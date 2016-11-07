@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.xiaomo.info/2016/11/07/nihon_seiyou/</loc>
+    
+    <lastmod>2016-11-07T08:14:54.702Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.xiaomo.info/tags/index.html</loc>
+    
+    <lastmod>2016-11-02T05:14:04.830Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.xiaomo.info/search/index.html</loc>
+    
+    <lastmod>2016-11-02T05:14:04.825Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.xiaomo.info/2016/11/02/java_spring_boot_data_format/</loc>
     
     <lastmod>2016-11-02T02:50:47.609Z</lastmod>
@@ -453,20 +474,6 @@
     <loc>http://blog.xiaomo.info//404.html</loc>
     
     <lastmod>2016-06-16T09:33:32.246Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.xiaomo.info/tags/index.html</loc>
-    
-    <lastmod>2016-06-15T03:24:53.636Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.xiaomo.info/search/index.html</loc>
-    
-    <lastmod>2016-06-15T02:10:30.069Z</lastmod>
     
   </url>
   
