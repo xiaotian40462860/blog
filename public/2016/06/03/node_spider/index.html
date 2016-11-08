@@ -156,13 +156,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜單</li>
+                        <li>標籤</li>
                         
-                        <li>Friends</li>
+                        <li>友情鏈接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>關於我</li>
                         
                     </ul>
                 </div>
@@ -292,7 +292,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
       <div class="body-wrap"><article id="post-node_spider" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -372,17 +372,17 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/06/03/node_spider/">nodejs爬虫项目实战</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">xiaomo</a></p>
-        <p><span>Created:</span>2016-06-03, 00:00:00</p>
-        <p><span>Updated:</span>2016-06-28, 10:49:16</p>
+        <p><span>本文標題:</span><a href="/2016/06/03/node_spider/">nodejs爬虫项目实战</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">xiaomo</a></p>
+        <p><span>發布時間:</span>2016-06-03, 00:00:00</p>
+        <p><span>最後更新:</span>2016-06-28, 10:49:16</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/06/03/node_spider/" title="nodejs爬虫项目实战">http://blog.xiaomo.info/2016/06/03/node_spider/</a>
-            <span class="copy-path" data-clipboard-text="From http://blog.xiaomo.info/2016/06/03/node_spider/　　By xiaomo" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/06/03/node_spider/" title="nodejs爬虫项目实战">http://blog.xiaomo.info/2016/06/03/node_spider/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/06/03/node_spider/　　作者: xiaomo" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
         </p>
     </div>
 
@@ -409,7 +409,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
+    <strong class="toc-title">文章目錄</strong>
     <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-依赖"><span class="toc-number">1.</span> <span class="toc-text">一、 依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-DOM操作-cheerio"><span class="toc-number">1.1.</span> <span class="toc-text">1. DOM操作  cheerio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-请求插件-request"><span class="toc-number">1.2.</span> <span class="toc-text">2. 请求插件  request</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-http库-superagent"><span class="toc-number">1.3.</span> <span class="toc-text">3. http库  superagent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-代理-eventproxy"><span class="toc-number">1.4.</span> <span class="toc-text">4. 代理  eventproxy</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、建立项目node-spider"><span class="toc-number">2.</span> <span class="toc-text">二、建立项目node-spider</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-建立一个Koa2项目"><span class="toc-number">2.1.</span> <span class="toc-text">1. 建立一个Koa2项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-生成一个koa2的项目"><span class="toc-number">2.2.</span> <span class="toc-text">2. 生成一个koa2的项目</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、目标网站分析"><span class="toc-number">3.</span> <span class="toc-text">三、目标网站分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、爬虫功能制作"><span class="toc-number">4.</span> <span class="toc-text">四、爬虫功能制作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-superagent"><span class="toc-number">4.1.</span> <span class="toc-text">1. superagent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-使用cheerio解析"><span class="toc-number">4.2.</span> <span class="toc-text">2. 使用cheerio解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-使用eventproxy来并发抓取"><span class="toc-number">4.3.</span> <span class="toc-text">3.使用eventproxy来并发抓取</span></a></li></ol></li></ol>
 </div>
 <style>
@@ -419,10 +419,10 @@
     }
 </style>
 
-<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+<input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
 
 <script>
-    yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
 </script>
 
 
@@ -486,15 +486,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/06/03/css-font-family/" title="Pre: CSS font-family 网页字体使用小结">
+            <a href="/2016/06/03/css-font-family/" title="上一篇: CSS font-family 网页字体使用小结">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/06/02/package.json_scripts/" title="Next: package.json常用script">
+            <a href="/2016/06/02/package.json_scripts/" title="下一篇: package.json常用script">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -517,14 +517,14 @@
                 2016 xiaomo
             </div>
             <div class="footer-right">
-                <a href="http://xiaomo.info/" target="_blank" title="welcome to my Blog">Blog </a> Created by <a href="https://github.com/qq83387856" target="_blank" title="I home that it can helpful!!  v3.0">xiaomo</a>  <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://xiaomo.info/" target="_blank" title="快速、簡潔且高效的博客框架">Blog </a> Created by <a href="https://github.com/qq83387856" target="_blank" title="簡而不減 Hexo 雙欄博客主題  v3.0">xiaomo</a>  <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >Site Visitors: 
+                        <span id="site-visit" >本站到訪數: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -534,7 +534,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">Page Hits: 
+                        <span id="page-visit">本頁閱讀量: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -590,9 +590,9 @@ MathJax.Hub.Queue(function() {
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
