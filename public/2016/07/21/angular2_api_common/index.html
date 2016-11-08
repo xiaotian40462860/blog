@@ -150,13 +150,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -286,7 +286,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap"><article id="post-angular2_api_common" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -357,17 +357,17 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/21/angular2_api_common/">angular2 api整理之通用模块</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
-        <p><span>发布时间:</span>2016-07-21, 00:00:00</p>
-        <p><span>最后更新:</span>2016-07-21, 16:41:11</p>
+        <p><span>Title:</span><a href="/2016/07/21/angular2_api_common/">angular2 api整理之通用模块</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">xiaomo</a></p>
+        <p><span>Created:</span>2016-07-21, 00:00:00</p>
+        <p><span>Updated:</span>2016-07-21, 16:41:11</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/21/angular2_api_common/" title="angular2 api整理之通用模块">http://blog.xiaomo.info/2016/07/21/angular2_api_common/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/07/21/angular2_api_common/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2016/07/21/angular2_api_common/" title="angular2 api整理之通用模块">http://blog.xiaomo.info/2016/07/21/angular2_api_common/</a>
+            <span class="copy-path" data-clipboard-text="From http://blog.xiaomo.info/2016/07/21/angular2_api_common/　　By xiaomo" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享"</a> 转载请保留原文链接及作者。
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
     </div>
 
@@ -394,7 +394,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
+    <strong class="toc-title">Contents</strong>
     <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、通用包"><span class="toc-number">1.</span> <span class="toc-text">一、通用包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-常量类"><span class="toc-number">1.1.</span> <span class="toc-text">1. 常量类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-根路径-APP-BASE-HREF"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 根路径 APP_BASE_HREF</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-指令常量-COMMON-DIRECTIVES"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 指令常量 COMMON_DIRECTIVES</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-管道常量-COMMON-PIPES"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.3 管道常量 COMMON_PIPES</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-表单指令常量-FORM-DIRECTIVES"><span class="toc-number">1.1.4.</span> <span class="toc-text">1.4 表单指令常量 FORM_DIRECTIVES</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-表单提供者常量-FORM-PROVIDERS"><span class="toc-number">1.1.5.</span> <span class="toc-text">1.5 表单提供者常量 FORM_PROVIDERS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-异步验证常量-NG-ASYNC-VALIDATORS"><span class="toc-number">1.1.6.</span> <span class="toc-text">1.6 异步验证常量 NG_ASYNC_VALIDATORS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-值存储器常量-NG-VALUE-ACCESSOR"><span class="toc-number">1.1.7.</span> <span class="toc-text">1.7 值存储器常量 NG_VALUE_ACCESSOR</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、-接口"><span class="toc-number">1.2.</span> <span class="toc-text">2、 接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-控制值存储器ControlValueAccessor"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 控制值存储器ControlValueAccessor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-表单-Form"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 表单 Form</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-路径变化事件-UrlChangeEvent"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 路径变化事件 UrlChangeEvent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-路径变化监听器-UrlChangeListener"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 路径变化监听器 UrlChangeListener</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-验证Validator"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.5 验证Validator</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-类"><span class="toc-number">1.3.</span> <span class="toc-text">3. 类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-抽象控制-AbstractControl"><span class="toc-number">1.3.1.</span> <span class="toc-text">3.1 抽象控制 AbstractControl</span></a></li></ol></li></ol></li></ol>
 </div>
 <style>
@@ -404,10 +404,10 @@
     }
 </style>
 
-<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
 <script>
-    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    yiliaConfig.toc = ["Hide", "Show", !!"false"];
 </script>
 
 
@@ -471,15 +471,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/28/angular2_api_roter/" title="上一篇: angular2 api整理之路由模块">
+            <a href="/2016/07/28/angular2_api_roter/" title="Pre: angular2 api整理之路由模块">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/12/javascript_rxjs_study_1/" title="下一篇: rxjs全接触">
+            <a href="/2016/07/12/javascript_rxjs_study_1/" title="Next: rxjs全接触">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -502,14 +502,14 @@
                 2016 xiaomo
             </div>
             <div class="footer-right">
-                <a href="http://xiaomo.info/" target="_blank" title="欢迎来到小莫的博客">Blog </a> Created by <a href="https://github.com/qq83387856" target="_blank" title="希望这里的文章对你有所帮助  v3.0">xiaomo</a>  <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://xiaomo.info/" target="_blank" title="welcome to my Blog">Blog </a> Created by <a href="https://github.com/qq83387856" target="_blank" title="I home that it can helpful!!  v3.0">xiaomo</a>  <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >本站到访数: 
+                        <span id="site-visit" >Site Visitors: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -519,7 +519,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">本页阅读量: 
+                        <span id="page-visit">Page Hits: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -575,9 +575,9 @@ MathJax.Hub.Queue(function() {
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
