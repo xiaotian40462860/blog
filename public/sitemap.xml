@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.xiaomo.info/2016/07/01/2016_study_plan/</loc>
+    
+    <lastmod>2016-11-08T08:40:07.575Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.xiaomo.info/2016/11/08/java_lombok/</loc>
     
     <lastmod>2016-11-08T08:16:44.202Z</lastmod>
@@ -159,13 +166,6 @@
     <loc>http://blog.xiaomo.info/2016/06/25/angular2_study_note_ng-tag/</loc>
     
     <lastmod>2016-06-30T07:52:15.720Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.xiaomo.info/2016/07/01/2016_study_plan/</loc>
-    
-    <lastmod>2016-06-30T04:28:07.355Z</lastmod>
     
   </url>
   
