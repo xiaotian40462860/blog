@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.xiaomo.info/"/>
-  <updated>2016-11-08T03:29:32.552Z</updated>
+  <updated>2016-11-08T06:59:02.796Z</updated>
   <id>http://blog.xiaomo.info/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>spring4免费全套视频教程</title>
+    <link href="http://blog.xiaomo.info/2016/11/08/java_spring/"/>
+    <id>http://blog.xiaomo.info/2016/11/08/java_spring/</id>
+    <published>2016-11-07T16:00:00.000Z</published>
+    <updated>2016-11-08T06:59:02.796Z</updated>
+    
+    <content type="html"><![CDATA[<p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br><a id="more"></a><br><img src="http://static.xiaomo.info/images/java_banner.png" alt="1"></p>
+<p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br><a href="http://edu.csdn.net/course/detail/852/" target="_blank" rel="external">国内第1套_Spring4 视频教程</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="http://blog.xiaomo.info/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://blog.xiaomo.info/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>lombok 简化java代码注解 理解</title>
@@ -987,39 +1011,6 @@
     <summary type="html">
     
       &lt;p&gt;既然要做spa，那么router当然是必不可少的。angular1的内置router坑坏了不少人，但是自始自终没有更新路由。好在angular2在路由上做的比较完备，不用再使用第三方router。是不是一大福音呢？&lt;a href=&quot;https://github.com/qq83387856/angular2-demo&quot;&gt;angular2-demo&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="angular2" scheme="http://blog.xiaomo.info/categories/angular2/"/>
-    
-    
-      <category term="javascript" scheme="http://blog.xiaomo.info/tags/javascript/"/>
-    
-      <category term="webpack" scheme="http://blog.xiaomo.info/tags/webpack/"/>
-    
-      <category term="angular2" scheme="http://blog.xiaomo.info/tags/angular2/"/>
-    
-      <category term="sass" scheme="http://blog.xiaomo.info/tags/sass/"/>
-    
-      <category term="typescript" scheme="http://blog.xiaomo.info/tags/typescript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>angular2学习笔记之表单和验证</title>
-    <link href="http://blog.xiaomo.info/2016/06/28/angular2_study_forms/"/>
-    <id>http://blog.xiaomo.info/2016/06/28/angular2_study_forms/</id>
-    <published>2016-06-27T16:00:00.000Z</published>
-    <updated>2016-06-30T09:11:39.051Z</updated>
-    
-    <content type="html"><![CDATA[<p>目前学习的版本是rc2,然而form相关的接口全部废弃掉使用新的了，google就是这么会折腾。<a href="https://github.com/qq83387856/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/angular.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、效果图"><a href="#一、效果图" class="headerlink" title="一、效果图"></a>一、效果图</h2><p><img src="http://static.xiaomo.info/images/ValidateForm.gif" alt=""></p>
-<h2 id="二、代码解析"><a href="#二、代码解析" class="headerlink" title="二、代码解析"></a>二、代码解析</h2><h3 id="1-ValidateForm-ts"><a href="#1-ValidateForm-ts" class="headerlink" title="1. ValidateForm.ts"></a>1. <a href="">ValidateForm.ts</a></h3><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;Component&#125; from <span class="string">"@angular/core"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;Hero&#125; from <span class="string">"./../../model/HeroModel"</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component(&#123;</span><br><span class="line">    selector: <span class="meta-string">'validate-form'</span>,</span><br><span class="line">    template: require(<span class="meta-string">'./ValidateForm.html'</span>)</span></span><br><span class="line">&#125;)</span><br><span class="line">export <span class="class"><span class="keyword">class</span> <span class="title">ValidateFormComponent</span> </span>&#123;</span><br><span class="line">  <span class="comment">//准备数据</span></span><br><span class="line">    powers = [<span class="string">'Really Smart'</span>, <span class="string">'Super Flexible'</span>,</span><br><span class="line">        <span class="string">'Super Hot'</span>, <span class="string">'Weather Changer'</span>];</span><br><span class="line">    model = new Hero(<span class="number">18</span>, <span class="string">'Dr IQ'</span>, <span class="keyword">this</span>.powers[<span class="number">0</span>], <span class="string">'Chuck Overstreet'</span>);</span><br><span class="line">    <span class="comment">//默认是未提交状态(作用是在模板中会根据是否提交的状态显示不同的视图)</span></span><br><span class="line">    submitted = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//提交之后将提交状态改为true</span></span><br><span class="line">    onSubmit() &#123;</span><br><span class="line">        <span class="keyword">this</span>.submitted = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//如果是活跃状态，显示提交后的表单(也就是填充了数据的表单)</span></span><br><span class="line">    active = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建新英雄(清空表单并将填充了数据的表单隐藏)</span></span><br><span class="line">    newHero() &#123;</span><br><span class="line">        <span class="keyword">this</span>.model = new Hero(<span class="number">42</span>, <span class="string">''</span>, <span class="string">''</span>);</span><br><span class="line">        <span class="keyword">this</span>.active = <span class="literal">false</span>;</span><br><span class="line">        setTimeout(() =&gt; <span class="keyword">this</span>.active = <span class="literal">true</span>, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;目前学习的版本是rc2,然而form相关的接口全部废弃掉使用新的了，google就是这么会折腾。&lt;a href=&quot;https://github.com/qq83387856/angular2-demo&quot;&gt;angular2-demo&lt;/a&gt;&lt;br&gt;
     
     </summary>
     
