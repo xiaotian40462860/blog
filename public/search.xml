@@ -10,50 +10,8 @@
 <h2 id="一、缘由"><a href="#一、缘由" class="headerlink" title="一、缘由"></a>一、缘由</h2><p>在<code>stackoverflow</code>上看到了这个问题。 <a href="https://stackoverflow.com/questions/40169763/spring-boot-restcontroller-not-work-with-lombok/40478142#40478142" target="_blank" rel="external">spring boot RestController not work with lombok</a>,然后就有了这篇博客。。</p>
 <h2 id="二、lombok是什么鬼"><a href="#二、lombok是什么鬼" class="headerlink" title="二、lombok是什么鬼"></a>二、lombok是什么鬼</h2><h3 id="1-maven引用"><a href="#1-maven引用" class="headerlink" title="1. maven引用"></a>1. maven引用</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.16.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="2-一些api"><a href="#2-一些api" class="headerlink" title="2. 一些api"></a>2. 一些api</h3><p>ombok 注解：<br>lombok 提供的注解不多，可以参考官方视频的讲解和官方文档。<br>Lombok 注解在线帮助文档：<a href="http://projectlombok.org/features/index" target="_blank" rel="external">http://projectlombok.org/features/index</a>.<br>下面介绍几个我常用的 lombok 注解：<br><code>@Data</code>   ：注解在类上；提供类所有属性的 getting 和 setting 方法，此外还提供了equals、canEqual、hashCode、toString 方法<br><code>@Setter</code>：注解在属性上；为属性提供 setting 方法<br><code>@Getter</code>：注解在属性上；为属性提供 getting 方法<br><code>@Log4j</code> ：注解在类上；为类提供一个 属性名为log 的 log4j 日志对象<br><code>@NoArgsConstructor</code>：注解在类上；为类提供一个无参的构造方法<br><code>@AllArgsConstructor</code>：注解在类上；为类提供一个全参的构造方法</p>
-<pre><code>下面是简单示例
-1.不使用 lombok 的方案
-public class Person {
-
-  private String id;
- private String name;
- private String identity;
- private Logger log = Logger.getLogger(Person.class);
-
- public Person() {
-
-}
-
-public Person(String id, String name, String identity) {
-    this.id              = id;
-    this.name       = name;
-    this.identity  = identity;
-}
-
-public String getId() {
-    return id;
-}
-
-public String getName() {
-    return name;
-}
-
-public String getIdentity() {
-    return identity;
-}
-
-public void setId(String id) {
-    this.id = id;
-}
-
-public void setName(String name) {
-    this.name = name;
-}
-
-public void setIdentity(String identity) {
-    this.identity = identity;
-}
-}
-</code></pre><h2 id="二、实践结果"><a href="#二、实践结果" class="headerlink" title="二、实践结果"></a>二、实践结果</h2><p>我发现<code>stackoverflow</code>的那个伙计代码写的并没有问题，我把他的代码粘到我本地运行没有一点卡壳。倒不如说他教会了我lombok，在此感谢一下。。嘿嘿</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">下面是简单示例</div><div class="line"><span class="number">1.</span>不使用 lombok 的方案</div><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> Person &#123;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> <span class="keyword">String</span> id;</div><div class="line"> <span class="keyword">private</span> <span class="keyword">String</span> name;</div><div class="line"> <span class="keyword">private</span> <span class="keyword">String</span> identity;</div><div class="line"> <span class="keyword">private</span> Logger log = Logger.getLogger(Person.<span class="keyword">class</span>);</div><div class="line"></div><div class="line"> <span class="keyword">public</span> Person() &#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> Person(<span class="keyword">String</span> id, <span class="keyword">String</span> name, <span class="keyword">String</span> identity) &#123;</div><div class="line">    <span class="keyword">this</span>.id              = id;</div><div class="line">    <span class="keyword">this</span>.name       = name;</div><div class="line">    <span class="keyword">this</span>.identity  = identity;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">String</span> getId() &#123;</div><div class="line">    <span class="built_in">return</span> id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">String</span> getName() &#123;</div><div class="line">    <span class="built_in">return</span> name;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">String</span> getIdentity() &#123;</div><div class="line">    <span class="built_in">return</span> identity;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> setId(<span class="keyword">String</span> id) &#123;</div><div class="line">    <span class="keyword">this</span>.id = id;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> setName(<span class="keyword">String</span> name) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> setIdentity(<span class="keyword">String</span> identity) &#123;</div><div class="line">    <span class="keyword">this</span>.identity = identity;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="二、实践结果"><a href="#二、实践结果" class="headerlink" title="二、实践结果"></a>二、实践结果</h2><p>我发现<code>stackoverflow</code>的那个伙计代码写的并没有问题，我把他的代码粘到我本地运行没有一点卡壳。倒不如说他教会了我lombok，在此感谢一下。。嘿嘿</p>
 ]]></content>
     </entry>
     
