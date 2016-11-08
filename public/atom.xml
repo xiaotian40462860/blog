@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.xiaomo.info/"/>
-  <updated>2016-11-08T03:16:11.283Z</updated>
+  <updated>2016-11-08T03:21:53.484Z</updated>
   <id>http://blog.xiaomo.info/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.xiaomo.info/2016/11/08/java_lombok/"/>
     <id>http://blog.xiaomo.info/2016/11/08/java_lombok/</id>
     <published>2016-11-07T16:00:00.000Z</published>
-    <updated>2016-11-08T03:16:11.283Z</updated>
+    <updated>2016-11-08T03:21:53.484Z</updated>
     
     <content type="html"><![CDATA[<p>今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。<br><a id="more"></a><br><img src="http://static.xiaomo.info/images/java_banner.png" alt="1"></p>
 <h2 id="一、缘由"><a href="#一、缘由" class="headerlink" title="一、缘由"></a>一、缘由</h2><p>在<code>stackoverflow</code>上看到了这个问题。 <a href="https://stackoverflow.com/questions/40169763/spring-boot-restcontroller-not-work-with-lombok/40478142#40478142" target="_blank" rel="external">spring boot RestController not work with lombok</a>,然后就有了这篇博客。。</p>
