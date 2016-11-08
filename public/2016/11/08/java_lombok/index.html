@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="Koa 是一个类似于 Express 的Web开发框架，创始人也都是TJ。Koa 的主要特点是，使用了 ES6 的 Generator 函数，进行了架构的重新设计。Koa 的原理和内部结构很像 Express，但是语法和内部结构进行了升级。">
+<meta name="description" content="今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nodejs框架koa学习">
-<meta property="og:url" content="http://blog.xiaomo.info/2016/05/24/node_koa/index.html">
+<meta property="og:title" content="lombok 简化java代码注解 理解">
+<meta property="og:url" content="http://blog.xiaomo.info/2016/11/08/java_lombok/index.html">
 <meta property="og:site_name" content="小莫-fighting">
-<meta property="og:description" content="Koa 是一个类似于 Express 的Web开发框架，创始人也都是TJ。Koa 的主要特点是，使用了 ES6 的 Generator 函数，进行了架构的重新设计。Koa 的原理和内部结构很像 Express，但是语法和内部结构进行了升级。">
-<meta property="og:image" content="http://static.xiaomo.info/images/nodejs.png">
-<meta property="og:updated_time" content="2016-06-28T02:50:05.172Z">
+<meta property="og:description" content="今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。">
+<meta property="og:image" content="http://static.xiaomo.info/images/java_banner.png">
+<meta property="og:updated_time" content="2016-11-08T03:00:33.215Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nodejs框架koa学习">
-<meta name="twitter:description" content="Koa 是一个类似于 Express 的Web开发框架，创始人也都是TJ。Koa 的主要特点是，使用了 ES6 的 Generator 函数，进行了架构的重新设计。Koa 的原理和内部结构很像 Express，但是语法和内部结构进行了升级。">
-<meta name="twitter:image" content="http://static.xiaomo.info/images/nodejs.png">
+<meta name="twitter:title" content="lombok 简化java代码注解 理解">
+<meta name="twitter:description" content="今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。">
+<meta name="twitter:image" content="http://static.xiaomo.info/images/java_banner.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>nodejs框架koa学习 | 小莫-fighting</title>
+<title>lombok 简化java代码注解 理解 | 小莫-fighting</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -288,11 +288,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-node_koa" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-java_lombok" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/24/node_koa/" class="article-date">
-      <time datetime="2016-05-23T16:00:00.000Z" itemprop="datePublished">2016-05-24</time>
+      <a href="/2016/11/08/java_lombok/" class="article-date">
+      <time datetime="2016-11-07T16:00:00.000Z" itemprop="datePublished">2016-11-08</time>
 </a>
     </div>
   
@@ -305,7 +305,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      nodejs框架koa学习
+      lombok 简化java代码注解 理解
     </h1>
   
 
@@ -314,13 +314,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/koa/">koa</a>
+    <a class="article-category-link" href="/categories/java/">java</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/es6/">es6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/koa/">koa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -330,20 +330,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Koa 是一个类似于 Express 的Web开发框架，创始人也都是TJ。Koa 的主要特点是，使用了 ES6 的 Generator 函数，进行了架构的重新设计。Koa 的原理和内部结构很像 Express，但是语法和内部结构进行了升级。<br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/nodejs.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、国际惯例-hello-world"><a href="#一、国际惯例-hello-world" class="headerlink" title="一、国际惯例 hello world"></a>一、国际惯例 hello world</h2><h3 id="1-当前版本1-2"><a href="#1-当前版本1-2" class="headerlink" title="1. 当前版本1.2"></a>1. 当前版本1.2</h3><p><code>npm install --save koa</code>   </p>
-<h3 id="2-代码撸起来"><a href="#2-代码撸起来" class="headerlink" title="2. 代码撸起来"></a>2. 代码撸起来</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">let</span> app = koa();</span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span>*(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.body = <span class="string">"hello xiaomo"</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">app.listen(<span class="number">8080</span>);</span><br></pre></td></tr></table></figure>
-<p>如此这般我们就创建了一个简单的http服务器。这段程序的作用是监听 8080 端口，当收到 GET 请求的时候，答复 hello xiaomo<br>你应该注意到了，我没有只用 var 关键词。我使用了 let 代替。在 ES6 中这基本上就是新的 var。这改变了变量的作用域，但是我不想在这里多说。  </p>
-<p>另一件事情有些奇怪，就是我们使用关键词 function*。这个星号表示这个函数是一个生成器函数。这意味着这个函数可以在运行的时候跳出然后再跳回来。这个概念很难去表述，所以我给你举个栗子。</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">inc</span> () &#123;</span></span><br><span class="line"> let <span class="built_in">number</span> = <span class="number">0</span></span><br><span class="line"> <span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line"> yield <span class="built_in">number</span>++</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let test = inc()</span><br><span class="line"></span><br><span class="line">console.<span class="built_in">log</span>(test.next().<span class="built_in">value</span>)<span class="comment"> // -&gt; 0</span></span><br><span class="line">console.<span class="built_in">log</span>(test.next().<span class="built_in">value</span>)<span class="comment"> // -&gt; 1</span></span><br><span class="line">console.<span class="built_in">log</span>(test.next().<span class="built_in">value</span>)<span class="comment"> // -&gt; 2</span></span><br></pre></td></tr></table></figure>
-<p>我分解一下这个程序：</p>
-<p>inc 函数定义了一个生成器函数，在每一次 while 循环中，产出 number 变量然后 number 变量加 1<br>inc 函数被指派给了变量 test<br>inc 函数被迭代了 3 次，第一次的时候，number 变量在函数中被初始化了。然后，这个函数进入到了一个 while 循环，在之后的迭代中这个循环也不会退出。然后 number 0 被产出，所以这个可以用 .value 方法接收。在后来的迭代中这个变量 number 自增了两次。<br>我希望这可以帮助理解一点生成器的工作原理。这只是非常复杂的 ES6 中的一小部分。</p>
-<p>但是无论如何，让我们回到 koa。koa 非常简单，甚至不包含一个路由。你需要在中间件生成器函数中手动做路由匹配：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> koa = <span class="built_in">require</span>(<span class="string">'koa'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> app = koa()</span><br><span class="line"></span><br><span class="line"><span class="comment">// normal route</span></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span>* (<span class="params">next</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.path !== <span class="string">'/'</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">yield</span> next</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.body = <span class="string">'hello world'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// /404 route</span></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span>* (<span class="params">next</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.path !== <span class="string">'/404'</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">yield</span> next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.body = <span class="string">'page not found'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// /500 route</span></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span>* (<span class="params">next</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.path !== <span class="string">'/500'</span>) &#123;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">yield</span> next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.body = <span class="string">'internal server error'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">8080</span>)</span><br></pre></td></tr></table></figure>
-<p>你可以看到，我们只要用 if 就可以做路由匹配了。你是不是很疑惑在这个上下文中的 this 是什么，express 中的 req 和 res 去哪里了。其实 this 绑定了大部分的 req 和 res 的函数和属性。如果你想知道更多关于 this 的详情，<a href="http://koajs.com/#context" target="_blank" rel="external">请点这里</a>。</p>
-<p>让我们写一个将请求中的内容大写的中间件：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> koa = <span class="built_in">require</span>(<span class="string">'koa'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> app = koa()</span><br><span class="line"></span><br><span class="line">app.use(upcaser())</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">upcaser</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="function"><span class="keyword">function</span>* (<span class="params">next</span>) </span>&#123;</span><br><span class="line"><span class="keyword">yield</span> next</span><br><span class="line"><span class="keyword">this</span>.body = <span class="keyword">this</span>.body.toUpperCase()</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">8080</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="我的github地址"><a href="#我的github地址" class="headerlink" title="我的github地址"></a>我的github地址</h2><p><a href="https://github.com/qq83387856" target="_blank" rel="external">https://github.com/qq83387856</a></p>
+        <p>今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。<br><a id="more"></a><br><img src="http://static.xiaomo.info/images/java_banner.png" alt="1"></p>
+<h2 id="一、缘由"><a href="#一、缘由" class="headerlink" title="一、缘由"></a>一、缘由</h2><p>在<code>stackoverflow</code>上看到了这个问题。 <a href="https://stackoverflow.com/questions/40169763/spring-boot-restcontroller-not-work-with-lombok/40478142#40478142" target="_blank" rel="external">spring boot RestController not work with lombok</a>,然后就有了这篇博客。。</p>
+<h2 id="二、lombok是什么鬼"><a href="#二、lombok是什么鬼" class="headerlink" title="二、lombok是什么鬼"></a>二、lombok是什么鬼</h2><h3 id="1-maven引用"><a href="#1-maven引用" class="headerlink" title="1. maven引用"></a>1. maven引用</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.16.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="2-一些api"><a href="#2-一些api" class="headerlink" title="2. 一些api"></a>2. 一些api</h3><p>ombok 注解：<br>    lombok 提供的注解不多，可以参考官方视频的讲解和官方文档。<br>    Lombok 注解在线帮助文档：<a href="http://projectlombok.org/features/index" target="_blank" rel="external">http://projectlombok.org/features/index</a>.<br>    下面介绍几个我常用的 lombok 注解：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Data</span>   ：注解在类上；提供类所有属性的 getting 和 setting 方法，此外还提供了equals、canEqual、hashCode、toString 方法</div><div class="line"><span class="meta">@Setter</span>：注解在属性上；为属性提供 setting 方法</div><div class="line"><span class="meta">@Getter</span>：注解在属性上；为属性提供 getting 方法</div><div class="line"><span class="meta">@Log</span>4j ：注解在类上；为类提供一个 属性名为log 的 log4j 日志对象</div><div class="line"><span class="meta">@NoArgsConstructor</span>：注解在类上；为类提供一个无参的构造方法</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="meta">@AllArgsConstructor</span>：注解在类上；为类提供一个全参的构造方法</div><div class="line"></div><div class="line"></div><div class="line">下面是简单示例</div><div class="line">    <span class="number">1</span>.不使用 lombok 的方案</div><div class="line"></div><div class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line"></div><div class="line">      <span class="keyword">private</span> String id;</div><div class="line">     <span class="keyword">private</span> String name;</div><div class="line">     <span class="keyword">private</span> String identity;</div><div class="line">     <span class="keyword">private</span> Logger log = Logger.getLogger(Person.class);</div><div class="line"></div><div class="line">     <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String id, String name, String identity)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.id              = id;</div><div class="line">        <span class="keyword">this</span>.name       = name;</div><div class="line">        <span class="keyword">this</span>.identity  = identity;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getId</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getIdentity</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> identity;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(String id)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.id = id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setIdentity</span><span class="params">(String identity)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.identity = identity;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="二、实践结果"><a href="#二、实践结果" class="headerlink" title="二、实践结果"></a>二、实践结果</h2><p>我发现<code>stackoverflow</code>的那个伙计代码写的并没有问题，我把他的代码粘到我本地运行没有一点卡壳。倒不如说他教会了我lombok，在此感谢一下。。嘿嘿</p>
 
       
     </div>
@@ -352,13 +344,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/05/24/node_koa/">nodejs框架koa学习</a></p>
+        <p><span>本文标题:</span><a href="/2016/11/08/java_lombok/">lombok 简化java代码注解 理解</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
-        <p><span>发布时间:</span>2016-05-24, 00:00:00</p>
-        <p><span>最后更新:</span>2016-06-28, 10:50:05</p>
+        <p><span>发布时间:</span>2016-11-08, 00:00:00</p>
+        <p><span>最后更新:</span>2016-11-08, 11:00:33</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/05/24/node_koa/" title="nodejs框架koa学习">http://blog.xiaomo.info/2016/05/24/node_koa/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/05/24/node_koa/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/11/08/java_lombok/" title="lombok 简化java代码注解 理解">http://blog.xiaomo.info/2016/11/08/java_lombok/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/11/08/java_lombok/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -370,16 +362,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/05/26/koa_generator/">
-                    koa生成器,一键生成koa和koa2项目
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/05/20/javascript_syntax/">
-                    javascript学习笔记
+                <a href="/2016/11/07/nihon_seiyou/">
+                    日本动漫声优公演,来看看什么叫专业声优
                 </a>
             </div>
         
@@ -390,7 +376,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、国际惯例-hello-world"><span class="toc-number">1.</span> <span class="toc-text">一、国际惯例 hello world</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-当前版本1-2"><span class="toc-number">1.1.</span> <span class="toc-text">1. 当前版本1.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-代码撸起来"><span class="toc-number">1.2.</span> <span class="toc-text">2. 代码撸起来</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的github地址"><span class="toc-number">2.</span> <span class="toc-text">我的github地址</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、缘由"><span class="toc-number">1.</span> <span class="toc-text">一、缘由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、lombok是什么鬼"><span class="toc-number">2.</span> <span class="toc-text">二、lombok是什么鬼</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-maven引用"><span class="toc-number">2.1.</span> <span class="toc-text">1. maven引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-一些api"><span class="toc-number">2.2.</span> <span class="toc-text">2. 一些api</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、实践结果"><span class="toc-number">3.</span> <span class="toc-text">二、实践结果</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -421,7 +407,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"nodejs框架koa学习　| 小莫-fighting　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"lombok 简化java代码注解 理解　| 小莫-fighting　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -437,7 +423,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" data-thread-key="2016/05/24/node_koa/" data-title="nodejs框架koa学习" data-url="http://blog.xiaomo.info/2016/05/24/node_koa/"></div>
+    <div class="ds-thread" data-thread-key="2016/11/08/java_lombok/" data-title="lombok 简化java代码注解 理解" data-url="http://blog.xiaomo.info/2016/11/08/java_lombok/"></div>
     <script>
     var duoshuoQuery = {short_name:"xiaomoblog"};
     (function() {
@@ -466,15 +452,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/05/26/koa_generator/" title="上一篇: koa生成器,一键生成koa和koa2项目">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/05/20/javascript_syntax/" title="下一篇: javascript学习笔记">
+            <a href="/2016/11/07/nihon_seiyou/" title="下一篇: 日本动漫声优公演,来看看什么叫专业声优">
                 <i class="fa fa-angle-right"></i>
             </a>
         
