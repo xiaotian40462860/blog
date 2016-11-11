@@ -15,18 +15,19 @@
 
 
 
-<meta name="description" content="好的script能够大大减少我们对命令行的操作，直接使用npm run xxx 就可以执行。">
+<meta name="description" content="曾经一度我一直想在做前后端分离的时间写api接口是一个痛苦的过程，虽然也在网上找了一些可以填写api的系统，但使用起来总是不尽人意。现在，终于找到一款可以和api完美集成自动生成api文档加测试的工具，真是一件让人高兴的事呢。如果你也需要，那就好好看看这篇文章吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="package.json常用script">
-<meta property="og:url" content="http://blog.xiaomo.info/2016/06/02/package.json_scripts/index.html">
+<meta property="og:title" content="swagger ui和spring boot集成生成api文档">
+<meta property="og:url" content="http://blog.xiaomo.info/2016/11/11/java_spring-boot_swagger-ui/index.html">
 <meta property="og:site_name" content="小莫-fighting">
-<meta property="og:description" content="好的script能够大大减少我们对命令行的操作，直接使用npm run xxx 就可以执行。">
-<meta property="og:image" content="http://static.xiaomo.info/images/npm.png">
-<meta property="og:updated_time" content="2016-06-28T02:49:11.092Z">
+<meta property="og:description" content="曾经一度我一直想在做前后端分离的时间写api接口是一个痛苦的过程，虽然也在网上找了一些可以填写api的系统，但使用起来总是不尽人意。现在，终于找到一款可以和api完美集成自动生成api文档加测试的工具，真是一件让人高兴的事呢。如果你也需要，那就好好看看这篇文章吧。">
+<meta property="og:image" content="http://static.xiaomo.info/images/java_banner.png">
+<meta property="og:image" content="http://static.xiaomo.info/images/swagger.png">
+<meta property="og:updated_time" content="2016-11-11T07:33:55.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="package.json常用script">
-<meta name="twitter:description" content="好的script能够大大减少我们对命令行的操作，直接使用npm run xxx 就可以执行。">
-<meta name="twitter:image" content="http://static.xiaomo.info/images/npm.png">
+<meta name="twitter:title" content="swagger ui和spring boot集成生成api文档">
+<meta name="twitter:description" content="曾经一度我一直想在做前后端分离的时间写api接口是一个痛苦的过程，虽然也在网上找了一些可以填写api的系统，但使用起来总是不尽人意。现在，终于找到一款可以和api完美集成自动生成api文档加测试的工具，真是一件让人高兴的事呢。如果你也需要，那就好好看看这篇文章吧。">
+<meta name="twitter:image" content="http://static.xiaomo.info/images/java_banner.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +59,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>package.json常用script | 小莫-fighting</title>
+<title>swagger ui和spring boot集成生成api文档 | 小莫-fighting</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -288,11 +289,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-package.json_scripts" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-java_spring-boot_swagger-ui" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/02/package.json_scripts/" class="article-date">
-      <time datetime="2016-06-01T16:00:00.000Z" itemprop="datePublished">2016-06-02</time>
+      <a href="/2016/11/11/java_spring-boot_swagger-ui/" class="article-date">
+      <time datetime="2016-11-10T16:00:00.000Z" itemprop="datePublished">2016-11-11</time>
 </a>
     </div>
   
@@ -305,7 +306,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      package.json常用script
+      swagger ui和spring boot集成生成api文档
     </h1>
   
 
@@ -314,13 +315,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/npm/">npm</a>
+    <a class="article-category-link" href="/categories/java/">java</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -330,25 +331,23 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>好的script能够大大减少我们对命令行的操作，直接使用npm run xxx 就可以执行。<br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/npm.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、git相关"><a href="#一、git相关" class="headerlink" title="一、git相关"></a>一、git相关</h2><h3 id="1-查看分支"><a href="#1-查看分支" class="headerlink" title="1. 查看分支"></a>1. 查看分支</h3><p>  <code>branch:git branch -a</code>,    </p>
-<h3 id="2-查看标签"><a href="#2-查看标签" class="headerlink" title="2. 查看标签"></a>2. 查看标签</h3><p>  <code>tag:git tag</code>,    </p>
-<h3 id="3-创建标签"><a href="#3-创建标签" class="headerlink" title="3. 创建标签"></a>3. 创建标签</h3><p>  <code>createtag:git tag -a 0.1.2 -m Release^-^</code>,    </p>
-<h3 id="4-推送标签"><a href="#4-推送标签" class="headerlink" title="4. 推送标签"></a>4. 推送标签</h3><p>  <code>pushtag:npm run createtag &amp;&amp; git push origin --tags</code>,        </p>
-<h3 id="5-删除分支"><a href="#5-删除分支" class="headerlink" title="5. 删除分支"></a>5. 删除分支</h3><p>  <code>delbranch:git push origin --delete</code>,             </p>
-<h3 id="6-同步git"><a href="#6-同步git" class="headerlink" title="6. 同步git"></a>6. 同步git</h3><p>  <code>fetch</code>:<code>git fetch -p</code>,                  </p>
-<h3 id="7-推送更新"><a href="#7-推送更新" class="headerlink" title="7. 推送更新"></a>7. 推送更新</h3><p>  <code>push</code>:<code>git push origin master</code>,            </p>
-<h3 id="8-提交代码"><a href="#8-提交代码" class="headerlink" title="8. 提交代码"></a>8. 提交代码</h3><p> <code>commit</code>:<code>git commit -a</code>,             </p>
-<h3 id="9-检出代码"><a href="#9-检出代码" class="headerlink" title="9. 检出代码"></a>9. 检出代码</h3><p>  <code>checkout</code>:<code>git checkout</code>,            </p>
-<h3 id="10-删除标签"><a href="#10-删除标签" class="headerlink" title="10. 删除标签"></a>10. 删除标签</h3><p>  <code>deltag:git push origin --delete tag</code>,             </p>
-<h3 id="11-删除己合并分支"><a href="#11-删除己合并分支" class="headerlink" title="11. 删除己合并分支"></a>11. 删除己合并分支</h3><p>   <code>delbranck:git branch -d</code>,          </p>
-<h3 id="12-删除所分支"><a href="#12-删除所分支" class="headerlink" title="12. 删除所分支"></a>12. 删除所分支</h3><p> <code>delbranchall:git branch -D</code>,                 </p>
-<h3 id="13-重命名分支"><a href="#13-重命名分支" class="headerlink" title="13. 重命名分支"></a>13. 重命名分支</h3><p>  <code>renamebranch:git branch -m</code>,   </p>
-<h2 id="二、webpack相关"><a href="#二、webpack相关" class="headerlink" title="二、webpack相关"></a>二、webpack相关</h2><h3 id="1-清空目录"><a href="#1-清空目录" class="headerlink" title="1. 清空目录"></a>1. 清空目录</h3><p>  <code>clean:rimraf dist</code>,</p>
-<h3 id="2-构建项目"><a href="#2-构建项目" class="headerlink" title="2. 构建项目"></a>2. 构建项目</h3><p>  <code>build:npm run clean &amp;&amp; webpack --progress --colors --profile</code>,</p>
-<h3 id="3-启动项目"><a href="#3-启动项目" class="headerlink" title="3. 启动项目"></a>3. 启动项目</h3><p>  <code>start:webpack-dev-server --progress --colors --profile</code>,</p>
-<h3 id="4-测试代码"><a href="#4-测试代码" class="headerlink" title="4. 测试代码"></a>4. 测试代码</h3><p>  <code>test:karma start</code>,</p>
-<h3 id="5-检测测试"><a href="#5-检测测试" class="headerlink" title="5. 检测测试"></a>5. 检测测试</h3><p>  <code>test-watch:karma start --auto-watch --no-single-run</code></p>
+        <p>曾经一度我一直想在做前后端分离的时间写api接口是一个痛苦的过程，虽然也在网上找了一些可以填写api的系统，但使用起来总是不尽人意。现在，终于找到一款可以和api完美集成自动生成api文档加测试的工具，真是一件让人高兴的事呢。如果你也需要，那就好好看看这篇文章吧。<br><a id="more"></a><br><img src="http://static.xiaomo.info/images/java_banner.png" alt="1"></p>
+<h2 id="一、环境"><a href="#一、环境" class="headerlink" title="一、环境"></a>一、环境</h2><h3 id="1-JAVA8"><a href="#1-JAVA8" class="headerlink" title="1. JAVA8"></a>1. JAVA8</h3><h3 id="2-MAVEN-3-0-5"><a href="#2-MAVEN-3-0-5" class="headerlink" title="2. MAVEN 3.0.5"></a>2. MAVEN 3.0.5</h3><h3 id="3-IDEA-2016-2-5"><a href="#3-IDEA-2016-2-5" class="headerlink" title="3. IDEA 2016.2.5"></a>3. IDEA 2016.2.5</h3><h3 id="4-spring-boot-1-4-1"><a href="#4-spring-boot-1-4-1" class="headerlink" title="4. spring boot 1.4.1"></a>4. spring boot 1.4.1</h3><h2 id="二、相关依赖"><a href="#二、相关依赖" class="headerlink" title="二、相关依赖"></a>二、相关依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="三、配置"><a href="#三、配置" class="headerlink" title="三、配置"></a>三、配置</h2><p>设置了一些默认显示的api相关信息，最后上截图的时就可以比较清楚的看到。</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@Configuration</span></div><div class="line"><span class="variable">@EnableSwagger2</span></div><div class="line">public class Swagger2Config &#123;</div><div class="line"></div><div class="line">    <span class="variable">@Bean</span></div><div class="line">    public Docket createRestApi() &#123;</div><div class="line">        <span class="selector-tag">return</span> <span class="selector-tag">new</span> <span class="selector-tag">Docket</span>(DocumentationType.SWAGGER_2)</div><div class="line">                <span class="selector-class">.apiInfo</span>(apiInfo())</div><div class="line">                <span class="selector-class">.select</span>()</div><div class="line">                <span class="selector-class">.apis</span>(RequestHandlerSelectors.basePackage(<span class="string">"info.xiaomo.website"</span>))</div><div class="line">                <span class="selector-class">.paths</span>(PathSelectors.any())</div><div class="line">                <span class="selector-class">.build</span>();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="selector-tag">private</span> <span class="selector-tag">ApiInfo</span> <span class="selector-tag">apiInfo</span>() &#123;</div><div class="line">        <span class="selector-tag">return</span> <span class="selector-tag">new</span> <span class="selector-tag">ApiInfoBuilder</span>()</div><div class="line">                <span class="selector-class">.title</span>(<span class="string">"Spring Boot中使用Swagger2构建RESTful APIs"</span>)</div><div class="line">                <span class="selector-class">.description</span>(<span class="string">"api根地址：http://api.xiaomo.info:8080/"</span>)</div><div class="line">                <span class="selector-class">.termsOfServiceUrl</span>(<span class="string">"http://blog.xiaomo.info/"</span>)</div><div class="line">                <span class="selector-class">.contact</span>(<span class="string">"小莫"</span>)</div><div class="line">                <span class="selector-class">.version</span>(<span class="string">"1.0"</span>)</div><div class="line">                <span class="selector-class">.build</span>();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="四、相关注解解读"><a href="#四、相关注解解读" class="headerlink" title="四、相关注解解读"></a>四、相关注解解读</h2><h3 id="1-Api"><a href="#1-Api" class="headerlink" title="1. @Api"></a>1. @Api</h3><p>用在类上，说明该类的作用<br><code>@Api(value = &quot;UserController&quot;, description = &quot;用户相关api&quot;)</code></p>
+<h3 id="2-ApiOperation"><a href="#2-ApiOperation" class="headerlink" title="2. @ApiOperation"></a>2. @ApiOperation</h3><p>用在方法上，说明方法的作用<br><code>@ApiOperation(value = &quot;查找用户&quot;, notes = &quot;查找用户&quot;, httpMethod = &quot;GET&quot;, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)</code></p>
+<h3 id="3-ApiImplicitParams"><a href="#3-ApiImplicitParams" class="headerlink" title="3 @ApiImplicitParams"></a>3 @ApiImplicitParams</h3><p>用在方法上包含一组参数说明</p>
+<h3 id="4-ApiImplicitParam"><a href="#4-ApiImplicitParam" class="headerlink" title="4. @ApiImplicitParam"></a>4. @ApiImplicitParam</h3><p>用在@ApiImplicitParams注解中，指定一个请求参数的各个方面<br>     paramType：参数放在哪个地方<br>     header–&gt;请求参数的获取：@RequestHeader<br>     query–&gt;请求参数的获取：@RequestParam<br>     path（用于restful接口）–&gt;请求参数的获取：@PathVariable<br>     body（不常用）<br>     form（不常用）<br>     name：参数名<br>     dataType：参数类型<br>     required：参数是否必须传<br>     value：参数的意思<br>     defaultValue：参数的默认值</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@ApiImplicitParams</span>(&#123;</div><div class="line">        <span class="variable">@ApiImplicitParam</span>(name = <span class="string">"id"</span>, value = <span class="string">"唯一id"</span>, required = true, dataType = <span class="string">"Long"</span>, paramType = <span class="string">"path"</span>),</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="5-ApiResponses"><a href="#5-ApiResponses" class="headerlink" title="5. @ApiResponses"></a>5. @ApiResponses</h3><p>用于表示一组响应</p>
+<h3 id="6-ApiResponse"><a href="#6-ApiResponse" class="headerlink" title="6. @ApiResponse"></a>6. @ApiResponse</h3><p>用在@ApiResponses中，一般用于表达一个错误的响应信息<br>     code：数字，例如400<br>     message：信息，例如”请求参数没填好”<br>     response：抛出异常的类</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">@ApiResponses</span>(value = &#123;  </div><div class="line">          <span class="variable">@ApiResponse</span>(code = <span class="number">400</span>, message = <span class="string">"No Name Provided"</span>)  </div><div class="line">  &#125;)</div></pre></td></tr></table></figure>
+<h3 id="7-ApiModel"><a href="#7-ApiModel" class="headerlink" title="7. @ApiModel"></a>7. @ApiModel</h3><p> 描述一个Model的信息（这种一般用在post创建的时候，使用@RequestBody这样的场景，请求参数无法使用@ApiImplicitParam注解进行描述的时候）<br> <code>@ApiModel(value = &quot;用户实体类&quot;)</code></p>
+<h3 id="8-ApiModelProperty"><a href="#8-ApiModelProperty" class="headerlink" title="8. @ApiModelProperty"></a>8. @ApiModelProperty</h3><p>描述一个model的属性<br><code>@ApiModelProperty(value = &quot;登录用户&quot;)</code></p>
+<h3 id="五、-和Swagger-UI的集成"><a href="#五、-和Swagger-UI的集成" class="headerlink" title="五、 和Swagger UI的集成"></a>五、 和Swagger UI的集成</h3><p>首先，从github(<a href="https://github.com/swagger-api/swagger-ui)上下载Swagger-UI" target="_blank" rel="external">https://github.com/swagger-api/swagger-ui)上下载Swagger-UI</a>, 把该项目dist目录下的内容拷贝到项目的resources的目录public下。</p>
+<h3 id="六、访问"><a href="#六、访问" class="headerlink" title="六、访问"></a>六、访问</h3><p><a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="external">http://localhost:8080/swagger-ui.html</a> 就可以看到效果如下<br><img src="http://static.xiaomo.info/images/swagger.png" alt=""></p>
+<h3 id="七、-项目实例"><a href="#七、-项目实例" class="headerlink" title="七、 项目实例"></a>七、 项目实例</h3><p><a href="https://github.com/JavaUsers/xiaomo-info-java/tree/master/website" target="_blank" rel="external">https://github.com/JavaUsers/xiaomo-info-java/tree/master/website</a></p>
 
       
     </div>
@@ -357,13 +356,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/06/02/package.json_scripts/">package.json常用script</a></p>
+        <p><span>本文标题:</span><a href="/2016/11/11/java_spring-boot_swagger-ui/">swagger ui和spring boot集成生成api文档</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
-        <p><span>发布时间:</span>2016-06-02, 00:00:00</p>
-        <p><span>最后更新:</span>2016-06-28, 10:49:11</p>
+        <p><span>发布时间:</span>2016-11-11, 00:00:00</p>
+        <p><span>最后更新:</span>2016-11-11, 15:33:55</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/06/02/package.json_scripts/" title="package.json常用script">http://blog.xiaomo.info/2016/06/02/package.json_scripts/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/06/02/package.json_scripts/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/11/11/java_spring-boot_swagger-ui/" title="swagger ui和spring boot集成生成api文档">http://blog.xiaomo.info/2016/11/11/java_spring-boot_swagger-ui/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/11/11/java_spring-boot_swagger-ui/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -375,16 +374,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/06/03/node_spider/">
-                    nodejs爬虫项目实战
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/06/01/npm_modules_share/">
-                    npm模块分享
+                <a href="/2016/11/08/java_spring/">
+                    spring4免费全套视频教程
                 </a>
             </div>
         
@@ -395,7 +388,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、git相关"><span class="toc-number">1.</span> <span class="toc-text">一、git相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-查看分支"><span class="toc-number">1.1.</span> <span class="toc-text">1. 查看分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-查看标签"><span class="toc-number">1.2.</span> <span class="toc-text">2. 查看标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建标签"><span class="toc-number">1.3.</span> <span class="toc-text">3. 创建标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-推送标签"><span class="toc-number">1.4.</span> <span class="toc-text">4. 推送标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-删除分支"><span class="toc-number">1.5.</span> <span class="toc-text">5. 删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-同步git"><span class="toc-number">1.6.</span> <span class="toc-text">6. 同步git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-推送更新"><span class="toc-number">1.7.</span> <span class="toc-text">7. 推送更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-提交代码"><span class="toc-number">1.8.</span> <span class="toc-text">8. 提交代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-检出代码"><span class="toc-number">1.9.</span> <span class="toc-text">9. 检出代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-删除标签"><span class="toc-number">1.10.</span> <span class="toc-text">10. 删除标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-删除己合并分支"><span class="toc-number">1.11.</span> <span class="toc-text">11. 删除己合并分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-删除所分支"><span class="toc-number">1.12.</span> <span class="toc-text">12. 删除所分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-重命名分支"><span class="toc-number">1.13.</span> <span class="toc-text">13. 重命名分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、webpack相关"><span class="toc-number">2.</span> <span class="toc-text">二、webpack相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-清空目录"><span class="toc-number">2.1.</span> <span class="toc-text">1. 清空目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-构建项目"><span class="toc-number">2.2.</span> <span class="toc-text">2. 构建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-启动项目"><span class="toc-number">2.3.</span> <span class="toc-text">3. 启动项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-测试代码"><span class="toc-number">2.4.</span> <span class="toc-text">4. 测试代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-检测测试"><span class="toc-number">2.5.</span> <span class="toc-text">5. 检测测试</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、环境"><span class="toc-number">1.</span> <span class="toc-text">一、环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-JAVA8"><span class="toc-number">1.1.</span> <span class="toc-text">1. JAVA8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-MAVEN-3-0-5"><span class="toc-number">1.2.</span> <span class="toc-text">2. MAVEN 3.0.5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-IDEA-2016-2-5"><span class="toc-number">1.3.</span> <span class="toc-text">3. IDEA 2016.2.5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-spring-boot-1-4-1"><span class="toc-number">1.4.</span> <span class="toc-text">4. spring boot 1.4.1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、相关依赖"><span class="toc-number">2.</span> <span class="toc-text">二、相关依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、配置"><span class="toc-number">3.</span> <span class="toc-text">三、配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、相关注解解读"><span class="toc-number">4.</span> <span class="toc-text">四、相关注解解读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Api"><span class="toc-number">4.1.</span> <span class="toc-text">1. @Api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-ApiOperation"><span class="toc-number">4.2.</span> <span class="toc-text">2. @ApiOperation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ApiImplicitParams"><span class="toc-number">4.3.</span> <span class="toc-text">3 @ApiImplicitParams</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-ApiImplicitParam"><span class="toc-number">4.4.</span> <span class="toc-text">4. @ApiImplicitParam</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-ApiResponses"><span class="toc-number">4.5.</span> <span class="toc-text">5. @ApiResponses</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-ApiResponse"><span class="toc-number">4.6.</span> <span class="toc-text">6. @ApiResponse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-ApiModel"><span class="toc-number">4.7.</span> <span class="toc-text">7. @ApiModel</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-ApiModelProperty"><span class="toc-number">4.8.</span> <span class="toc-text">8. @ApiModelProperty</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、-和Swagger-UI的集成"><span class="toc-number">4.9.</span> <span class="toc-text">五、 和Swagger UI的集成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、访问"><span class="toc-number">4.10.</span> <span class="toc-text">六、访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七、-项目实例"><span class="toc-number">4.11.</span> <span class="toc-text">七、 项目实例</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -426,7 +419,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"package.json常用script　| 小莫-fighting　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"swagger ui和spring boot集成生成api文档　| 小莫-fighting　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -442,7 +435,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" data-thread-key="2016/06/02/package.json_scripts/" data-title="package.json常用script" data-url="http://blog.xiaomo.info/2016/06/02/package.json_scripts/"></div>
+    <div class="ds-thread" data-thread-key="2016/11/11/java_spring-boot_swagger-ui/" data-title="swagger ui和spring boot集成生成api文档" data-url="http://blog.xiaomo.info/2016/11/11/java_spring-boot_swagger-ui/"></div>
     <script>
     var duoshuoQuery = {short_name:"xiaomoblog"};
     (function() {
@@ -471,15 +464,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/06/03/node_spider/" title="上一篇: nodejs爬虫项目实战">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/06/01/npm_modules_share/" title="下一篇: npm模块分享">
+            <a href="/2016/11/08/java_spring/" title="下一篇: spring4免费全套视频教程">
                 <i class="fa fa-angle-right"></i>
             </a>
         
