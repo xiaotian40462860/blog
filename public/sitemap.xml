@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.xiaomo.info/2016/11/08/JavaLombok/</loc>
+    
+    <lastmod>2016-11-25T07:41:41.688Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.xiaomo.info/2016/11/02/JavaSpringBootDataFormat/</loc>
     
     <lastmod>2016-11-25T07:30:17.381Z</lastmod>
@@ -446,13 +453,6 @@
     <loc>http://blog.xiaomo.info/about/index.html</loc>
     
     <lastmod>2016-11-14T07:35:33.407Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.xiaomo.info/2016/11/08/java_lombok/</loc>
-    
-    <lastmod>2016-11-08T08:16:44.202Z</lastmod>
     
   </url>
   
