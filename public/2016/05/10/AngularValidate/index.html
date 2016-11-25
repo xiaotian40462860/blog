@@ -23,7 +23,7 @@
 <meta property="og:description" content="使用angularjs的验证系统来做前端验证需要注意的一些地方">
 <meta property="og:image" content="http://static.xiaomo.info/images/angular.png">
 <meta property="og:image" content="http://static.xiaomo.info/images/validate.gif">
-<meta property="og:updated_time" content="2016-11-16T10:06:41.525Z">
+<meta property="og:updated_time" content="2016-11-25T07:29:10.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angularjs的验证系统">
 <meta name="twitter:description" content="使用angularjs的验证系统来做前端验证需要注意的一些地方">
@@ -332,17 +332,17 @@
       
           
         <p>使用angularjs的验证系统来做前端验证需要注意的一些地方<br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/angular.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、-效果图"><a href="#一、-效果图" class="headerlink" title="一、 效果图"></a>一、 效果图</h2><p> <img src="http://static.xiaomo.info/images/validate.gif" alt="angularjs验证效果图"></p>
-<h2 id="二、-要点"><a href="#二、-要点" class="headerlink" title="二、 要点"></a>二、 要点</h2><h3 id="1：form"><a href="#1：form" class="headerlink" title="1：form"></a>1：form</h3><p>给form起一个名字,并禁掉原生的验证</p>
-<h3 id="2-显示时机"><a href="#2-显示时机" class="headerlink" title="2. 显示时机"></a>2. 显示时机</h3><p>这个div是要在内容发生变化且不合法才会显示</p>
+<h3 id="一、-效果图"><a href="#一、-效果图" class="headerlink" title="一、 效果图"></a>一、 效果图</h3><p> <img src="http://static.xiaomo.info/images/validate.gif" alt="angularjs验证效果图"></p>
+<h3 id="二、-要点"><a href="#二、-要点" class="headerlink" title="二、 要点"></a>二、 要点</h3><h4 id="1：form"><a href="#1：form" class="headerlink" title="1：form"></a>1：form</h4><p>给form起一个名字,并禁掉原生的验证</p>
+<h4 id="2-显示时机"><a href="#2-显示时机" class="headerlink" title="2. 显示时机"></a>2. 显示时机</h4><p>这个div是要在内容发生变化且不合法才会显示</p>
 <figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$dirty &amp;&amp; addBlogForm.title.$invalid"</span>&gt;</div><div class="line">                 &lt;<span class="keyword">small</span> <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$error.required"</span>&gt;请输入标题内容&lt;/<span class="keyword">small</span>&gt;</div><div class="line">                 &lt;<span class="keyword">small</span> <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$error.minlength"</span>&gt;标题内容最少长度为<span class="number">3</span>&lt;/<span class="keyword">small</span>&gt;</div><div class="line">                 &lt;<span class="keyword">small</span> <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$error.maxlength"</span>&gt;标题最大长度为<span class="number">64</span>&lt;/<span class="keyword">small</span>&gt;</div><div class="line">                 &lt;<span class="keyword">small</span> <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$error.unique"</span>&gt;</div><div class="line">                     这个标题己经被用过了，请换一个标题吧</div><div class="line">                 &lt;/<span class="keyword">small</span>&gt;</div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>
-<h3 id="3-格式"><a href="#3-格式" class="headerlink" title="3. 格式"></a>3. 格式</h3><p>格式为fromName.inputName.$error.xxx   例子如上</p>
-<h3 id="4-判断"><a href="#4-判断" class="headerlink" title="4. 判断"></a>4. 判断</h3><p>将提交按钮是否可用交给ng来判断:合法的时候才可用</p>
+<h4 id="3-格式"><a href="#3-格式" class="headerlink" title="3. 格式"></a>3. 格式</h4><p>格式为fromName.inputName.$error.xxx   例子如上</p>
+<h4 id="4-判断"><a href="#4-判断" class="headerlink" title="4. 判断"></a>4. 判断</h4><p>将提交按钮是否可用交给ng来判断:合法的时候才可用</p>
 <blockquote>
 <p>代码示例</p>
 </blockquote>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;button ng-<span class="built_in">click</span>=<span class="string">"addBlog()"</span> <span class="keyword">class</span>=<span class="string">"btn btn-info"</span> ng-disabled=<span class="string">"addBlogForm.$invalid"</span>&gt;添加博客</div></pre></td></tr></table></figure>
-<h2 id="三、插件"><a href="#三、插件" class="headerlink" title="三、插件"></a>三、插件</h2><p> 以上介绍的是angularjs的原生的验证，下面是一些关于验证的扩展插件</p>
+<h3 id="三、插件"><a href="#三、插件" class="headerlink" title="三、插件"></a>三、插件</h3><p> 以上介绍的是angularjs的原生的验证，下面是一些关于验证的扩展插件</p>
 <table>
 <thead>
 <tr>
@@ -365,7 +365,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="四、-github"><a href="#四、-github" class="headerlink" title="四、 github"></a>四、 github</h2><p>附上我github的地址<br>   <a href="https://github.com/qq83387856" target="_blank" rel="external">https://github.com/qq83387856</a></p>
+<h3 id="四、-github"><a href="#四、-github" class="headerlink" title="四、 github"></a>四、 github</h3><p>附上我github的地址<br>   <a href="https://github.com/qq83387856" target="_blank" rel="external">https://github.com/qq83387856</a></p>
 
       
     </div>
@@ -377,7 +377,7 @@
         <p><span>本文标题:</span><a href="/2016/05/10/AngularValidate/">angularjs的验证系统</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-05-10, 00:00:00</p>
-        <p><span>最后更新:</span>2016-11-16, 18:06:41</p>
+        <p><span>最后更新:</span>2016-11-25, 15:29:10</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/05/10/AngularValidate/" title="angularjs的验证系统">http://blog.xiaomo.info/2016/05/10/AngularValidate/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/05/10/AngularValidate/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -412,7 +412,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-效果图"><span class="toc-number">1.</span> <span class="toc-text">一、 效果图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、-要点"><span class="toc-number">2.</span> <span class="toc-text">二、 要点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1：form"><span class="toc-number">2.1.</span> <span class="toc-text">1：form</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-显示时机"><span class="toc-number">2.2.</span> <span class="toc-text">2. 显示时机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-格式"><span class="toc-number">2.3.</span> <span class="toc-text">3. 格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-判断"><span class="toc-number">2.4.</span> <span class="toc-text">4. 判断</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、插件"><span class="toc-number">3.</span> <span class="toc-text">三、插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、-github"><span class="toc-number">4.</span> <span class="toc-text">四、 github</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、-效果图"><span class="toc-number">1.</span> <span class="toc-text">一、 效果图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-要点"><span class="toc-number">2.</span> <span class="toc-text">二、 要点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1：form"><span class="toc-number">2.1.</span> <span class="toc-text">1：form</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-显示时机"><span class="toc-number">2.2.</span> <span class="toc-text">2. 显示时机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-格式"><span class="toc-number">2.3.</span> <span class="toc-text">3. 格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-判断"><span class="toc-number">2.4.</span> <span class="toc-text">4. 判断</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、插件"><span class="toc-number">3.</span> <span class="toc-text">三、插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、-github"><span class="toc-number">4.</span> <span class="toc-text">四、 github</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,

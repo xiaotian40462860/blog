@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="设计模式是一套反复使用的、思想成熟、经过分类和无数实战总结出来的。使用设计模式是为了让代码可重用、可扩展、可解藕、更容易让人理解并且有保证代码的可靠性。设计模式能够真正工程化，设计模式是软件工程的基石脉络，如同大厦的结构一样。只有夯实基础结构，才能盖好健壮的大楼。 也是我们迈向高级开发人员必经的一步。">
 <meta property="og:image" content="http://static.xiaomo.info/images/javascript.png">
-<meta property="og:updated_time" content="2016-11-17T01:27:25.643Z">
+<meta property="og:updated_time" content="2016-11-25T07:12:23.446Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript设计模式">
 <meta name="twitter:description" content="设计模式是一套反复使用的、思想成熟、经过分类和无数实战总结出来的。使用设计模式是为了让代码可重用、可扩展、可解藕、更容易让人理解并且有保证代码的可靠性。设计模式能够真正工程化，设计模式是软件工程的基石脉络，如同大厦的结构一样。只有夯实基础结构，才能盖好健壮的大楼。 也是我们迈向高级开发人员必经的一步。">
@@ -331,76 +331,76 @@
       
           
         <p>设计模式是一套反复使用的、思想成熟、经过分类和无数实战总结出来的。使用设计模式是为了让代码可重用、可扩展、可解藕、更容易让人理解并且有保证代码的可靠性。设计模式能够真正工程化，设计模式是软件工程的基石脉络，如同大厦的结构一样。只有夯实基础结构，才能盖好健壮的大楼。 也是我们迈向高级开发人员必经的一步。<br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/javascript.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、设计原则"><a href="#一、设计原则" class="headerlink" title="一、设计原则"></a>一、设计原则</h2><h3 id="1-开闭原则"><a href="#1-开闭原则" class="headerlink" title="1. 开闭原则"></a>1. 开闭原则</h3><p>对扩展开发，对修改关闭。</p>
-<h3 id="2-里氏替换原则"><a href="#2-里氏替换原则" class="headerlink" title="2.  里氏替换原则"></a>2.  里氏替换原则</h3><p>子类继承父类，但单独调用完全可以运行。</p>
-<h3 id="3-依赖倒转原则"><a href="#3-依赖倒转原则" class="headerlink" title="3. 依赖倒转原则"></a>3. 依赖倒转原则</h3><p>引用一个对象，如果这个对象有低层类型，直接引用低层。</p>
-<h3 id="4-接口隔离原则"><a href="#4-接口隔离原则" class="headerlink" title="4. 接口隔离原则"></a>4. 接口隔离原则</h3><p>每一个接口应该是一种角色。</p>
-<h3 id="5-合成-聚合复用原则"><a href="#5-合成-聚合复用原则" class="headerlink" title="5. 合成/聚合复用原则"></a>5. 合成/聚合复用原则</h3><p>新的对象应使用一些己有的对象，使之成为新对象的一部分。</p>
-<h3 id="6-迪米特原则"><a href="#6-迪米特原则" class="headerlink" title="6. 迪米特原则"></a>6. 迪米特原则</h3><p>一个对象在对其他对象尽可能少的了解。</p>
-<h2 id="二、-设计模式"><a href="#二、-设计模式" class="headerlink" title="二、 设计模式"></a>二、 设计模式</h2><h3 id="1-原型模式"><a href="#1-原型模式" class="headerlink" title="1. 原型模式"></a>1. 原型模式</h3><p>概念：和javascript的prototype不同<br>prototype是指原型实例(new)指向创建对象的种类，并且通过拷贝这些原型创建新的对象。如克隆</p>
+<h3 id="一、设计原则"><a href="#一、设计原则" class="headerlink" title="一、设计原则"></a>一、设计原则</h3><h4 id="1-开闭原则"><a href="#1-开闭原则" class="headerlink" title="1. 开闭原则"></a>1. 开闭原则</h4><p>对扩展开发，对修改关闭。</p>
+<h4 id="2-里氏替换原则"><a href="#2-里氏替换原则" class="headerlink" title="2.  里氏替换原则"></a>2.  里氏替换原则</h4><p>子类继承父类，但单独调用完全可以运行。</p>
+<h4 id="3-依赖倒转原则"><a href="#3-依赖倒转原则" class="headerlink" title="3. 依赖倒转原则"></a>3. 依赖倒转原则</h4><p>引用一个对象，如果这个对象有低层类型，直接引用低层。</p>
+<h4 id="4-接口隔离原则"><a href="#4-接口隔离原则" class="headerlink" title="4. 接口隔离原则"></a>4. 接口隔离原则</h4><p>每一个接口应该是一种角色。</p>
+<h4 id="5-合成-聚合复用原则"><a href="#5-合成-聚合复用原则" class="headerlink" title="5. 合成/聚合复用原则"></a>5. 合成/聚合复用原则</h4><p>新的对象应使用一些己有的对象，使之成为新对象的一部分。</p>
+<h4 id="6-迪米特原则"><a href="#6-迪米特原则" class="headerlink" title="6. 迪米特原则"></a>6. 迪米特原则</h4><p>一个对象在对其他对象尽可能少的了解。</p>
+<h3 id="二、-设计模式"><a href="#二、-设计模式" class="headerlink" title="二、 设计模式"></a>二、 设计模式</h3><h4 id="1-原型模式"><a href="#1-原型模式" class="headerlink" title="1. 原型模式"></a>1. 原型模式</h4><p>概念：和javascript的prototype不同<br>prototype是指原型实例(new)指向创建对象的种类，并且通过拷贝这些原型创建新的对象。如克隆</p>
 <p>作用：<br>原型对象本身就是有效的利用了每个构造器创建的对象</p>
 <p>注意事项：<br>注意深拷贝和浅拷贝，以免出现引用问题。</p>
 <p>代码实战和总结：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//声明一个对象</span></div><div class="line">  <span class="keyword">var</span> myObj = &#123;</div><div class="line">    <span class="attr">str</span>:<span class="string">'myStr'</span>,</div><div class="line">    <span class="attr">num</span>:<span class="number">1</span>,</div><div class="line">    <span class="attr">myArr</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</div><div class="line">    <span class="attr">myObj</span>:&#123;</div><div class="line">      <span class="attr">innerObj</span>:&#123;</div><div class="line">        <span class="attr">test</span>:<span class="number">25</span></div><div class="line">      &#125;,</div><div class="line">      <span class="attr">innerStr</span>:<span class="string">'innerStr'</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line"><span class="comment">//拷贝对象的方法（浅拷贝）会影响原型</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">clone</span> (<span class="params">obj</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> ret = &#123;&#125;;</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> k <span class="keyword">in</span> obj)&#123;</div><div class="line">        ret[k]= obj[k];</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">return</span> ret;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">//深拷贝  使用Object.create</span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">result</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line">  result.prototype = <span class="built_in">Object</span>.create(myObj);</div><div class="line">  <span class="keyword">var</span> _result = <span class="keyword">new</span> result();</div><div class="line"></div><div class="line">  <span class="comment">//执行</span></div><div class="line">  <span class="keyword">var</span> result = clone(myObj);</div><div class="line">  result.myObj.innerStr = <span class="string">'outStr'</span>;</div><div class="line">  <span class="built_in">console</span>.log(result);</div></pre></td></tr></table></figure>
 <p>Object.create(prototype,optionalDescriptorObjects)</p>
-<h3 id="2-策略模式"><a href="#2-策略模式" class="headerlink" title="2. 策略模式"></a>2. 策略模式</h3><p>概念：<br>策略模式定义了算法家族，分别封装起来，让它们之间可以相互替换，此模式让算法的变化不会影响到使用算法的客户。（目标一致，顺序不同，例如：田忌赛马）</p>
+<h4 id="2-策略模式"><a href="#2-策略模式" class="headerlink" title="2. 策略模式"></a>2. 策略模式</h4><p>概念：<br>策略模式定义了算法家族，分别封装起来，让它们之间可以相互替换，此模式让算法的变化不会影响到使用算法的客户。（目标一致，顺序不同，例如：田忌赛马）</p>
 <p>作用：<br>所有的这些算法都是做相同的事情，只是实现不同。<br>以相同的方法调用所有的方法，减少了各种算法在和使用算法类之间的耦合。<br>单独定义了算法类，也方便单元测试。</p>
 <p>注意事项：<br>不仅可以封装算法，也可以封装几乎任何类型的规则，是要在分析过程中需要在不同时间应用不同的规则， 可以考虑使用策略模式</p>
 <p>代码实战和总结</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//普通的验证</span></div><div class="line">  <span class="keyword">var</span> $input = $(<span class="string">'input'</span>).val();</div><div class="line">  <span class="keyword">var</span> val = &#123;</div><div class="line">    isEmpty:<span class="function"><span class="keyword">function</span><span class="params">(argument)</span></span>&#123;</div><div class="line">      <span class="comment">// code</span></div><div class="line">    &#125;</div><div class="line">    isTel:<span class="function"><span class="keyword">function</span><span class="params">(argument)</span></span>&#123;</div><div class="line">      <span class="comment">// code</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">var</span> ise = val.isEmpty($input);</div><div class="line">  <span class="keyword">var</span> isTel = val.isTel($input)</div><div class="line">  <span class="keyword">if</span>(ise &amp;&amp; isTel)&#123;</div><div class="line">    alert(<span class="string">'ok'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line"><span class="comment">// 挂载到$fn.val上   典型的策略模式验证</span></div><div class="line">  $input(&#123;</div><div class="line">    isEmpty:<span class="keyword">false</span>,</div><div class="line">    isTel:<span class="keyword">True</span></div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
-<h3 id="3-组合模式"><a href="#3-组合模式" class="headerlink" title="3. 组合模式"></a>3. 组合模式</h3><p>概念：</p>
+<h4 id="3-组合模式"><a href="#3-组合模式" class="headerlink" title="3. 组合模式"></a>3. 组合模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结：</p>
-<h3 id="4-外观模式"><a href="#4-外观模式" class="headerlink" title="4. 外观模式"></a>4. 外观模式</h3><p>概念：</p>
+<h4 id="4-外观模式"><a href="#4-外观模式" class="headerlink" title="4. 外观模式"></a>4. 外观模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="5-迭代器模式"><a href="#5-迭代器模式" class="headerlink" title="5. 迭代器模式"></a>5. 迭代器模式</h3><p>概念：</p>
+<h4 id="5-迭代器模式"><a href="#5-迭代器模式" class="headerlink" title="5. 迭代器模式"></a>5. 迭代器模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="6-命令模式"><a href="#6-命令模式" class="headerlink" title="6. 命令模式"></a>6. 命令模式</h3><p>概念：</p>
+<h4 id="6-命令模式"><a href="#6-命令模式" class="headerlink" title="6. 命令模式"></a>6. 命令模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="7-代理模式"><a href="#7-代理模式" class="headerlink" title="7. 代理模式"></a>7. 代理模式</h3><p>概念：</p>
+<h4 id="7-代理模式"><a href="#7-代理模式" class="headerlink" title="7. 代理模式"></a>7. 代理模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="8-适配器模式"><a href="#8-适配器模式" class="headerlink" title="8. 适配器模式"></a>8. 适配器模式</h3><p>概念：</p>
+<h4 id="8-适配器模式"><a href="#8-适配器模式" class="headerlink" title="8. 适配器模式"></a>8. 适配器模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="9-责任链模式"><a href="#9-责任链模式" class="headerlink" title="9. 责任链模式"></a>9. 责任链模式</h3><p>概念：</p>
+<h4 id="9-责任链模式"><a href="#9-责任链模式" class="headerlink" title="9. 责任链模式"></a>9. 责任链模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="10-工厂模式"><a href="#10-工厂模式" class="headerlink" title="10. 工厂模式"></a>10. 工厂模式</h3><p>概念：</p>
+<h4 id="10-工厂模式"><a href="#10-工厂模式" class="headerlink" title="10. 工厂模式"></a>10. 工厂模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="11-单例模式"><a href="#11-单例模式" class="headerlink" title="11. 单例模式"></a>11. 单例模式</h3><p>概念：</p>
+<h4 id="11-单例模式"><a href="#11-单例模式" class="headerlink" title="11. 单例模式"></a>11. 单例模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="12-观察者模式"><a href="#12-观察者模式" class="headerlink" title="12. 观察者模式"></a>12. 观察者模式</h3><p>概念：</p>
+<h4 id="12-观察者模式"><a href="#12-观察者模式" class="headerlink" title="12. 观察者模式"></a>12. 观察者模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="13-中介者模式"><a href="#13-中介者模式" class="headerlink" title="13. 中介者模式"></a>13. 中介者模式</h3><p>概念：</p>
+<h4 id="13-中介者模式"><a href="#13-中介者模式" class="headerlink" title="13. 中介者模式"></a>13. 中介者模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="14-装饰者模式"><a href="#14-装饰者模式" class="headerlink" title="14. 装饰者模式"></a>14. 装饰者模式</h3><p>概念：</p>
+<h4 id="14-装饰者模式"><a href="#14-装饰者模式" class="headerlink" title="14. 装饰者模式"></a>14. 装饰者模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="15-建造者模式"><a href="#15-建造者模式" class="headerlink" title="15. 建造者模式"></a>15. 建造者模式</h3><p>概念：</p>
+<h4 id="15-建造者模式"><a href="#15-建造者模式" class="headerlink" title="15. 建造者模式"></a>15. 建造者模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
-<h3 id="16-构造函数模式"><a href="#16-构造函数模式" class="headerlink" title="16. 构造函数模式"></a>16. 构造函数模式</h3><p>概念：</p>
+<h4 id="16-构造函数模式"><a href="#16-构造函数模式" class="headerlink" title="16. 构造函数模式"></a>16. 构造函数模式</h4><p>概念：</p>
 <p>作用：</p>
 <p>注意事项：</p>
 <p>代码实战和总结</p>
@@ -415,7 +415,7 @@
         <p><span>本文标题:</span><a href="/2016/07/02/JavascriptDesignPattern/">javascript设计模式</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-07-02, 00:00:00</p>
-        <p><span>最后更新:</span>2016-11-17, 09:27:25</p>
+        <p><span>最后更新:</span>2016-11-25, 15:12:23</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/07/02/JavascriptDesignPattern/" title="javascript设计模式">http://blog.xiaomo.info/2016/07/02/JavascriptDesignPattern/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/07/02/JavascriptDesignPattern/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -450,7 +450,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、设计原则"><span class="toc-number">1.</span> <span class="toc-text">一、设计原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-开闭原则"><span class="toc-number">1.1.</span> <span class="toc-text">1. 开闭原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-里氏替换原则"><span class="toc-number">1.2.</span> <span class="toc-text">2.  里氏替换原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-依赖倒转原则"><span class="toc-number">1.3.</span> <span class="toc-text">3. 依赖倒转原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-接口隔离原则"><span class="toc-number">1.4.</span> <span class="toc-text">4. 接口隔离原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-合成-聚合复用原则"><span class="toc-number">1.5.</span> <span class="toc-text">5. 合成/聚合复用原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-迪米特原则"><span class="toc-number">1.6.</span> <span class="toc-text">6. 迪米特原则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、-设计模式"><span class="toc-number">2.</span> <span class="toc-text">二、 设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-原型模式"><span class="toc-number">2.1.</span> <span class="toc-text">1. 原型模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-策略模式"><span class="toc-number">2.2.</span> <span class="toc-text">2. 策略模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-组合模式"><span class="toc-number">2.3.</span> <span class="toc-text">3. 组合模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-外观模式"><span class="toc-number">2.4.</span> <span class="toc-text">4. 外观模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-迭代器模式"><span class="toc-number">2.5.</span> <span class="toc-text">5. 迭代器模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-命令模式"><span class="toc-number">2.6.</span> <span class="toc-text">6. 命令模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-代理模式"><span class="toc-number">2.7.</span> <span class="toc-text">7. 代理模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-适配器模式"><span class="toc-number">2.8.</span> <span class="toc-text">8. 适配器模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-责任链模式"><span class="toc-number">2.9.</span> <span class="toc-text">9. 责任链模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-工厂模式"><span class="toc-number">2.10.</span> <span class="toc-text">10. 工厂模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-单例模式"><span class="toc-number">2.11.</span> <span class="toc-text">11. 单例模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-观察者模式"><span class="toc-number">2.12.</span> <span class="toc-text">12. 观察者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-中介者模式"><span class="toc-number">2.13.</span> <span class="toc-text">13. 中介者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-装饰者模式"><span class="toc-number">2.14.</span> <span class="toc-text">14. 装饰者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-建造者模式"><span class="toc-number">2.15.</span> <span class="toc-text">15. 建造者模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-构造函数模式"><span class="toc-number">2.16.</span> <span class="toc-text">16. 构造函数模式</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、设计原则"><span class="toc-number">1.</span> <span class="toc-text">一、设计原则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-开闭原则"><span class="toc-number">1.1.</span> <span class="toc-text">1. 开闭原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-里氏替换原则"><span class="toc-number">1.2.</span> <span class="toc-text">2.  里氏替换原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-依赖倒转原则"><span class="toc-number">1.3.</span> <span class="toc-text">3. 依赖倒转原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-接口隔离原则"><span class="toc-number">1.4.</span> <span class="toc-text">4. 接口隔离原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-合成-聚合复用原则"><span class="toc-number">1.5.</span> <span class="toc-text">5. 合成/聚合复用原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-迪米特原则"><span class="toc-number">1.6.</span> <span class="toc-text">6. 迪米特原则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-设计模式"><span class="toc-number">2.</span> <span class="toc-text">二、 设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-原型模式"><span class="toc-number">2.1.</span> <span class="toc-text">1. 原型模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-策略模式"><span class="toc-number">2.2.</span> <span class="toc-text">2. 策略模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-组合模式"><span class="toc-number">2.3.</span> <span class="toc-text">3. 组合模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-外观模式"><span class="toc-number">2.4.</span> <span class="toc-text">4. 外观模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-迭代器模式"><span class="toc-number">2.5.</span> <span class="toc-text">5. 迭代器模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-命令模式"><span class="toc-number">2.6.</span> <span class="toc-text">6. 命令模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-代理模式"><span class="toc-number">2.7.</span> <span class="toc-text">7. 代理模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-适配器模式"><span class="toc-number">2.8.</span> <span class="toc-text">8. 适配器模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-责任链模式"><span class="toc-number">2.9.</span> <span class="toc-text">9. 责任链模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-工厂模式"><span class="toc-number">2.10.</span> <span class="toc-text">10. 工厂模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-单例模式"><span class="toc-number">2.11.</span> <span class="toc-text">11. 单例模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-观察者模式"><span class="toc-number">2.12.</span> <span class="toc-text">12. 观察者模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-中介者模式"><span class="toc-number">2.13.</span> <span class="toc-text">13. 中介者模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#14-装饰者模式"><span class="toc-number">2.14.</span> <span class="toc-text">14. 装饰者模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#15-建造者模式"><span class="toc-number">2.15.</span> <span class="toc-text">15. 建造者模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#16-构造函数模式"><span class="toc-number">2.16.</span> <span class="toc-text">16. 构造函数模式</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn,

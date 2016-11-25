@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://moxfive.xyz/resources/font-a3.png">
 <meta property="og:image" content="http://moxfive.xyz/resources/font-a4.png">
 <meta property="og:image" content="http://moxfive.xyz/resources/font-icon.png">
-<meta property="og:updated_time" content="2016-11-17T01:23:00.280Z">
+<meta property="og:updated_time" content="2016-11-25T07:21:23.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS font-family 网页字体使用小结">
 <meta name="twitter:description" content="前言一直到最近才开始调整博客的字体，之前都是全站微软雅黑了事。慢慢调整后发现 font-family 这个属性相关的知识还是不少的，整理一下常用的部分，分享于此。">
@@ -342,8 +342,8 @@
         <p></p><h2 id="intro">前言</h2>一直到最近才开始调整博客的字体，之前都是全站微软雅黑了事。慢慢调整后发现 font-family 这个属性相关的知识还是不少的，整理一下常用的部分，分享于此。<p></p>
 <a id="more"></a>
 <p><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/life.png" alt="点击访问小莫的github"></a></p>
-<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><h3 id="使用语法"><a href="#使用语法" class="headerlink" title="使用语法"></a>使用语法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">font-family</span>: 字体名1, 字体名2, 字体名<span class="selector-tag">n</span>, 字体系列名;</div><div class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">Verdana</span>, <span class="selector-tag">Helvetica</span>, "<span class="selector-tag">Microsoft</span> <span class="selector-tag">YaHei</span>", <span class="selector-tag">Arial</span>;</div></pre></td></tr></table></figure>
-<h3 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h3><blockquote>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><h4 id="使用语法"><a href="#使用语法" class="headerlink" title="使用语法"></a>使用语法</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">font-family</span>: 字体名1, 字体名2, 字体名<span class="selector-tag">n</span>, 字体系列名;</div><div class="line"><span class="selector-tag">font-family</span>: <span class="selector-tag">Verdana</span>, <span class="selector-tag">Helvetica</span>, "<span class="selector-tag">Microsoft</span> <span class="selector-tag">YaHei</span>", <span class="selector-tag">Arial</span>;</div></pre></td></tr></table></figure>
+<h4 id="语法说明"><a href="#语法说明" class="headerlink" title="语法说明"></a>语法说明</h4><blockquote>
 <ol>
 <li>系统将选择列表中最先可用的字体来显示文字;</li>
 <li>因为规则1，通常在最末添加一个 generic-family 字体系列名，保证文字获得相似的显示效果;</li>
@@ -352,12 +352,12 @@
 <li>中文字体建议也是用其对应英文字体名，如”微软雅黑”为”Microsoft YaHei”，以提高编码兼容性。</li>
 </ol>
 </blockquote>
-<h2 id="常见字体系列"><a href="#常见字体系列" class="headerlink" title="常见字体系列"></a>常见字体系列</h2><h3 id="Serif-衬线字体"><a href="#Serif-衬线字体" class="headerlink" title="Serif 衬线字体"></a>Serif 衬线字体</h3><ul>
+<h3 id="常见字体系列"><a href="#常见字体系列" class="headerlink" title="常见字体系列"></a>常见字体系列</h3><h4 id="Serif-衬线字体"><a href="#Serif-衬线字体" class="headerlink" title="Serif 衬线字体"></a>Serif 衬线字体</h4><ul>
 <li>Times New Roman, Georgia 和宋体都是很常见的衬线字体；</li>
 <li>特征: 文字笔划的开始或结束处有额外的装饰，笔划有粗细之分。</li>
 </ul>
 <p><img src="http://moxfive.xyz/resources/serif.png" alt="serif"></p>
-<h3 id="Sans-serif-无衬线字体"><a href="#Sans-serif-无衬线字体" class="headerlink" title="Sans-serif 无衬线字体"></a>Sans-serif 无衬线字体</h3><ul>
+<h4 id="Sans-serif-无衬线字体"><a href="#Sans-serif-无衬线字体" class="headerlink" title="Sans-serif 无衬线字体"></a>Sans-serif 无衬线字体</h4><ul>
 <li>Arial, Verdana, Tahoma, 微软雅黑都是很常见的无衬线字体;</li>
 <li>说明: <code>sans-</code>源于法语前缀，意思为<code>没有</code>。Sans-serif 也就是指无衬线字体。</li>
 <li>特征: 字体比较圆滑，笔划较为均匀。</li>
@@ -366,7 +366,7 @@
 <ul>
 <li>字体选用: 有种说法是正文多用衬线字体，易于区分；标题多用无衬线字体。不过这个也看个人喜好，我更习惯正文用无衬线字体。如果实在不知道怎么选，随便找一个自己看着舒服的网站，套用它的字体样式好了。</li>
 </ul>
-<h3 id="Monospace-等宽字体"><a href="#Monospace-等宽字体" class="headerlink" title="Monospace 等宽字体"></a>Monospace 等宽字体</h3><ul>
+<h4 id="Monospace-等宽字体"><a href="#Monospace-等宽字体" class="headerlink" title="Monospace 等宽字体"></a>Monospace 等宽字体</h4><ul>
 <li>Courier New, Consolas, Menlo 都是比较常见的等宽字体;</li>
 <li>特征: 字母、数字、空格以及其他符号所占宽度都一致。识别度高，易于对齐和定位，通常用于显示代码。</li>
 </ul>
@@ -374,13 +374,13 @@
 <ul>
 <li>一个优秀的代码字体除了等宽外，还应该能较好地区分出<code>0 o O i l 1 I &quot;&quot; &#39;&#39; [] () {}</code> 等字符。</li>
 </ul>
-<h3 id="Cursive-手写体"><a href="#Cursive-手写体" class="headerlink" title="Cursive 手写体"></a>Cursive 手写体</h3><ul>
+<h4 id="Cursive-手写体"><a href="#Cursive-手写体" class="headerlink" title="Cursive 手写体"></a>Cursive 手写体</h4><ul>
 <li>Comic Sans, Author, 华文行楷都是比较常见的仿手写体;</li>
 <li>特征: 模仿人的手写体，笔划圆滑或者有连笔等装饰。英文的花体，中文的行书草书等都属于此类。</li>
 </ul>
 <p><img src="http://moxfive.xyz/resources/cursive.png" alt="cursive"></p>
-<h2 id="获取字体名称"><a href="#获取字体名称" class="headerlink" title="获取字体名称"></a>获取字体名称</h2><p>同一个字体在不同系统和应用中可能会显示为不同名字，但其内部一般有一个不变的英文名字。CSS font-family 需要引用的就是字体的内部名字。</p>
-<h3 id="本地字体"><a href="#本地字体" class="headerlink" title="本地字体"></a>本地字体</h3><ul>
+<h3 id="获取字体名称"><a href="#获取字体名称" class="headerlink" title="获取字体名称"></a>获取字体名称</h3><p>同一个字体在不同系统和应用中可能会显示为不同名字，但其内部一般有一个不变的英文名字。CSS font-family 需要引用的就是字体的内部名字。</p>
+<h4 id="本地字体"><a href="#本地字体" class="headerlink" title="本地字体"></a>本地字体</h4><ul>
 <li>Win 上通过搜索或控制面板进入字体文件夹，然后双击字体查看字体名称;</li>
 <li>通过软件，如记事本、Office 等也可以查看字体名字:</li>
 </ul>
@@ -389,7 +389,7 @@
 <li>Mac 上搜索打开字体册即可，中间一栏显示的就是字体名称:</li>
 </ul>
 <p><img src="http://moxfive.xyz/resources/font-a2.png" alt="font-a2"></p>
-<h3 id="网页字体"><a href="#网页字体" class="headerlink" title="网页字体"></a>网页字体</h3><ul>
+<h4 id="网页字体"><a href="#网页字体" class="headerlink" title="网页字体"></a>网页字体</h4><ul>
 <li>审查元素，查看生效的 font-family:</li>
 </ul>
 <p><img src="http://moxfive.xyz/resources/font-a3.png" alt="font-a3"></p>
@@ -397,9 +397,9 @@
 <li>通过 Chrome 插件 <a href="http://chengyinliu.com/whatfont.html" target="_blank" rel="external">WhatFont</a>:</li>
 </ul>
 <p><img src="http://moxfive.xyz/resources/font-a4.png" alt="font-a4"></p>
-<h2 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h2><p>使用<code>@font-face</code>引入字体后，可以像使用文字那样，无损的控制图标的大小，颜色等样式。常见的有 Webdings，Wingdings, <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a>.</p>
+<h3 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h3><p>使用<code>@font-face</code>引入字体后，可以像使用文字那样，无损的控制图标的大小，颜色等样式。常见的有 Webdings，Wingdings, <a href="http://fontawesome.io/" target="_blank" rel="external">Font Awesome</a>.</p>
 <p><img src="http://moxfive.xyz/resources/font-icon.png" alt="font-icon"></p>
-<h2 id="备用记录"><a href="#备用记录" class="headerlink" title="备用记录"></a>备用记录</h2><h3 id="字体配置"><a href="#字体配置" class="headerlink" title="字体配置"></a>字体配置</h3><ul>
+<h3 id="备用记录"><a href="#备用记录" class="headerlink" title="备用记录"></a>备用记录</h3><h4 id="字体配置"><a href="#字体配置" class="headerlink" title="字体配置"></a>字体配置</h4><ul>
 <li>下面是自己目前比较常用的字体配置，通常按系列设置为 CSS 预处理器的变量，方便调用。</li>
 </ul>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//中文</span></div><div class="line"><span class="attribute">font</span>-chs = <span class="string">"Microsoft YaHei"</span>, <span class="string">"Hiragino Sans GB"</span>, <span class="string">"WenQuanYi Micro Hei"</span></div><div class="line"><span class="comment">//无衬线字体 sans-serif</span></div><div class="line"><span class="attribute">font</span>-sans = Verdana, <span class="string">"Helvetica Neue"</span>, Helvetica, Tahoma, Arial</div><div class="line"><span class="comment">//衬线字体 serif</span></div><div class="line"><span class="attribute">font</span>-serif = Times, Georgia</div><div class="line"><span class="comment">//等宽字体 monospace</span></div><div class="line"><span class="attribute">font</span>-mono = Menlo, Consolas, <span class="string">"Source Code Pro"</span>, Inconsolata, Monaco, <span class="string">"Courier New"</span></div></pre></td></tr></table></figure>
@@ -637,7 +637,7 @@
         <p><span>本文标题:</span><a href="/2016/06/03/CssFontFamily/">CSS font-family 网页字体使用小结</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-06-03, 00:33:55</p>
-        <p><span>最后更新:</span>2016-11-17, 09:23:00</p>
+        <p><span>最后更新:</span>2016-11-25, 15:21:23</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/06/03/CssFontFamily/" title="CSS font-family 网页字体使用小结">http://blog.xiaomo.info/2016/06/03/CssFontFamily/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/06/03/CssFontFamily/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -672,7 +672,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本用法"><span class="toc-number">2.</span> <span class="toc-text">基本用法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用语法"><span class="toc-number">2.1.</span> <span class="toc-text">使用语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法说明"><span class="toc-number">2.2.</span> <span class="toc-text">语法说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见字体系列"><span class="toc-number">3.</span> <span class="toc-text">常见字体系列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Serif-衬线字体"><span class="toc-number">3.1.</span> <span class="toc-text">Serif 衬线字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sans-serif-无衬线字体"><span class="toc-number">3.2.</span> <span class="toc-text">Sans-serif 无衬线字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Monospace-等宽字体"><span class="toc-number">3.3.</span> <span class="toc-text">Monospace 等宽字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cursive-手写体"><span class="toc-number">3.4.</span> <span class="toc-text">Cursive 手写体</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获取字体名称"><span class="toc-number">4.</span> <span class="toc-text">获取字体名称</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地字体"><span class="toc-number">4.1.</span> <span class="toc-text">本地字体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网页字体"><span class="toc-number">4.2.</span> <span class="toc-text">网页字体</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字体图标"><span class="toc-number">5.</span> <span class="toc-text">字体图标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#备用记录"><span class="toc-number">6.</span> <span class="toc-text">备用记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字体配置"><span class="toc-number">6.1.</span> <span class="toc-text">字体配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体英文名"><span class="toc-number">6.2.</span> <span class="toc-text">字体英文名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">7.</span> <span class="toc-text">相关链接</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#intro"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本用法"><span class="toc-number">1.1.</span> <span class="toc-text">基本用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用语法"><span class="toc-number">1.1.1.</span> <span class="toc-text">使用语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#语法说明"><span class="toc-number">1.1.2.</span> <span class="toc-text">语法说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见字体系列"><span class="toc-number">1.2.</span> <span class="toc-text">常见字体系列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Serif-衬线字体"><span class="toc-number">1.2.1.</span> <span class="toc-text">Serif 衬线字体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sans-serif-无衬线字体"><span class="toc-number">1.2.2.</span> <span class="toc-text">Sans-serif 无衬线字体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Monospace-等宽字体"><span class="toc-number">1.2.3.</span> <span class="toc-text">Monospace 等宽字体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cursive-手写体"><span class="toc-number">1.2.4.</span> <span class="toc-text">Cursive 手写体</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取字体名称"><span class="toc-number">1.3.</span> <span class="toc-text">获取字体名称</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#本地字体"><span class="toc-number">1.3.1.</span> <span class="toc-text">本地字体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网页字体"><span class="toc-number">1.3.2.</span> <span class="toc-text">网页字体</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体图标"><span class="toc-number">1.4.</span> <span class="toc-text">字体图标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#备用记录"><span class="toc-number">1.5.</span> <span class="toc-text">备用记录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字体配置"><span class="toc-number">1.5.1.</span> <span class="toc-text">字体配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体英文名"><span class="toc-number">1.6.</span> <span class="toc-text">字体英文名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关链接"><span class="toc-number">2.</span> <span class="toc-text">相关链接</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,

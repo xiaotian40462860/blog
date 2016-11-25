@@ -24,7 +24,7 @@ favicon: http://static.xiaomo.info/images/favicon.ico
 ## RSS requires a plugin to take effect | 使用 RSS 需先安装对应插件
 ## https://github.com/hexojs/hexo-generator-feed
 subnav:
-  github: "https://github.com/qq83387856"
+  github: "https://github.com/syoubaku"
   zhihu: "https://www.zhihu.com/people/hupengbest"
   QQ: "http://wpa.qq.com/msgrd?v=3&uin=83387856&site=qq&menu=yes"
   weibo: "http://weibo.com/234129952"

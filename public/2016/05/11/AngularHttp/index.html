@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="因为我在使用angularjs做异步删除数据的时候遇到了一些问题，所以把这些问题记录下面供大家参考，也加深自己的印象。">
 <meta property="og:image" content="http://static.xiaomo.info/images/angular.png">
-<meta property="og:updated_time" content="2016-11-16T10:06:41.403Z">
+<meta property="og:updated_time" content="2016-11-25T07:29:10.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用angularjs的$http异步删除数据">
 <meta name="twitter:description" content="因为我在使用angularjs做异步删除数据的时候遇到了一些问题，所以把这些问题记录下面供大家参考，也加深自己的印象。">
@@ -333,14 +333,14 @@
         <p>因为我在使用angularjs做异步删除数据的时候遇到了一些问题，所以把这些问题记录下面供大家参考，也加深自己的印象。</p>
 <a id="more"></a>
 <p><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/angular.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>有人会说删除这东西有什么可讲的，写个删除的service，controller调用一下不就完了。<br>嗯…看起来是这样，但是具体实现起来真的有这么简单吗？首先有以下几个坑</p>
+<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>有人会说删除这东西有什么可讲的，写个删除的service，controller调用一下不就完了。<br>嗯…看起来是这样，但是具体实现起来真的有这么简单吗？首先有以下几个坑</p>
 <ul>
 <li>怎么确定数据是否删除成功？</li>
 <li>怎么同步视图的数据库的内容？</li>
 </ul>
-<h2 id="二、-思路"><a href="#二、-思路" class="headerlink" title="二、 思路"></a>二、 思路</h2><h3 id="1-实现方式一"><a href="#1-实现方式一" class="headerlink" title="1.实现方式一"></a>1.实现方式一</h3><p>删除数据库中对应的内容,然后将$scope中的对应的内容splice</p>
-<h3 id="2-实现方式二"><a href="#2-实现方式二" class="headerlink" title="2.实现方式二"></a>2.实现方式二</h3><p>删除数据库中对应的内容，然后再reload一下数据(也就是再调用一次查询方法，这种消耗可想而知，并且还要保证先删除数据再查询)</p>
-<h2 id="三、-具体实现方式"><a href="#三、-具体实现方式" class="headerlink" title="三、 具体实现方式"></a>三、 具体实现方式</h2><blockquote>
+<h3 id="二、-思路"><a href="#二、-思路" class="headerlink" title="二、 思路"></a>二、 思路</h3><h4 id="1-实现方式一"><a href="#1-实现方式一" class="headerlink" title="1.实现方式一"></a>1.实现方式一</h4><p>删除数据库中对应的内容,然后将$scope中的对应的内容splice</p>
+<h4 id="2-实现方式二"><a href="#2-实现方式二" class="headerlink" title="2.实现方式二"></a>2.实现方式二</h4><p>删除数据库中对应的内容，然后再reload一下数据(也就是再调用一次查询方法，这种消耗可想而知，并且还要保证先删除数据再查询)</p>
+<h3 id="三、-具体实现方式"><a href="#三、-具体实现方式" class="headerlink" title="三、 具体实现方式"></a>三、 具体实现方式</h3><blockquote>
 <p>删除数据的service：用异步，返回promise<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">service(<span class="string">'deleteBlogService'</span>,<span class="comment">//删除博客</span></div><div class="line">        [<span class="string">'$rootScope'</span>,</div><div class="line">            <span class="string">'$http'</span>,</div><div class="line">            <span class="string">'$q'</span>,</div><div class="line">            <span class="function"><span class="keyword">function</span> <span class="params">($rootScope, $http, $q)</span> </span>&#123;</div><div class="line">                <span class="keyword">var</span> result = &#123;&#125;;</div><div class="line">                result.operate = <span class="function"><span class="keyword">function</span> <span class="params">(blogId)</span> </span>&#123;</div><div class="line">                    <span class="keyword">var</span> deferred = $q.defer();</div><div class="line">                    $http(&#123;</div><div class="line">                        headers: &#123;</div><div class="line">                            <span class="string">'Content-Type'</span>: <span class="string">'application/x-www-form-urlencoded;charset=UTF-8'</span></div><div class="line">                        &#125;,</div><div class="line">                        url: $rootScope.$baseUrl + <span class="string">"/admin/blog/deleteBlogById"</span>,</div><div class="line">                        method: <span class="string">'GET'</span>,</div><div class="line">                        dataType: <span class="string">'json'</span>,</div><div class="line">                        params: &#123;</div><div class="line">                            id: blogId</div><div class="line">                        &#125;</div><div class="line">                    &#125;)</div><div class="line">                        .success(<span class="function"><span class="keyword">function</span> <span class="params">(data)</span> </span>&#123;</div><div class="line">                            deferred.resolve(data);</div><div class="line">                            console.log(<span class="string">"删除成功！"</span>);</div><div class="line">                        &#125;)</div><div class="line">                        .error(<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</div><div class="line">                            deferred.reject();</div><div class="line">                            alert(<span class="string">"删除失败！"</span>)</div><div class="line">                        &#125;);</div><div class="line">                    <span class="keyword">return</span> deferred.promise;</div><div class="line">                &#125;;</div><div class="line">                <span class="keyword">return</span> result;</div><div class="line">            &#125;])</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>controller里面注意事项</p>
@@ -359,7 +359,7 @@
         <p><span>本文标题:</span><a href="/2016/05/11/AngularHttp/">使用angularjs的$http异步删除数据</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-05-11, 00:00:00</p>
-        <p><span>最后更新:</span>2016-11-16, 18:06:41</p>
+        <p><span>最后更新:</span>2016-11-25, 15:29:10</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/05/11/AngularHttp/" title="使用angularjs的$http异步删除数据">http://blog.xiaomo.info/2016/05/11/AngularHttp/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/05/11/AngularHttp/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -394,7 +394,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、前言"><span class="toc-number">1.</span> <span class="toc-text">一、前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、-思路"><span class="toc-number">2.</span> <span class="toc-text">二、 思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-实现方式一"><span class="toc-number">2.1.</span> <span class="toc-text">1.实现方式一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-实现方式二"><span class="toc-number">2.2.</span> <span class="toc-text">2.实现方式二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、-具体实现方式"><span class="toc-number">3.</span> <span class="toc-text">三、 具体实现方式</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、前言"><span class="toc-number">1.</span> <span class="toc-text">一、前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-思路"><span class="toc-number">2.</span> <span class="toc-text">二、 思路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-实现方式一"><span class="toc-number">2.1.</span> <span class="toc-text">1.实现方式一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-实现方式二"><span class="toc-number">2.2.</span> <span class="toc-text">2.实现方式二</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-具体实现方式"><span class="toc-number">3.</span> <span class="toc-text">三、 具体实现方式</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,

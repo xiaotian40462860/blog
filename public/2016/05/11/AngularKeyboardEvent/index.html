@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="使用angularjs的键盘事件来增强用户体验。">
 <meta property="og:image" content="http://static.xiaomo.info/images/angular.png">
-<meta property="og:updated_time" content="2016-11-16T10:06:41.913Z">
+<meta property="og:updated_time" content="2016-11-25T07:29:10.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angularjs键盘事件">
 <meta name="twitter:description" content="使用angularjs的键盘事件来增强用户体验。">
@@ -331,17 +331,17 @@
       
           
         <p> 使用angularjs的键盘事件来增强用户体验。<br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/angular.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、绑定键盘事件"><a href="#一、绑定键盘事件" class="headerlink" title="一、绑定键盘事件"></a>一、绑定键盘事件</h2><p>（尤其注意：不能用a标签，不然会失效）</p>
+<h3 id="一、绑定键盘事件"><a href="#一、绑定键盘事件" class="headerlink" title="一、绑定键盘事件"></a>一、绑定键盘事件</h3><p>（尤其注意：不能用a标签，不然会失效）</p>
 <blockquote>
 <p>推荐button</p>
-<h3 id="方法一：ng内置指令"><a href="#方法一：ng内置指令" class="headerlink" title="方法一：ng内置指令"></a>方法一：ng内置指令</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;button ng-<span class="built_in">click</span>=<span class="string">"login()"</span> ng-keypress=<span class="string">"todoSomething($event)"</span> <span class="keyword">class</span>=<span class="string">"btn btn-success btn-lg"</span> ng-disabled=<span class="string">"loginForm.$invalid"</span>&gt;</div><div class="line">    登录</div><div class="line">&lt;/button&gt;</div></pre></td></tr></table></figure>
+<h4 id="方法一：ng内置指令"><a href="#方法一：ng内置指令" class="headerlink" title="方法一：ng内置指令"></a>方法一：ng内置指令</h4><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;button ng-<span class="built_in">click</span>=<span class="string">"login()"</span> ng-keypress=<span class="string">"todoSomething($event)"</span> <span class="keyword">class</span>=<span class="string">"btn btn-success btn-lg"</span> ng-disabled=<span class="string">"loginForm.$invalid"</span>&gt;</div><div class="line">    登录</div><div class="line">&lt;/button&gt;</div></pre></td></tr></table></figure>
 <p>说明：在对应的控制器中的$scope上绑定一个todoSomething方法<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$scope.todoSomething=<span class="function"><span class="keyword">function</span><span class="params">($event)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>($event.keyCode==<span class="number">13</span>)&#123;<span class="comment">//回车</span></div><div class="line">        login();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 </blockquote>
-<h3 id="方法二：自定义指令"><a href="#方法二：自定义指令" class="headerlink" title="方法二：自定义指令"></a>方法二：自定义指令</h3><blockquote>
+<h4 id="方法二：自定义指令"><a href="#方法二：自定义指令" class="headerlink" title="方法二：自定义指令"></a>方法二：自定义指令</h4><blockquote>
 <p>html<br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;button ng-<span class="built_in">click</span>=<span class="string">"login()"</span> ng-enter=<span class="string">"login()"</span> <span class="keyword">class</span>=<span class="string">"btn btn-success btn-lg"</span> ng-disabled=<span class="string">"loginForm.$invalid"</span>&gt;</div><div class="line">    登录</div><div class="line">&lt;/button&gt;</div></pre></td></tr></table></figure></p>
 <p>指令<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">myApp.directive(<span class="string">'ngEnter'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="params">(scope, element, attrs)</span> </span>&#123;</div><div class="line">            element.bind(<span class="string">"keydown keypress"</span>, <span class="function"><span class="keyword">function</span> <span class="params">(event)</span> </span>&#123;</div><div class="line">                <span class="keyword">if</span> (event.which === <span class="number">13</span>) &#123;</div><div class="line">                    scope.$apply(<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</div><div class="line">                        scope.$eval(attrs.ngEnter);</div><div class="line">                    &#125;);</div><div class="line">                    event.preventDefault();</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line">        &#125;;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="二、总结"><a href="#二、总结" class="headerlink" title="二、总结"></a>二、总结</h2><p>两种方法都能实现敲回车登录的功能，不过推荐指令的方式，对$scope的污染比较低</p>
+<h3 id="二、总结"><a href="#二、总结" class="headerlink" title="二、总结"></a>二、总结</h3><p>两种方法都能实现敲回车登录的功能，不过推荐指令的方式，对$scope的污染比较低</p>
 <blockquote>
 <p>参考文档：<a href="https://segmentfault.com/a/1190000002634554#articleHeader8" target="_blank" rel="external">angularjs学习笔记—事件指令</a></p>
 </blockquote>
@@ -356,7 +356,7 @@
         <p><span>本文标题:</span><a href="/2016/05/11/AngularKeyboardEvent/">angularjs键盘事件</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-05-11, 00:00:00</p>
-        <p><span>最后更新:</span>2016-11-16, 18:06:41</p>
+        <p><span>最后更新:</span>2016-11-25, 15:29:10</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/05/11/AngularKeyboardEvent/" title="angularjs键盘事件">http://blog.xiaomo.info/2016/05/11/AngularKeyboardEvent/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/05/11/AngularKeyboardEvent/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -391,7 +391,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、绑定键盘事件"><span class="toc-number">1.</span> <span class="toc-text">一、绑定键盘事件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：ng内置指令"><span class="toc-number">1.1.</span> <span class="toc-text">方法一：ng内置指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二：自定义指令"><span class="toc-number">1.2.</span> <span class="toc-text">方法二：自定义指令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、总结"><span class="toc-number">2.</span> <span class="toc-text">二、总结</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、绑定键盘事件"><span class="toc-number">1.</span> <span class="toc-text">一、绑定键盘事件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法一：ng内置指令"><span class="toc-number">1.1.</span> <span class="toc-text">方法一：ng内置指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法二：自定义指令"><span class="toc-number">1.2.</span> <span class="toc-text">方法二：自定义指令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、总结"><span class="toc-number">2.</span> <span class="toc-text">二、总结</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,

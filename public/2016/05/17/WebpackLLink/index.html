@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="webpack的loaders是一大特色，也是很重要的一部分。这遍博客我将分类讲解一些常用的laoder">
 <meta property="og:image" content="http://static.xiaomo.info/images/webpack.png">
-<meta property="og:updated_time" content="2016-11-16T10:06:41.459Z">
+<meta property="og:updated_time" content="2016-11-25T07:26:23.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack进阶之loader篇">
 <meta name="twitter:description" content="webpack的loaders是一大特色，也是很重要的一部分。这遍博客我将分类讲解一些常用的laoder">
@@ -331,7 +331,7 @@
       
           
         <p>webpack的loaders是一大特色，也是很重要的一部分。这遍博客我将分类讲解一些常用的laoder<br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/webpack.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、loaders之-预处理"><a href="#一、loaders之-预处理" class="headerlink" title="一、loaders之 预处理"></a>一、loaders之 预处理</h2><ul>
+<h3 id="一、loaders之-预处理"><a href="#一、loaders之-预处理" class="headerlink" title="一、loaders之 预处理"></a>一、loaders之 预处理</h3><ul>
 <li>css-loader 处理css中路径引用等问题</li>
 <li>style-loader 动态把样式写入css</li>
 <li>sass-loader scss编译器</li>
@@ -341,7 +341,7 @@
 <p><code>npm install --save -dev css-loader style-loader sass-loader less-loader postcss-loader</code>  </p>
 <p>栗子:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">module</span>: &#123;</div><div class="line">  <span class="attribute">loaders</span>: [</div><div class="line">    &#123;test: /\.css$/, loader: <span class="string">"style!css?sourceMap!postcss"</span>&#125;,</div><div class="line">    &#123;<span class="attribute">test</span>: /\.less$/, loader: <span class="string">"style!css!less|postcss"</span>&#125;,</div><div class="line">    &#123;<span class="attribute">test</span>: /\.scss$/, loader: <span class="string">"style!css!sass|postcss"</span>&#125;</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="二、loaders之-js处理"><a href="#二、loaders之-js处理" class="headerlink" title="二、loaders之 js处理"></a>二、loaders之 js处理</h2><ul>
+<h3 id="二、loaders之-js处理"><a href="#二、loaders之-js处理" class="headerlink" title="二、loaders之 js处理"></a>二、loaders之 js处理</h3><ul>
 <li>babel-loader</li>
 <li>jsx-loader</li>
 </ul>
@@ -351,22 +351,22 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"presets"</span>: [<span class="string">"es2015"</span>,<span class="string">"react"</span>],</div><div class="line">  <span class="attr">"plugins"</span>:[<span class="string">"antd"</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>新建一个名字为<code>webpack.config.js</code>文件</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">module.exports =&#123;</div><div class="line"><span class="symbol"> entry:</span> <span class="string">'./entry.js'</span>,</div><div class="line"><span class="symbol"> output:</span> &#123; <span class="string">path:</span> __dirname,</div><div class="line"><span class="symbol"> filename:</span> <span class="string">'bundle.js'</span></div><div class="line"> &#125;,</div><div class="line"><span class="symbol"> module:</span> &#123;</div><div class="line"><span class="string">loaders:</span> [</div><div class="line">  &#123;<span class="string">test:</span> <span class="regexp">/\.js$/</span>, <span class="string">loader:</span> <span class="string">"babel"</span>, <span class="string">exclude:</span> <span class="regexp">/node_modules/</span>&#125;,</div><div class="line">  &#123;<span class="string">test:</span> <span class="regexp">/\.jsx$/</span>, <span class="string">loader:</span> <span class="string">"jsx-loader"</span>&#125;</div><div class="line">  &#123;<span class="string">test:</span> <span class="regexp">/.css$/</span>, <span class="string">loader:</span> <span class="string">'style!css'</span>&#125; ]</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h2 id="三、loaders之-图片处理"><a href="#三、loaders之-图片处理" class="headerlink" title="三、loaders之 图片处理"></a>三、loaders之 图片处理</h2><ul>
+<h3 id="三、loaders之-图片处理"><a href="#三、loaders之-图片处理" class="headerlink" title="三、loaders之 图片处理"></a>三、loaders之 图片处理</h3><ul>
 <li>url-loader</li>
 </ul>
 <p><code>npm install --save-dev url-loadr</code></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">module</span>: &#123;</div><div class="line">  <span class="attribute">loaders</span>: [</div><div class="line">    &#123;test: /\.(jpg|png)$/, loader: <span class="string">"url?limit=8192"</span>&#125;,</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="四、loaders之-文件处理"><a href="#四、loaders之-文件处理" class="headerlink" title="四、loaders之 文件处理"></a>四、loaders之 文件处理</h2><ul>
+<h3 id="四、loaders之-文件处理"><a href="#四、loaders之-文件处理" class="headerlink" title="四、loaders之 文件处理"></a>四、loaders之 文件处理</h3><ul>
 <li>file-loader</li>
 </ul>
 <p><code>npm install --save-dev file-loader</code></p>
 <figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">module: &#123;</div><div class="line">  loaders: [</div><div class="line">    &#123;</div><div class="line">      test: /\.(png|<span class="type">jpg</span>|<span class="type">jpeg</span>|<span class="type">gif</span>|<span class="type">svg</span>|<span class="type">woff</span>|<span class="type">woff2</span>|<span class="type">ttf</span>|<span class="type">eot</span>)$/,</div><div class="line">      loader: 'file'</div><div class="line">      &#125;,</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="五、loaders之-json处理"><a href="#五、loaders之-json处理" class="headerlink" title="五、loaders之 json处理"></a>五、loaders之 json处理</h2><ul>
+<h3 id="五、loaders之-json处理"><a href="#五、loaders之-json处理" class="headerlink" title="五、loaders之 json处理"></a>五、loaders之 json处理</h3><ul>
 <li>json-loader</li>
 </ul>
 <p><code>npm install --save-dev json-loader</code></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">module</span>: &#123;</div><div class="line">  <span class="attribute">loaders</span>: [</div><div class="line">    &#123;test: /\.json$/,loader: <span class="string">'json'</span>&#125;,</div><div class="line">  ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="六、loaders之-html处理"><a href="#六、loaders之-html处理" class="headerlink" title="六、loaders之 html处理"></a>六、loaders之 html处理</h2><ul>
+<h3 id="六、loaders之-html处理"><a href="#六、loaders之-html处理" class="headerlink" title="六、loaders之 html处理"></a>六、loaders之 html处理</h3><ul>
 <li>raw-loader</li>
 </ul>
 <p><code>npm install --save-dev raw-loader</code></p>
@@ -382,7 +382,7 @@
         <p><span>本文标题:</span><a href="/2016/05/17/WebpackLLink/">webpack进阶之loader篇</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-05-17, 00:00:00</p>
-        <p><span>最后更新:</span>2016-11-16, 18:06:41</p>
+        <p><span>最后更新:</span>2016-11-25, 15:26:23</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/05/17/WebpackLLink/" title="webpack进阶之loader篇">http://blog.xiaomo.info/2016/05/17/WebpackLLink/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/05/17/WebpackLLink/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -417,7 +417,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、loaders之-预处理"><span class="toc-number">1.</span> <span class="toc-text">一、loaders之 预处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、loaders之-js处理"><span class="toc-number">2.</span> <span class="toc-text">二、loaders之 js处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、loaders之-图片处理"><span class="toc-number">3.</span> <span class="toc-text">三、loaders之 图片处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、loaders之-文件处理"><span class="toc-number">4.</span> <span class="toc-text">四、loaders之 文件处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、loaders之-json处理"><span class="toc-number">5.</span> <span class="toc-text">五、loaders之 json处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、loaders之-html处理"><span class="toc-number">6.</span> <span class="toc-text">六、loaders之 html处理</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、loaders之-预处理"><span class="toc-number">1.</span> <span class="toc-text">一、loaders之 预处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、loaders之-js处理"><span class="toc-number">2.</span> <span class="toc-text">二、loaders之 js处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、loaders之-图片处理"><span class="toc-number">3.</span> <span class="toc-text">三、loaders之 图片处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、loaders之-文件处理"><span class="toc-number">4.</span> <span class="toc-text">四、loaders之 文件处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、loaders之-json处理"><span class="toc-number">5.</span> <span class="toc-text">五、loaders之 json处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、loaders之-html处理"><span class="toc-number">6.</span> <span class="toc-text">六、loaders之 html处理</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,

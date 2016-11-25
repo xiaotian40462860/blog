@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="好的script能够大大减少我们对命令行的操作，直接使用npm run xxx 就可以执行。">
 <meta property="og:image" content="http://static.xiaomo.info/images/npm.png">
-<meta property="og:updated_time" content="2016-11-17T01:23:00.253Z">
+<meta property="og:updated_time" content="2016-11-25T07:21:23.482Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="package.json常用script">
 <meta name="twitter:description" content="好的script能够大大减少我们对命令行的操作，直接使用npm run xxx 就可以执行。">
@@ -331,24 +331,24 @@
       
           
         <p>好的script能够大大减少我们对命令行的操作，直接使用npm run xxx 就可以执行。<br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/npm.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、git相关"><a href="#一、git相关" class="headerlink" title="一、git相关"></a>一、git相关</h2><h3 id="1-查看分支"><a href="#1-查看分支" class="headerlink" title="1. 查看分支"></a>1. 查看分支</h3><p>  <code>branch:git branch -a</code>,    </p>
-<h3 id="2-查看标签"><a href="#2-查看标签" class="headerlink" title="2. 查看标签"></a>2. 查看标签</h3><p>  <code>tag:git tag</code>,    </p>
-<h3 id="3-创建标签"><a href="#3-创建标签" class="headerlink" title="3. 创建标签"></a>3. 创建标签</h3><p>  <code>createtag:git tag -a 0.1.2 -m Release^-^</code>,    </p>
-<h3 id="4-推送标签"><a href="#4-推送标签" class="headerlink" title="4. 推送标签"></a>4. 推送标签</h3><p>  <code>pushtag:npm run createtag &amp;&amp; git push origin --tags</code>,        </p>
-<h3 id="5-删除分支"><a href="#5-删除分支" class="headerlink" title="5. 删除分支"></a>5. 删除分支</h3><p>  <code>delbranch:git push origin --delete</code>,             </p>
-<h3 id="6-同步git"><a href="#6-同步git" class="headerlink" title="6. 同步git"></a>6. 同步git</h3><p>  <code>fetch</code>:<code>git fetch -p</code>,                  </p>
-<h3 id="7-推送更新"><a href="#7-推送更新" class="headerlink" title="7. 推送更新"></a>7. 推送更新</h3><p>  <code>push</code>:<code>git push origin master</code>,            </p>
-<h3 id="8-提交代码"><a href="#8-提交代码" class="headerlink" title="8. 提交代码"></a>8. 提交代码</h3><p> <code>commit</code>:<code>git commit -a</code>,             </p>
-<h3 id="9-检出代码"><a href="#9-检出代码" class="headerlink" title="9. 检出代码"></a>9. 检出代码</h3><p>  <code>checkout</code>:<code>git checkout</code>,            </p>
-<h3 id="10-删除标签"><a href="#10-删除标签" class="headerlink" title="10. 删除标签"></a>10. 删除标签</h3><p>  <code>deltag:git push origin --delete tag</code>,             </p>
-<h3 id="11-删除己合并分支"><a href="#11-删除己合并分支" class="headerlink" title="11. 删除己合并分支"></a>11. 删除己合并分支</h3><p>   <code>delbranck:git branch -d</code>,          </p>
-<h3 id="12-删除所分支"><a href="#12-删除所分支" class="headerlink" title="12. 删除所分支"></a>12. 删除所分支</h3><p> <code>delbranchall:git branch -D</code>,                 </p>
-<h3 id="13-重命名分支"><a href="#13-重命名分支" class="headerlink" title="13. 重命名分支"></a>13. 重命名分支</h3><p>  <code>renamebranch:git branch -m</code>,   </p>
-<h2 id="二、webpack相关"><a href="#二、webpack相关" class="headerlink" title="二、webpack相关"></a>二、webpack相关</h2><h3 id="1-清空目录"><a href="#1-清空目录" class="headerlink" title="1. 清空目录"></a>1. 清空目录</h3><p>  <code>clean:rimraf dist</code>,</p>
-<h3 id="2-构建项目"><a href="#2-构建项目" class="headerlink" title="2. 构建项目"></a>2. 构建项目</h3><p>  <code>build:npm run clean &amp;&amp; webpack --progress --colors --profile</code>,</p>
-<h3 id="3-启动项目"><a href="#3-启动项目" class="headerlink" title="3. 启动项目"></a>3. 启动项目</h3><p>  <code>start:webpack-dev-server --progress --colors --profile</code>,</p>
-<h3 id="4-测试代码"><a href="#4-测试代码" class="headerlink" title="4. 测试代码"></a>4. 测试代码</h3><p>  <code>test:karma start</code>,</p>
-<h3 id="5-检测测试"><a href="#5-检测测试" class="headerlink" title="5. 检测测试"></a>5. 检测测试</h3><p>  <code>test-watch:karma start --auto-watch --no-single-run</code></p>
+<h3 id="一、git相关"><a href="#一、git相关" class="headerlink" title="一、git相关"></a>一、git相关</h3><h4 id="1-查看分支"><a href="#1-查看分支" class="headerlink" title="1. 查看分支"></a>1. 查看分支</h4><p>  <code>branch:git branch -a</code>,    </p>
+<h4 id="2-查看标签"><a href="#2-查看标签" class="headerlink" title="2. 查看标签"></a>2. 查看标签</h4><p>  <code>tag:git tag</code>,    </p>
+<h4 id="3-创建标签"><a href="#3-创建标签" class="headerlink" title="3. 创建标签"></a>3. 创建标签</h4><p>  <code>createtag:git tag -a 0.1.2 -m Release^-^</code>,    </p>
+<h4 id="4-推送标签"><a href="#4-推送标签" class="headerlink" title="4. 推送标签"></a>4. 推送标签</h4><p>  <code>pushtag:npm run createtag &amp;&amp; git push origin --tags</code>,        </p>
+<h4 id="5-删除分支"><a href="#5-删除分支" class="headerlink" title="5. 删除分支"></a>5. 删除分支</h4><p>  <code>delbranch:git push origin --delete</code>,             </p>
+<h4 id="6-同步git"><a href="#6-同步git" class="headerlink" title="6. 同步git"></a>6. 同步git</h4><p>  <code>fetch</code>:<code>git fetch -p</code>,                  </p>
+<h4 id="7-推送更新"><a href="#7-推送更新" class="headerlink" title="7. 推送更新"></a>7. 推送更新</h4><p>  <code>push</code>:<code>git push origin master</code>,            </p>
+<h4 id="8-提交代码"><a href="#8-提交代码" class="headerlink" title="8. 提交代码"></a>8. 提交代码</h4><p> <code>commit</code>:<code>git commit -a</code>,             </p>
+<h4 id="9-检出代码"><a href="#9-检出代码" class="headerlink" title="9. 检出代码"></a>9. 检出代码</h4><p>  <code>checkout</code>:<code>git checkout</code>,            </p>
+<h4 id="10-删除标签"><a href="#10-删除标签" class="headerlink" title="10. 删除标签"></a>10. 删除标签</h4><p>  <code>deltag:git push origin --delete tag</code>,             </p>
+<h4 id="11-删除己合并分支"><a href="#11-删除己合并分支" class="headerlink" title="11. 删除己合并分支"></a>11. 删除己合并分支</h4><p>   <code>delbranck:git branch -d</code>,          </p>
+<h4 id="12-删除所分支"><a href="#12-删除所分支" class="headerlink" title="12. 删除所分支"></a>12. 删除所分支</h4><p> <code>delbranchall:git branch -D</code>,                 </p>
+<h4 id="13-重命名分支"><a href="#13-重命名分支" class="headerlink" title="13. 重命名分支"></a>13. 重命名分支</h4><p>  <code>renamebranch:git branch -m</code>,   </p>
+<h3 id="二、webpack相关"><a href="#二、webpack相关" class="headerlink" title="二、webpack相关"></a>二、webpack相关</h3><h4 id="1-清空目录"><a href="#1-清空目录" class="headerlink" title="1. 清空目录"></a>1. 清空目录</h4><p>  <code>clean:rimraf dist</code>,</p>
+<h4 id="2-构建项目"><a href="#2-构建项目" class="headerlink" title="2. 构建项目"></a>2. 构建项目</h4><p>  <code>build:npm run clean &amp;&amp; webpack --progress --colors --profile</code>,</p>
+<h4 id="3-启动项目"><a href="#3-启动项目" class="headerlink" title="3. 启动项目"></a>3. 启动项目</h4><p>  <code>start:webpack-dev-server --progress --colors --profile</code>,</p>
+<h4 id="4-测试代码"><a href="#4-测试代码" class="headerlink" title="4. 测试代码"></a>4. 测试代码</h4><p>  <code>test:karma start</code>,</p>
+<h4 id="5-检测测试"><a href="#5-检测测试" class="headerlink" title="5. 检测测试"></a>5. 检测测试</h4><p>  <code>test-watch:karma start --auto-watch --no-single-run</code></p>
 
       
     </div>
@@ -360,7 +360,7 @@
         <p><span>本文标题:</span><a href="/2016/06/02/Package.jsonScripts/">package.json常用script</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-06-02, 00:00:00</p>
-        <p><span>最后更新:</span>2016-11-17, 09:23:00</p>
+        <p><span>最后更新:</span>2016-11-25, 15:21:23</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/06/02/Package.jsonScripts/" title="package.json常用script">http://blog.xiaomo.info/2016/06/02/Package.jsonScripts/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.xiaomo.info/2016/06/02/Package.jsonScripts/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -395,7 +395,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、git相关"><span class="toc-number">1.</span> <span class="toc-text">一、git相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-查看分支"><span class="toc-number">1.1.</span> <span class="toc-text">1. 查看分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-查看标签"><span class="toc-number">1.2.</span> <span class="toc-text">2. 查看标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-创建标签"><span class="toc-number">1.3.</span> <span class="toc-text">3. 创建标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-推送标签"><span class="toc-number">1.4.</span> <span class="toc-text">4. 推送标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-删除分支"><span class="toc-number">1.5.</span> <span class="toc-text">5. 删除分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-同步git"><span class="toc-number">1.6.</span> <span class="toc-text">6. 同步git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-推送更新"><span class="toc-number">1.7.</span> <span class="toc-text">7. 推送更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-提交代码"><span class="toc-number">1.8.</span> <span class="toc-text">8. 提交代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-检出代码"><span class="toc-number">1.9.</span> <span class="toc-text">9. 检出代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-删除标签"><span class="toc-number">1.10.</span> <span class="toc-text">10. 删除标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-删除己合并分支"><span class="toc-number">1.11.</span> <span class="toc-text">11. 删除己合并分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-删除所分支"><span class="toc-number">1.12.</span> <span class="toc-text">12. 删除所分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-重命名分支"><span class="toc-number">1.13.</span> <span class="toc-text">13. 重命名分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、webpack相关"><span class="toc-number">2.</span> <span class="toc-text">二、webpack相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-清空目录"><span class="toc-number">2.1.</span> <span class="toc-text">1. 清空目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-构建项目"><span class="toc-number">2.2.</span> <span class="toc-text">2. 构建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-启动项目"><span class="toc-number">2.3.</span> <span class="toc-text">3. 启动项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-测试代码"><span class="toc-number">2.4.</span> <span class="toc-text">4. 测试代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-检测测试"><span class="toc-number">2.5.</span> <span class="toc-text">5. 检测测试</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、git相关"><span class="toc-number">1.</span> <span class="toc-text">一、git相关</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-查看分支"><span class="toc-number">1.1.</span> <span class="toc-text">1. 查看分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-查看标签"><span class="toc-number">1.2.</span> <span class="toc-text">2. 查看标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-创建标签"><span class="toc-number">1.3.</span> <span class="toc-text">3. 创建标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-推送标签"><span class="toc-number">1.4.</span> <span class="toc-text">4. 推送标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-删除分支"><span class="toc-number">1.5.</span> <span class="toc-text">5. 删除分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-同步git"><span class="toc-number">1.6.</span> <span class="toc-text">6. 同步git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-推送更新"><span class="toc-number">1.7.</span> <span class="toc-text">7. 推送更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-提交代码"><span class="toc-number">1.8.</span> <span class="toc-text">8. 提交代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-检出代码"><span class="toc-number">1.9.</span> <span class="toc-text">9. 检出代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-删除标签"><span class="toc-number">1.10.</span> <span class="toc-text">10. 删除标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-删除己合并分支"><span class="toc-number">1.11.</span> <span class="toc-text">11. 删除己合并分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-删除所分支"><span class="toc-number">1.12.</span> <span class="toc-text">12. 删除所分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13-重命名分支"><span class="toc-number">1.13.</span> <span class="toc-text">13. 重命名分支</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、webpack相关"><span class="toc-number">2.</span> <span class="toc-text">二、webpack相关</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-清空目录"><span class="toc-number">2.1.</span> <span class="toc-text">1. 清空目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-构建项目"><span class="toc-number">2.2.</span> <span class="toc-text">2. 构建项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-启动项目"><span class="toc-number">2.3.</span> <span class="toc-text">3. 启动项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-测试代码"><span class="toc-number">2.4.</span> <span class="toc-text">4. 测试代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-检测测试"><span class="toc-number">2.5.</span> <span class="toc-text">5. 检测测试</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
