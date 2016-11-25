@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.xiaomo.info/"/>
-  <updated>2016-11-17T01:30:35.091Z</updated>
+  <updated>2016-11-25T06:55:46.895Z</updated>
   <id>http://blog.xiaomo.info/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>拥抱https(http全面切换到https)</title>
+    <link href="http://blog.xiaomo.info/2016/11/25/HttpToHttps/"/>
+    <id>http://blog.xiaomo.info/2016/11/25/HttpToHttps/</id>
+    <published>2016-11-24T16:00:00.000Z</published>
+    <updated>2016-11-25T06:55:46.895Z</updated>
+    
+    <content type="html"><![CDATA[<p>在百度和谷歌的鼓励下，现在很多网站都开始换成https了啊，只是有的没有隐私数据的网站感觉没有太大必要，但是设计要密码账号的网站必须要的。不过有部分网站没有换成https只是暂时的，2-3年后预估互联网会全部变成https。因为https成本也不是很高，免费SSL证书也有，比如腾讯免费SSL证书，starssl免费证书等。关键是https对SEO更加友好。<br><a id="more"></a><br><img src="http://static.xiaomo.info/images/linux.png" alt="1"></p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="域-名：阿里云"><a href="#域-名：阿里云" class="headerlink" title="域 名：阿里云"></a>域 名：阿里云</h3><h3 id="服务器：阿里云ECS-center-os-6-5"><a href="#服务器：阿里云ECS-center-os-6-5" class="headerlink" title="服务器：阿里云ECS center os 6.5"></a>服务器：阿里云ECS <code>center os 6.5</code></h3><h3 id="SSL证书-腾讯SSL免费版"><a href="#SSL证书-腾讯SSL免费版" class="headerlink" title="SSL证书: 腾讯SSL免费版"></a>SSL证书: 腾讯SSL免费版</h3><h3 id="web容器：nginx-php"><a href="#web容器：nginx-php" class="headerlink" title="web容器：nginx+php"></a>web容器：nginx+php</h3><h2 id="一、为什么要切换到HTTPS"><a href="#一、为什么要切换到HTTPS" class="headerlink" title="一、为什么要切换到HTTPS"></a>一、为什么要切换到HTTPS</h2><h3 id="1-安全方面"><a href="#1-安全方面" class="headerlink" title="1.安全方面"></a>1.安全方面</h3><p>HTTPS比HTTP更加安全</p>
+<h3 id="2-技术方面"><a href="#2-技术方面" class="headerlink" title="2.技术方面"></a>2.技术方面</h3><p>不懂HTTPS多不好意思啊，所以就当是学习了。</p>
+<h2 id="二、为什么要用腾讯SSL"><a href="#二、为什么要用腾讯SSL" class="headerlink" title="二、为什么要用腾讯SSL"></a>二、为什么要用腾讯SSL</h2><p>因为免费啊，毕竟穷人用不起企业级别的，先用一年免费的再说。starssl是外国的，看不习惯鸟语还是老老实实用中文。</p>
+<h2 id="三、申请证书"><a href="#三、申请证书" class="headerlink" title="三、申请证书"></a>三、申请证书</h2><p>申请地址：<a href="https://console.qcloud.com/ssl" target="_blank" rel="external">https://console.qcloud.com/ssl</a><br>申请证书之后会给一个下载链接，下载之后会有3个文件夹。分别是nginx、tomcat、apache。因为我个人用的是nginx，就说下nginx的配置。没有调查就没有发言权，用其他两种的小伙伴请自行研究。</p>
+<h2 id="四、DNS配置"><a href="#四、DNS配置" class="headerlink" title="四、DNS配置"></a>四、DNS配置</h2><p>证书申请通过之后会让你配置一个CNAME类型的DNS，根据提示配置一下就好了。</p>
+<h2 id="五、上传"><a href="#五、上传" class="headerlink" title="五、上传"></a>五、上传</h2><p>将下载的证书nginx文件夹打包上传到 <code>usr/local/nginx</code>目录</p>
+<h2 id="六、nginx配置"><a href="#六、nginx配置" class="headerlink" title="六、nginx配置"></a>六、nginx配置</h2><p>先确认<code>nginx</code>安装时已编译http_ssl模块，也就是执行如下命令查看是否存在–with-http_ssl_module参数：</p>
+<p>执行<code>/usr/local/nginx/sbin/nginx -V</code>这个命令</p>
+<p>在返回的结果中找是否有<code>--with-http_ssl_module</code>参数，没有的话要先激活这个模块。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nginx <span class="string">version:</span> nginx/<span class="number">1.6</span><span class="number">.0</span></div><div class="line">built by gcc <span class="number">4.4</span><span class="number">.7</span> <span class="number">20120313</span> (Red Hat <span class="number">4.4</span><span class="number">.7</span><span class="number">-4</span>) (GCC)</div><div class="line">TLS SNI support enabled</div><div class="line">configure <span class="string">arguments:</span> --prefix=<span class="regexp">/usr/</span>local<span class="regexp">/nginx --with-http_ssl_module --with-openssl=/</span>usr<span class="regexp">/local/</span>src<span class="regexp">/openssl-1.0.1/</span></div></pre></td></tr></table></figure>
+<p>然后在<code>usr/local/nginx/conf/nginx.conf</code>中修改配置，配置如下<br>在server中加入以下内容，注意修改一下对应<code>ssl_certificate</code>和<code>ssl_certificate_key</code>文件的位置</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">listen</span> <span class="number">443</span>;</div><div class="line">        <span class="attribute">ssl</span> <span class="literal">on</span>;</div><div class="line">        <span class="attribute">ssl_certificate</span> /usr/local/nginx/ssl/1_blog.xiaomo.info_bundle.crt; <span class="comment">#证书公钥文件路径</span></div><div class="line">        <span class="attribute">ssl_certificate_key</span>  /usr/local/nginx/ssl/2_blog.xiaomo.<span class="literal">info</span>.key;   <span class="comment">#证书私钥文件路径</span></div><div class="line">        <span class="attribute">ssl_session_timeout</span>  <span class="number">5m</span>;</div><div class="line">        <span class="attribute">ssl_protocols</span> SSLv3 TLSv1 TLSv1.<span class="number">1</span> TLSv1.<span class="number">2</span>;</div><div class="line">        <span class="attribute">ssl_ciphers</span>  HIGH:!ADH:!EXPORT56:RC4+RSA:+MEDIUM;</div></pre></td></tr></table></figure>
+<p>这一段主要是开启SSL</p>
+<p>保存配置之后要确认是否配置正确，执行<code>/usr/local/nginx/sbin/nginx -t</code>命令</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">linux-<span class="keyword">test</span>:~ # /usr/<span class="keyword">local</span>/nginx/sbin/nginx -t</div><div class="line">#如下显示则为正确无误：</div><div class="line">nginx: the configuration <span class="keyword">file</span> /usr/<span class="keyword">local</span>/nginx/<span class="keyword">conf</span>/nginx.<span class="keyword">conf</span> <span class="keyword">syntax</span> is ok</div><div class="line">nginx: configuration <span class="keyword">file</span> /usr/<span class="keyword">local</span>/nginx/<span class="keyword">conf</span>/nginx.<span class="keyword">conf</span> <span class="keyword">test</span> is successful</div></pre></td></tr></table></figure>
+<p>重定向http到https,加入以下这段，意思是访问http的网站的时候会重定向到https上去。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">location</span> / &#123;</div><div class="line">             <span class="attribute">if</span> (<span class="variable">$scheme</span> = http) &#123;</div><div class="line">                     <span class="attribute">return</span> <span class="number">301</span> https://<span class="variable">$host</span><span class="variable">$request_uri</span>;</div><div class="line">                     &#125;</div><div class="line">     &#125;</div></pre></td></tr></table></figure>
+<p>七、生效<br>执行<code>/usr/local/nginx/sbin/nginx -s reload</code>,如无错误，现在应该可以顺利访问 <img src="blog.xiaomo.info" alt="blog.xiaomo.info">这个网站，并且是https的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在百度和谷歌的鼓励下，现在很多网站都开始换成https了啊，只是有的没有隐私数据的网站感觉没有太大必要，但是设计要密码账号的网站必须要的。不过有部分网站没有换成https只是暂时的，2-3年后预估互联网会全部变成https。因为https成本也不是很高，免费SSL证书也有，比如腾讯免费SSL证书，starssl免费证书等。关键是https对SEO更加友好。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://blog.xiaomo.info/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="技术" scheme="http://blog.xiaomo.info/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>swagger ui和spring boot集成生成api文档</title>
@@ -55,30 +96,6 @@
   </entry>
   
   <entry>
-    <title>spring4免费全套视频教程</title>
-    <link href="http://blog.xiaomo.info/2016/11/08/JavaSpringVideo/"/>
-    <id>http://blog.xiaomo.info/2016/11/08/JavaSpringVideo/</id>
-    <published>2016-11-07T16:00:00.000Z</published>
-    <updated>2016-11-17T01:30:34.928Z</updated>
-    
-    <content type="html"><![CDATA[<p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br><a id="more"></a><br><img src="http://static.xiaomo.info/images/java_banner.png" alt="1"></p>
-<p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br><a href="http://edu.csdn.net/course/detail/852/" target="_blank" rel="external">国内第1套_Spring4 视频教程</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="java" scheme="http://blog.xiaomo.info/categories/java/"/>
-    
-    
-      <category term="java" scheme="http://blog.xiaomo.info/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>lombok 简化java代码注解 理解</title>
     <link href="http://blog.xiaomo.info/2016/11/08/java_lombok/"/>
     <id>http://blog.xiaomo.info/2016/11/08/java_lombok/</id>
@@ -99,6 +116,30 @@
     <summary type="html">
     
       &lt;p&gt;今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="java" scheme="http://blog.xiaomo.info/categories/java/"/>
+    
+    
+      <category term="java" scheme="http://blog.xiaomo.info/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring4免费全套视频教程</title>
+    <link href="http://blog.xiaomo.info/2016/11/08/JavaSpringVideo/"/>
+    <id>http://blog.xiaomo.info/2016/11/08/JavaSpringVideo/</id>
+    <published>2016-11-07T16:00:00.000Z</published>
+    <updated>2016-11-17T01:30:34.928Z</updated>
+    
+    <content type="html"><![CDATA[<p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br><a id="more"></a><br><img src="http://static.xiaomo.info/images/java_banner.png" alt="1"></p>
+<p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br><a href="http://edu.csdn.net/course/detail/852/" target="_blank" rel="external">国内第1套_Spring4 视频教程</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。&lt;br&gt;
     
     </summary>
     
@@ -1006,39 +1047,6 @@
     
     
       <category term="技术" scheme="http://blog.xiaomo.info/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>angular2学习笔记之动画效果</title>
-    <link href="http://blog.xiaomo.info/2016/06/30/Angular2studyAnimate/"/>
-    <id>http://blog.xiaomo.info/2016/06/30/Angular2studyAnimate/</id>
-    <published>2016-06-29T16:00:00.000Z</published>
-    <updated>2016-11-17T01:27:16.755Z</updated>
-    
-    <content type="html"><![CDATA[<p>动画是现代 Web 应用设计中一个很重要的方面。我们希望用户界面能在不同的状态之间更平滑的转场。如果需要，还可以用适当的动画来吸引注意力。 设计良好的动画不但会让 UI 更有趣，还会让它更容易使用。Angular 的动画系统赋予了制作各种动画效果的能力，以构建出与原生 CSS 动画性能相同的动画。 我们也获得了额外的让动画逻辑与其它应用代码紧紧集成在一起的能力，这让动画可以被更容易的触发与控制。<a href="https://github.com/qq83387856/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://static.xiaomo.info/images/angular.png" alt="点击访问小莫的github"></a></p>
-<h2 id="一、在两个状态间转场"><a href="#一、在两个状态间转场" class="headerlink" title="一、在两个状态间转场"></a>一、在两个状态间转场</h2><h3 id="1-构建一个动画"><a href="#1-构建一个动画" class="headerlink" title="1. 构建一个动画"></a>1. 构建一个动画</h3><p>它会让一个元素用模型驱动的方式在两个状态之间转场。动画会被定义在 <code>@Component</code> 元数据中。在添加动画之前，先引入一些与动画有关的函数</p>
-<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">  Component,</div><div class="line">  Input,</div><div class="line">  trigger,</div><div class="line">  state,</div><div class="line">  style,</div><div class="line">  transition,</div><div class="line">  animate</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line">//通过这些，可以在组件元数据中定义一个名叫 heroState 的 动画触发器 。它在两个状态 active 和 inactive 之间进行转场。 当英雄处于激活状态时，它会把该元素显示得稍微大一点、亮一点。</div><div class="line"><span class="keyword">import</span> &#123; Heroes &#125; <span class="keyword">from</span> <span class="string">'./hero.service'</span>;</div><div class="line">@Component(&#123;</div><div class="line">  <span class="name">moduleId</span>: <span class="built_in">module</span>.id,</div><div class="line">  <span class="name">selector</span>: <span class="string">'hero-list-basic'</span>,</div><div class="line">  <span class="name">template</span>: `</div><div class="line">    &lt;ul&gt;</div><div class="line">      &lt;li *ngFor=<span class="string">"let hero of heroes"</span></div><div class="line">          @heroState=<span class="string">"hero.state"</span></div><div class="line">          (click)=<span class="string">"hero.toggleState()"</span>&gt;</div><div class="line">        &#123;&#123;hero.name&#125;&#125;</div><div class="line">      &lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div><div class="line">  `,</div><div class="line">  <span class="name">styleUrls</span>: [<span class="string">'hero-list.component.css'</span>],</div><div class="line">  <span class="name">animations</span>: [</div><div class="line">    trigger(<span class="string">'heroState'</span>, [</div><div class="line">      state(<span class="string">'inactive'</span>, style(&#123;</div><div class="line">        <span class="name">backgroundColor</span>: <span class="string">'#eee'</span>,</div><div class="line">        <span class="name">transform</span>: <span class="string">'scale(1)'</span></div><div class="line">      &#125;)),</div><div class="line">      state(<span class="string">'active'</span>,   style(&#123;</div><div class="line">        <span class="name">backgroundColor</span>: <span class="string">'#cfd8dc'</span>,</div><div class="line">        <span class="name">transform</span>: <span class="string">'scale(1.1)'</span></div><div class="line">      &#125;)),</div><div class="line">      transition(<span class="string">'inactive =&gt; active'</span>, animate(<span class="string">'100ms ease-in'</span>)),</div><div class="line">      transition(<span class="string">'active =&gt; inactive'</span>, animate(<span class="string">'100ms ease-out'</span>))</div><div class="line">    ])</div><div class="line">  ]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">HeroListBasicComponent</span> &#123;</span></div><div class="line">  @Input() <span class="name">heroes</span>: Heroes;</div><div class="line">&#125;</div><div class="line">//我们刚刚定义了一个动画，但它还没有被用到任何地方。要想使用它，可以在模板中用 @triggerName 语法来把它附加到一个或多个元素上。</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;动画是现代 Web 应用设计中一个很重要的方面。我们希望用户界面能在不同的状态之间更平滑的转场。如果需要，还可以用适当的动画来吸引注意力。 设计良好的动画不但会让 UI 更有趣，还会让它更容易使用。Angular 的动画系统赋予了制作各种动画效果的能力，以构建出与原生 CSS 动画性能相同的动画。 我们也获得了额外的让动画逻辑与其它应用代码紧紧集成在一起的能力，这让动画可以被更容易的触发与控制。&lt;a href=&quot;https://github.com/qq83387856/angular2-demo&quot;&gt;angular2-demo&lt;/a&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="angular2" scheme="http://blog.xiaomo.info/categories/angular2/"/>
-    
-    
-      <category term="javascript" scheme="http://blog.xiaomo.info/tags/javascript/"/>
-    
-      <category term="webpack" scheme="http://blog.xiaomo.info/tags/webpack/"/>
-    
-      <category term="angular2" scheme="http://blog.xiaomo.info/tags/angular2/"/>
-    
-      <category term="sass" scheme="http://blog.xiaomo.info/tags/sass/"/>
-    
-      <category term="typescript" scheme="http://blog.xiaomo.info/tags/typescript/"/>
     
   </entry>
   

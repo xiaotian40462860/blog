@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.xiaomo.info/2016/11/25/HttpToHttps/</loc>
+    
+    <lastmod>2016-11-25T06:55:46.895Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.xiaomo.info/2016/11/11/JavaSpringBootSwaggerUi/</loc>
     
     <lastmod>2016-11-17T01:30:35.091Z</lastmod>
