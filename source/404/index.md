@@ -56,8 +56,8 @@ permalink: /404
 ***
 
 <div class="pic">
-<img src="http://static.xiaomo.info/images/aboutme.gif" title="xiaomo">
-<img src="http://static.xiaomo.info/images/aboutme.gif" title="xiaomo">
+<img src="https://static.xiaomo.info/images/aboutme.gif" title="xiaomo">
+<img src="https://static.xiaomo.info/images/aboutme.gif" title="xiaomo">
 </div>
 
 <p class="center">很抱歉，您所访问的地址并不存在: </p>
