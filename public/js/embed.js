@@ -556,7 +556,7 @@ function os(e) {
     D = function(t) {
         if (! ("WebSocket" in e && i)) return ! 1;
         _.push(i.stringify(t)),
-        M || (M = w.webSocket = new WebSocket("wss://ws.duoshuo.com:8201/"), M.onopen = function() {
+        M || (M = w.webSocket = new WebSocket("ws://ws.duoshuo.com:8201/"), M.onopen = function() {
             var e;
             if (M.readyState === 1) while (e = _.shift()) M.send(e)
         },
@@ -640,7 +640,7 @@ function os(e) {
             return e.url
         },
         avatarUrl: function(e, t) {
-            return 'https://blog.xiaomo.info/static/https.php?s='+e.avatar_url || 'https://blog.xiaomo.info/static/https.php?s='+nt.data.default_avatar_url
+            return 'http://xiaomo.info/static/https.php?s='+e.avatar_url || 'http://xiaomo.info/static/https.php?s='+nt.data.default_avatar_url
         },
         userAnchor: function(e) {
             var t = J.userUrl(e);
