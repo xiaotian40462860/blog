@@ -640,9 +640,9 @@ function os(e) {
             return e.url
         },
         avatarUrl: function(e, t) {
-            return 'https://blog.xiaomo.info/js/https.php?s='+e.avatar_url || 'https://blog.xiaomo.info/js/https.php?s='+nt.data.default_avatar_url
+            return e.avatar_url || nt.data.default_avatar_url
         },
-        userAnchor: function(e) {
+        userAnchor: function(e) {npm
             var t = J.userUrl(e);
             return t ? '<a rel="nofollow author" target="_blank" href="' + p(t) + '">' + p(e.name) + "</a>": p(e.name)
         },
