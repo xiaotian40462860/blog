@@ -16,7 +16,7 @@ menu:
 avatar: /img/head.png
 
 # Small icon of Your site | 站点小图标地址
-favicon: http://xiaomo.info/images/favicon.ico
+favicon: http://xiaomo.info/static/images/favicon.ico
 
 # Social info. Bar | 社交信息展示
 ## Keep "mailto:" in Email | 设置 Email 时保留 "mailto:"

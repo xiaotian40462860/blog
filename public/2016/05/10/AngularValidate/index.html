@@ -21,13 +21,13 @@
 <meta property="og:url" content="https://blog.xiaomo.info/2016/05/10/AngularValidate/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="使用angularjs的验证系统来做前端验证需要注意的一些地方">
-<meta property="og:image" content="http://xiaomo.info/images/angular.png">
-<meta property="og:image" content="http://xiaomo.info/images/validate.gif">
+<meta property="og:image" content="http://xiaomo.info/static/images/angular.png">
+<meta property="og:image" content="http://xiaomo.info/static/images/validate.gif">
 <meta property="og:updated_time" content="2016-11-26T01:35:29.386Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angularjs的验证系统">
 <meta name="twitter:description" content="使用angularjs的验证系统来做前端验证需要注意的一些地方">
-<meta name="twitter:image" content="http://xiaomo.info/images/angular.png">
+<meta name="twitter:image" content="http://xiaomo.info/static/images/angular.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -331,8 +331,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>使用angularjs的验证系统来做前端验证需要注意的一些地方<br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://xiaomo.info/images/angular.png" alt="点击访问小莫的github"></a></p>
-<h3 id="一、-效果图"><a href="#一、-效果图" class="headerlink" title="一、 效果图"></a>一、 效果图</h3><p> <img src="http://xiaomo.info/images/validate.gif" alt="angularjs验证效果图"></p>
+        <p>使用angularjs的验证系统来做前端验证需要注意的一些地方<br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/angular.png" alt="点击访问小莫的github"></a></p>
+<h3 id="一、-效果图"><a href="#一、-效果图" class="headerlink" title="一、 效果图"></a>一、 效果图</h3><p> <img src="http://xiaomo.info/static/images/validate.gif" alt="angularjs验证效果图"></p>
 <h3 id="二、-要点"><a href="#二、-要点" class="headerlink" title="二、 要点"></a>二、 要点</h3><h4 id="1：form"><a href="#1：form" class="headerlink" title="1：form"></a>1：form</h4><p>给form起一个名字,并禁掉原生的验证</p>
 <h4 id="2-显示时机"><a href="#2-显示时机" class="headerlink" title="2. 显示时机"></a>2. 显示时机</h4><p>这个div是要在内容发生变化且不合法才会显示</p>
 <figure class="highlight ceylon"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$dirty &amp;&amp; addBlogForm.title.$invalid"</span>&gt;</div><div class="line">                 &lt;<span class="keyword">small</span> <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$error.required"</span>&gt;请输入标题内容&lt;/<span class="keyword">small</span>&gt;</div><div class="line">                 &lt;<span class="keyword">small</span> <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$error.minlength"</span>&gt;标题内容最少长度为<span class="number">3</span>&lt;/<span class="keyword">small</span>&gt;</div><div class="line">                 &lt;<span class="keyword">small</span> <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$error.maxlength"</span>&gt;标题最大长度为<span class="number">64</span>&lt;/<span class="keyword">small</span>&gt;</div><div class="line">                 &lt;<span class="keyword">small</span> <span class="keyword">class</span>=<span class="string">"error"</span> ng-show=<span class="string">"addBlogForm.title.$error.unique"</span>&gt;</div><div class="line">                     这个标题己经被用过了，请换一个标题吧</div><div class="line">                 &lt;/<span class="keyword">small</span>&gt;</div><div class="line">  &lt;/div&gt;</div></pre></td></tr></table></figure>

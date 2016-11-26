@@ -21,14 +21,14 @@
 <meta property="og:url" content="https://blog.xiaomo.info/2016/06/23/Angular2StudyNoteComponent/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="angular2的思想非常先进，摒弃了angular1那种复杂的构建模式，采用了组件化开方的方，那我们一起来看一看，一个基础的组件是什么样子的呢。angular2-demo">
-<meta property="og:image" content="http://xiaomo.info/images/angular.png">
-<meta property="og:image" content="http://xiaomo.info/images/jiegou.png">
-<meta property="og:image" content="http://xiaomo.info/images/Basic.png">
+<meta property="og:image" content="http://xiaomo.info/static/images/angular.png">
+<meta property="og:image" content="http://xiaomo.info/static/images/jiegou.png">
+<meta property="og:image" content="http://xiaomo.info/static/images/Basic.png">
 <meta property="og:updated_time" content="2016-11-26T01:35:33.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angular2学习笔记之基本组件和ngFor">
 <meta name="twitter:description" content="angular2的思想非常先进，摒弃了angular1那种复杂的构建模式，采用了组件化开方的方，那我们一起来看一看，一个基础的组件是什么样子的呢。angular2-demo">
-<meta name="twitter:image" content="http://xiaomo.info/images/angular.png">
+<meta name="twitter:image" content="http://xiaomo.info/static/images/angular.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -332,15 +332,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>angular2的思想非常先进，摒弃了angular1那种复杂的构建模式，采用了组件化开方的方，那我们一起来看一看，一个基础的组件是什么样子的呢。<a href="https://github.com/qq83387856/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://xiaomo.info/images/angular.png" alt="点击访问小莫的github"></a></p>
-<h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><h4 id="1-目录结构"><a href="#1-目录结构" class="headerlink" title="1. 目录结构"></a>1. 目录结构</h4><p><img src="http://xiaomo.info/images/jiegou.png" alt=""></p>
+        <p>angular2的思想非常先进，摒弃了angular1那种复杂的构建模式，采用了组件化开方的方，那我们一起来看一看，一个基础的组件是什么样子的呢。<a href="https://github.com/qq83387856/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/qq83387856" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/angular.png" alt="点击访问小莫的github"></a></p>
+<h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><h4 id="1-目录结构"><a href="#1-目录结构" class="headerlink" title="1. 目录结构"></a>1. 目录结构</h4><p><img src="http://xiaomo.info/static/images/jiegou.png" alt=""></p>
 <ul>
 <li><code>.ts</code>   组件代码</li>
 <li><code>.scss</code>   样式</li>
 <li><code>.png</code>   效果图</li>
 <li><code>.html</code>   模板文件</li>
 </ul>
-<h3 id="2-效果图"><a href="#2-效果图" class="headerlink" title="2. 效果图"></a>2. 效果图</h3><p><img src="http://xiaomo.info/images/Basic.png" alt=""></p>
+<h3 id="2-效果图"><a href="#2-效果图" class="headerlink" title="2. 效果图"></a>2. 效果图</h3><p><img src="http://xiaomo.info/static/images/Basic.png" alt=""></p>
 <h3 id="二、代码实例"><a href="#二、代码实例" class="headerlink" title="二、代码实例"></a>二、代码实例</h3><p><a href="https://github.com/qq83387856/angular2-demo/tree/master/src/ts/component/basic" target="_blank" rel="external">https://github.com/qq83387856/angular2-demo/tree/master/src/ts/component/basic</a></p>
 <h3 id="三、-详细解读"><a href="#三、-详细解读" class="headerlink" title="三、 详细解读"></a>三、 详细解读</h3><h4 id="1-Basic-ts"><a href="#1-Basic-ts" class="headerlink" title="1. Basic.ts"></a>1. <a href="https://github.com/qq83387856/angular2-demo/blob/master/src/ts/component/basic/Basic.ts" target="_blank" rel="external">Basic.ts</a></h4><p>一个基本的组件就长个样子，并没有那么神秘</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;Component&#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123;UserModel&#125; <span class="keyword">from</span> <span class="string">'./../../model/UserModel'</span>;</div><div class="line"></div><div class="line"><span class="comment">// 创建模拟数据</span></div><div class="line"><span class="keyword">let</span> xiaomo:UserModel = <span class="keyword">new</span> UserModel( <span class="string">'xiaomo'</span>);</div><div class="line"><span class="keyword">let</span> xiaoming:UserModel = <span class="keyword">new</span> UserModel(<span class="string">'xiaoming'</span>);</div><div class="line"></div><div class="line">@Component(&#123;</div><div class="line">    <span class="attr">selector</span>: <span class="string">'basic'</span>,</div><div class="line">    <span class="attr">styles</span>:[<span class="built_in">require</span>(<span class="string">'./Basic.scss'</span>)], <span class="comment">//内联样式,注意使用row-loader</span></div><div class="line">    template: <span class="built_in">require</span>(<span class="string">'./Basic.html'</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">BasicComponent</span> </span>&#123;</div><div class="line"></div><div class="line">    users:<span class="built_in">Object</span>;</div><div class="line">    <span class="comment">// 在构造函数中赋值</span></div><div class="line">    <span class="keyword">constructor</span>() &#123;</div><div class="line">            <span class="keyword">this</span>.users= [ xiaomo,xiaoming];</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
