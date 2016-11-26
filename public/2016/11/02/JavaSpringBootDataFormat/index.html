@@ -21,12 +21,12 @@
 <meta property="og:url" content="https://blog.xiaomo.info/2016/11/02/JavaSpringBootDataFormat/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。">
-<meta property="og:image" content="http://static.xiaomo.info/images/java_banner.png">
-<meta property="og:updated_time" content="2016-11-25T07:30:17.381Z">
+<meta property="og:image" content="https://static.xiaomo.info/images/java_banner.png">
+<meta property="og:updated_time" content="2016-11-26T01:35:28.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring boot做前后分离时间格式化">
 <meta name="twitter:description" content="最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。">
-<meta name="twitter:image" content="http://static.xiaomo.info/images/java_banner.png">
+<meta name="twitter:image" content="https://static.xiaomo.info/images/java_banner.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -150,13 +150,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -286,7 +286,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap"><article id="post-JavaSpringBootDataFormat" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -330,7 +330,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。<br><a id="more"></a><br><img src="http://static.xiaomo.info/images/java_banner.png" alt="1"></p>
+        <p>最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。<br><a id="more"></a><br><img src="https://static.xiaomo.info/images/java_banner.png" alt="1"></p>
 <h3 id="一、写一个Serializer"><a href="#一、写一个Serializer" class="headerlink" title="一、写一个Serializer"></a>一、写一个<code>Serializer</code></h3><p>然后做一个时间格式化的处理</p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> info.xiaomo.core.filter;</div><div class="line"></div><div class="line"><span class="keyword">import</span> com.fasterxml.jackson.core.<span class="type">JsonGenerator</span>;</div><div class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.<span class="type">JsonSerializer</span>;</div><div class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.<span class="type">SerializerProvider</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.<span class="type">IOException</span>;</div><div class="line"><span class="keyword">import</span> java.text.<span class="type">SimpleDateFormat</span>;</div><div class="line"><span class="keyword">import</span> java.util.<span class="type">Date</span>;</div><div class="line"></div><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">CustomDateSerializer</span> <span class="keyword">extends</span> <span class="title">JsonSerializer&lt;Date&gt;</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    public void serialize(<span class="type">Date</span> value, <span class="type">JsonGenerator</span> jsonGenerator, <span class="type">SerializerProvider</span> provider) <span class="keyword">throws</span> <span class="type">IOException</span> &#123;</div><div class="line">        <span class="type">SimpleDateFormat</span> sdf = <span class="keyword">new</span> <span class="type">SimpleDateFormat</span>(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</div><div class="line">        jsonGenerator.writeString(sdf.format(value));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="二、-使用"><a href="#二、-使用" class="headerlink" title="二、 使用"></a>二、 使用</h3><p>在需要转换的时间的Model中加上这个类,仔细观察下面代码中类型为<code>Date</code>的属性</p>
@@ -342,17 +342,17 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/11/02/JavaSpringBootDataFormat/">spring boot做前后分离时间格式化</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">xiaomo</a></p>
-        <p><span>Created:</span>2016-11-02, 00:00:00</p>
-        <p><span>Updated:</span>2016-11-25, 15:30:17</p>
+        <p><span>本文标题:</span><a href="/2016/11/02/JavaSpringBootDataFormat/">spring boot做前后分离时间格式化</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
+        <p><span>发布时间:</span>2016-11-02, 00:00:00</p>
+        <p><span>最后更新:</span>2016-11-26, 09:35:28</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/11/02/JavaSpringBootDataFormat/" title="spring boot做前后分离时间格式化">https://blog.xiaomo.info/2016/11/02/JavaSpringBootDataFormat/</a>
-            <span class="copy-path" data-clipboard-text="From https://blog.xiaomo.info/2016/11/02/JavaSpringBootDataFormat/　　By xiaomo" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/11/02/JavaSpringBootDataFormat/" title="spring boot做前后分离时间格式化">https://blog.xiaomo.info/2016/11/02/JavaSpringBootDataFormat/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://blog.xiaomo.info/2016/11/02/JavaSpringBootDataFormat/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享"</a> 转载请保留原文链接及作者。
         </p>
     </div>
 
@@ -379,7 +379,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
+    <strong class="toc-title">文章目录</strong>
     <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、写一个Serializer"><span class="toc-number">1.</span> <span class="toc-text">一、写一个Serializer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、-使用"><span class="toc-number">2.</span> <span class="toc-text">二、 使用</span></a></li></ol>
 </div>
 <style>
@@ -389,10 +389,10 @@
     }
 </style>
 
-<input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
 <script>
-    yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
 </script>
 
 
@@ -434,7 +434,7 @@
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;
 
-        ds.src = 'http://static.xiaomo.info/embed.js';
+        ds.src = 'https://static.xiaomo.info/embed.js';
         /*上面是我自己的 embed.js 链接，请改为你自己的地址*/
 
         ds.charset = 'UTF-8';
@@ -456,21 +456,21 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/11/07/NihonSeiyou/" title="Pre: 日本动漫声优公演,来看看什么叫专业声优">
+            <a href="/2016/11/07/NihonSeiyou/" title="上一篇: 日本动漫声优公演,来看看什么叫专业声优">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/11/01/JavaSpringBootCors/" title="Next: spring boot做前后分离的跨域问题">
+            <a href="/2016/11/01/JavaSpringBootCors/" title="下一篇: spring boot做前后分离的跨域问题">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/11/25/HttpToHttps/">拥抱https(http全面切换到https)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/11/JavaSpringBootSwaggerUi/">swagger ui和spring boot集成生成api文档</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/08/JavaLombok/">lombok简化java代码注解的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/08/JavaSpringVideo/">spring4免费全套视频教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/07/NihonSeiyou/">日本动漫声优公演,来看看什么叫专业声优</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/JavaSpringBootDataFormat/">spring boot做前后分离时间格式化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/01/JavaSpringBootCors/">spring boot做前后分离的跨域问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/29/JavaSpringZiliao/">spring boot相关资料</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/JavaIdeaMaven/">Maven 与 IntelliJ IDEA 的完美结合</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/24/JavaServletUpload/">使用Servlet做简单的上传功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NihonAnime/">喜欢的动漫</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/NihonSekaku/">生活习惯的不同，造就了丰富多彩的世界</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/BangumiDongli/">《东离剑游记》</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/NpmYargs/">yargs插件的使用，node.js 命令行框架 yargs 和你的程序实现交互</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/Ionic2Environment/">ionic2环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/Angular2ApiRouter/">angular2 api整理之路由模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/Angular2ApiCommon/">angular2 api整理之通用模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/12/JavascriptRxjsStudy/">rxjs全接触</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/02/JavascriptDesignPattern/">javascript设计模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/01/2016StudyPlan/">5年学习计划</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/30/Angular2studyAnimate/">angular2学习笔记之动画效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/Angular2StudyServiceHttp/">angular2学习笔记之服务和http</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/Angular2StudyNoteOther/">angular2学习笔记之小技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/angular2_study_note_ng-tag/">angular2学习笔记之ng2标签</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/24/Angular2StudyNoteEvent/">angular2学习笔记之事件和多组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/23/Angular2StudyNoteComponent/">angular2学习笔记之基本组件和ngFor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/22/Angular2StudyNoteEnvironment/">angular2学习笔记之基础环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/21/ReactEnvironment/">react学习笔记之环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/17/DuoshuoComment/">获取多说和 Disqus 文章评论数的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/17/PublicDns/">几个国内专用的公共 DNS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/17/LinuxDisk/">阿里云服务器磁盘挂载</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/17/LinuxChmod/">linux权限详细解读</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/07/MarkdownTableStyle/">Markdown 表格样式调整与自适应优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/07/GulpUse/">gulp构建工具的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/05/FrontEndTools/">前端工程化工具初选</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/04/AnkiExcelShortcuts/">Anki 记忆库之 Excel 快捷键大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/03/CssFontFamily/">CSS font-family 网页字体使用小结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/03/NodeSpider/">nodejs爬虫项目实战</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/Package.jsonScripts/">package.json常用script</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/01/NpmModulesShare/">npm模块分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/27/MongodbUse/">mongodb数据库的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/26/KoaGenerator/">koa生成器,一键生成koa和koa2项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/24/NodeKoa/">nodejs框架koa学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/20/JavascriptSyntax/">javascript学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/19/Es6Syntax/">es6语法快速上手</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/WebpackParams/">webpack相关命令参数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/WebpackPlugins/">webpack进阶之插件篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/WebpackLLink/">webpack进阶之loader篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/16/ExcelMarkdownTable/">用 Excel 生成和管理 Markdown 表格</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/16/NodeProcess/">nodejs的process模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/WebpackBasicUse/">webpack使用之基础篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/AboutMe/">我的个人简历</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/13/NodeOnlineChat/">使用nodejs搭建一个简易的即时聊天软件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/12/LinuxCrontab/">linux下使用定时器跑任务</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/AngularKeyboardEvent/">angularjs键盘事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/AngularUiRouter/">第三方组件ui-router的简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/MarkdownSyntax/">markdown语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/AngularHttp/">使用angularjs的$http异步删除数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/ngOptions/">表单添加之ng-options</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/AtomPlugins/">atom的使用和插件的安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/NgCheckbox/">angularjs复选框</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/10/AngularValidate/">angularjs的验证系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/30/SublimeConfig/">Sublime Text 3 使用配置与插件安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/AnkiTemplates/">Anki 自用卡片模板分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/16/PngGifTransparency/">制作透明背景 PNG 图片和 GIF 动图的几种方法</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/11/25/HttpToHttps/">拥抱https(http全面切换到https)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/11/JavaSpringBootSwaggerUi/">swagger ui和spring boot集成生成api文档</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/08/JavaLombok/">lombok简化java代码注解的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/08/JavaSpringVideo/">spring4免费全套视频教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/07/NihonSeiyou/">日本动漫声优公演,来看看什么叫专业声优</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/JavaSpringBootDataFormat/">spring boot做前后分离时间格式化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/01/JavaSpringBootCors/">spring boot做前后分离的跨域问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/29/JavaSpringZiliao/">spring boot相关资料</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/JavaIdeaMaven/">Maven 与 IntelliJ IDEA 的完美结合</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/24/JavaServletUpload/">使用Servlet做简单的上传功能</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/08/NihonAnime/">喜欢的动漫</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/28/NihonSekaku/">生活习惯的不同，造就了丰富多彩的世界</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/BangumiDongli/">《东离剑游记》</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/NpmYargs/">yargs插件的使用，node.js 命令行框架 yargs 和你的程序实现交互</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/Ionic2Environment/">ionic2环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/Angular2ApiRouter/">angular2 api整理之路由模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/21/Angular2ApiCommon/">angular2 api整理之通用模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/12/JavascriptRxjsStudy/">rxjs全接触</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/02/JavascriptDesignPattern/">javascript设计模式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/01/2016StudyPlan/">5年学习计划</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/30/Angular2studyAnimate/">angular2学习笔记之动画效果</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/27/Angular2StudyServiceHttp/">angular2学习笔记之服务和http</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/26/Angular2StudyNoteOther/">angular2学习笔记之小技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/25/Angular2StudyNoteNgTag/">angular2学习笔记之ng2标签</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/24/Angular2StudyNoteEvent/">angular2学习笔记之事件和多组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/23/Angular2StudyNoteComponent/">angular2学习笔记之基本组件和ngFor</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/22/Angular2StudyNoteEnvironment/">angular2学习笔记之基础环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/21/ReactEnvironment/">react学习笔记之环境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/17/DuoshuoComment/">获取多说和 Disqus 文章评论数的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/17/PublicDns/">几个国内专用的公共 DNS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/17/LinuxDisk/">阿里云服务器磁盘挂载</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/17/LinuxChmod/">linux权限详细解读</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/07/MarkdownTableStyle/">Markdown 表格样式调整与自适应优化</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/07/GulpUse/">gulp构建工具的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/05/FrontEndTools/">前端工程化工具初选</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/04/AnkiExcelShortcuts/">Anki 记忆库之 Excel 快捷键大全</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/03/CssFontFamily/">CSS font-family 网页字体使用小结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/03/NodeSpider/">nodejs爬虫项目实战</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/02/Package.jsonScripts/">package.json常用script</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/01/NpmModulesShare/">npm模块分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/27/MongodbUse/">mongodb数据库的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/26/KoaGenerator/">koa生成器,一键生成koa和koa2项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/24/NodeKoa/">nodejs框架koa学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/20/JavascriptSyntax/">javascript学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/19/Es6Syntax/">es6语法快速上手</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/WebpackParams/">webpack相关命令参数</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/WebpackPlugins/">webpack进阶之插件篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/17/WebpackLLink/">webpack进阶之loader篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/16/ExcelMarkdownTable/">用 Excel 生成和管理 Markdown 表格</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/16/NodeProcess/">nodejs的process模块</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/WebpackBasicUse/">webpack使用之基础篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/14/AboutMe/">我的个人简历</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/13/NodeOnlineChat/">使用nodejs搭建一个简易的即时聊天软件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/12/LinuxCrontab/">linux下使用定时器跑任务</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/AngularKeyboardEvent/">angularjs键盘事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/AngularUiRouter/">第三方组件ui-router的简单使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/MarkdownSyntax/">markdown语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/AngularHttp/">使用angularjs的$http异步删除数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/ngOptions/">表单添加之ng-options</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/AtomPlugins/">atom的使用和插件的安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/11/NgCheckbox/">angularjs复选框</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/05/10/AngularValidate/">angularjs的验证系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/30/SublimeConfig/">Sublime Text 3 使用配置与插件安装</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/23/AnkiTemplates/">Anki 自用卡片模板分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/11/16/PngGifTransparency/">制作透明背景 PNG 图片和 GIF 动图的几种方法</a></li></ul>
 
 
 
@@ -487,14 +487,14 @@
                 2016 xiaomo
             </div>
             <div class="footer-right">
-                <a href="http://xiaomo.info/" target="_blank" title="welcome to my Blog">Blog </a> Created by <a href="https://github.com/qq83387856" target="_blank" title="I home that it can helpful!!  v3.0">xiaomo</a>  <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://xiaomo.info/" target="_blank" title="欢迎来到小莫的博客">Blog </a> Created by <a href="https://github.com/qq83387856" target="_blank" title="希望这里的文章对你有所帮助  v3.0">xiaomo</a>  <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" >Site Visitors: 
+                        <span id="site-visit" >本站到访数: 
                             <span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
@@ -504,7 +504,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit">Page Hits: 
+                        <span id="page-visit">本页阅读量: 
                             <span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
@@ -560,9 +560,9 @@ MathJax.Hub.Queue(function() {
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
