@@ -21,12 +21,12 @@
 <meta property="og:url" content="https://blog.xiaomo.info/2016/11/02/JavaSpringBootDataFormat/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。">
-<meta property="og:image" content="https://static.xiaomo.info/images/java_banner.png">
+<meta property="og:image" content="http://xiaomo.info/images/java_banner.png">
 <meta property="og:updated_time" content="2016-11-26T01:35:28.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring boot做前后分离时间格式化">
 <meta name="twitter:description" content="最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。">
-<meta name="twitter:image" content="https://static.xiaomo.info/images/java_banner.png">
+<meta name="twitter:image" content="http://xiaomo.info/images/java_banner.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -330,7 +330,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。<br><a id="more"></a><br><img src="https://static.xiaomo.info/images/java_banner.png" alt="1"></p>
+        <p>最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。<br><a id="more"></a><br><img src="http://xiaomo.info/images/java_banner.png" alt="1"></p>
 <h3 id="一、写一个Serializer"><a href="#一、写一个Serializer" class="headerlink" title="一、写一个Serializer"></a>一、写一个<code>Serializer</code></h3><p>然后做一个时间格式化的处理</p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> info.xiaomo.core.filter;</div><div class="line"></div><div class="line"><span class="keyword">import</span> com.fasterxml.jackson.core.<span class="type">JsonGenerator</span>;</div><div class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.<span class="type">JsonSerializer</span>;</div><div class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.<span class="type">SerializerProvider</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.<span class="type">IOException</span>;</div><div class="line"><span class="keyword">import</span> java.text.<span class="type">SimpleDateFormat</span>;</div><div class="line"><span class="keyword">import</span> java.util.<span class="type">Date</span>;</div><div class="line"></div><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">CustomDateSerializer</span> <span class="keyword">extends</span> <span class="title">JsonSerializer&lt;Date&gt;</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    public void serialize(<span class="type">Date</span> value, <span class="type">JsonGenerator</span> jsonGenerator, <span class="type">SerializerProvider</span> provider) <span class="keyword">throws</span> <span class="type">IOException</span> &#123;</div><div class="line">        <span class="type">SimpleDateFormat</span> sdf = <span class="keyword">new</span> <span class="type">SimpleDateFormat</span>(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</div><div class="line">        jsonGenerator.writeString(sdf.format(value));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="二、-使用"><a href="#二、-使用" class="headerlink" title="二、 使用"></a>二、 使用</h3><p>在需要转换的时间的Model中加上这个类,仔细观察下面代码中类型为<code>Date</code>的属性</p>
