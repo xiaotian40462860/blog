@@ -640,7 +640,7 @@ function os(e) {
             return e.url
         },
         avatarUrl: function(e, t) {
-            return 'http://xiaomo.info/static/https.php?s='+e.avatar_url || 'http://xiaomo.info/static/https.php?s='+nt.data.default_avatar_url
+            return 'https://blog.xiaomo.info/js/https.php?s='+e.avatar_url || 'https://blog.xiaomo.info/js/https.php?s='+nt.data.default_avatar_url
         },
         userAnchor: function(e) {
             var t = J.userUrl(e);
