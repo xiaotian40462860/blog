@@ -640,11 +640,6 @@ function os(e) {
                 return e.url
             },
             avatarUrl: function (e, t) {
-                if (e.avatar_url) {
-                    e.avatar_url = (document.location.protocol == "https:") ? e.avatar_url.replace(/^http\:\/\//, "https://blog.xiaomo.info/proxy/") : e.avatar_url
-                } else {
-                    nt.data.default_avatar_url = (document.location.protocol == "https:") ? nt.data.default_avatar_url.replace(/^http\:\/\//, "https://blog.xiaomo.info/proxy/") : nt.data.default_avatar_url
-                }
                 return e.avatar_url || nt.data.default_avatar_url
             },
         userAnchor: function(e) {npm
