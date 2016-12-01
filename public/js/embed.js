@@ -636,13 +636,17 @@ function os(e) {
     };
     for (var $ in Object.prototype) return alert("Object.prototype\u4e0d\u4e3a\u7a7a\uff0c\u8bf7\u4e0d\u8981\u7ed9Object.prototype\u8bbe\u7f6e\u65b9\u6cd5");
     var J = w.templates = {
-        userUrl: function(e) {
-            return e.url
-        },
-        avatarUrl: function(e, t) {
-            return 'https://image.xiaomo.info/duoshuo/embed.php?s='+e.avatar_url
-                || 'https://image.xiaomo.info/duoshuo/embed.php?s='+nt.data.default_avatar_url
-        },
+            userUrl: function (e) {
+                return e.url
+            },
+            avatarUrl: function (e, t) {
+                if (e.avatar_url) {
+                    e.avatar_url = (document.location.protocol == "https:") ? e.avatar_url.replace(/^http\:\/\//, "https://blog.xiaomo.info/proxy/") : e.avatar_url
+                } else {
+                    nt.data.default_avatar_url = (document.location.protocol == "https:") ? nt.data.default_avatar_url.replace(/^http\:\/\//, "https://blog.xiaomo.info/proxy/") : nt.data.default_avatar_url
+                }
+                return e.avatar_url || nt.data.default_avatar_url
+            },
         userAnchor: function(e) {npm
             var t = J.userUrl(e);
             return t ? '<a rel="nofollow author" target="_blank" href="' + p(t) + '">' + p(e.name) + "</a>": p(e.name)
