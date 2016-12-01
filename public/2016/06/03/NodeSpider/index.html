@@ -21,18 +21,18 @@
 <meta property="og:url" content="https://blog.xiaomo.info/2016/06/03/NodeSpider/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="这篇文章主要介绍了NodeJS制作爬虫的全过程，包括项目建立，目标网站分析、使用superagent获取源数据、使用cheerio解析、使用eventproxy来并发抓取每个主题的内容等方面，有需要的小伙伴参考下吧。">
-<meta property="og:image" content="https://image.xiaomo.info/nodeSpider/nodejs.png">
+<meta property="og:image" content="https://image.xiaomo.info/banner/nodejs.png">
 <meta property="og:image" content="https://image.xiaomo.info/nodeSpider/0.png">
 <meta property="og:image" content="https://image.xiaomo.info/nodeSpider/1.png">
 <meta property="og:image" content="https://image.xiaomo.info/nodeSpider/2.png">
 <meta property="og:image" content="https://image.xiaomo.info/nodeSpider/3.png">
 <meta property="og:image" content="https://image.xiaomo.info/nodeSpider/4.png">
 <meta property="og:image" content="https://image.xiaomo.info/nodeSpider/5.png">
-<meta property="og:updated_time" content="2016-12-01T06:12:43.473Z">
+<meta property="og:updated_time" content="2016-12-01T06:31:41.644Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs爬虫项目实战">
 <meta name="twitter:description" content="这篇文章主要介绍了NodeJS制作爬虫的全过程，包括项目建立，目标网站分析、使用superagent获取源数据、使用cheerio解析、使用eventproxy来并发抓取每个主题的内容等方面，有需要的小伙伴参考下吧。">
-<meta name="twitter:image" content="https://image.xiaomo.info/nodeSpider/nodejs.png">
+<meta name="twitter:image" content="https://image.xiaomo.info/banner/nodejs.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -336,7 +336,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>这篇文章主要介绍了NodeJS制作爬虫的全过程，包括项目建立，目标网站分析、使用superagent获取源数据、使用cheerio解析、使用eventproxy来并发抓取每个主题的内容等方面，有需要的小伙伴参考下吧。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/nodeSpider/nodejs.png" alt="点击访问小莫的github"></a></p>
+        <p>这篇文章主要介绍了NodeJS制作爬虫的全过程，包括项目建立，目标网站分析、使用superagent获取源数据、使用cheerio解析、使用eventproxy来并发抓取每个主题的内容等方面，有需要的小伙伴参考下吧。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/nodejs.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-依赖"><a href="#一、-依赖" class="headerlink" title="一、 依赖"></a>一、 依赖</h3><h4 id="1-DOM操作-cheerio"><a href="#1-DOM操作-cheerio" class="headerlink" title="1. DOM操作  cheerio"></a>1. DOM操作  <a href="https://npm.taobao.org/package/cheerio" target="_blank" rel="external">cheerio</a></h4><h4 id="2-请求插件-request"><a href="#2-请求插件-request" class="headerlink" title="2. 请求插件  request"></a>2. 请求插件  <a href="https://npm.taobao.org/package/request" target="_blank" rel="external">request</a></h4><h4 id="3-http库-superagent"><a href="#3-http库-superagent" class="headerlink" title="3. http库  superagent"></a>3. http库  <a href="https://npm.taobao.org/package/superagent" target="_blank" rel="external">superagent</a></h4><h4 id="4-代理-eventproxy"><a href="#4-代理-eventproxy" class="headerlink" title="4. 代理  eventproxy"></a>4. 代理  <a href="https://npm.taobao.org/package/eventproxy" target="_blank" rel="external">eventproxy</a></h4><h3 id="二、建立项目node-spider"><a href="#二、建立项目node-spider" class="headerlink" title="二、建立项目node-spider"></a>二、建立项目node-spider</h3><h4 id="1-建立一个Koa2项目"><a href="#1-建立一个Koa2项目" class="headerlink" title="1. 建立一个Koa2项目"></a>1. 建立一个Koa2项目</h4><p> <code>npm install -g koa-generator</code></p>
 <h4 id="2-生成一个koa2的项目"><a href="#2-生成一个koa2的项目" class="headerlink" title="2. 生成一个koa2的项目"></a>2. 生成一个koa2的项目</h4><p> <code>koa2 -e node-spider</code>   -e表示使用ejs模板，具体参照<a href="http://localhost:4000/2016/05/26/2016-5-26-koa_generator/" target="_blank" rel="external">koa生成器,一键生成koa和koa2项目</a>   </p>
 <h3 id="三、目标网站分析"><a href="#三、目标网站分析" class="headerlink" title="三、目标网站分析"></a>三、目标网站分析</h3><p>如图，这是CNode首页一部分div标签，我们就是通过这一系列的id、class来定位我们需要的信息。<br><img src="https://image.xiaomo.info/nodeSpider/0.png" alt=""></p>
@@ -375,7 +375,7 @@
         <p><span>本文标题:</span><a href="/2016/06/03/NodeSpider/">nodejs爬虫项目实战</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-06-03, 00:00:00</p>
-        <p><span>最后更新:</span>2016-12-01, 14:12:43</p>
+        <p><span>最后更新:</span>2016-12-01, 14:31:41</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/06/03/NodeSpider/" title="nodejs爬虫项目实战">https://blog.xiaomo.info/2016/06/03/NodeSpider/</a>
             <span class="copy-path" data-clipboard-text="原文: https://blog.xiaomo.info/2016/06/03/NodeSpider/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
