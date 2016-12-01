@@ -25,9 +25,9 @@
 <meta property="og:image" content="https://dn-cnode.qbox.me/FskKgd_Epv4IYYh0waATFFHoD7g9">
 <meta property="og:image" content="https://dn-cnode.qbox.me/FhJDMWtAwWxgkXsEMWsfIz4XZ3Jl">
 <meta property="og:image" content="http://f.cl.ly/items/18471z1H402O24072r1J/Screenshot.png">
-<meta property="og:image" content="https://image.xiaomo.info/banner/debug.png">
+<meta property="og:image" content="https://image.xiaomo.info/node/debug.png">
 <meta property="og:image" content="http://f.cl.ly/items/2i3h1d3t121M2Z1A3Q0N/Screenshot.png">
-<meta property="og:updated_time" content="2016-12-01T06:50:27.307Z">
+<meta property="og:updated_time" content="2016-12-01T07:37:07.472Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm模块分享">
 <meta name="twitter:description" content="平时自己用的npm模块也不算少了，其实网上有很多牛人开发的npm模块都很好，希望不要被埋没了。">
@@ -365,7 +365,7 @@
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"> //Example app.js</div><div class="line">var <span class="built_in">debug</span> = <span class="built_in">require</span>(<span class="string">'debug'</span>)(<span class="string">'http'</span>)</div><div class="line">  , http = <span class="built_in">require</span>(<span class="string">'http'</span>)</div><div class="line">  , name = <span class="string">'My App'</span>;</div><div class="line"></div><div class="line">// fake app</div><div class="line"></div><div class="line"><span class="built_in">debug</span>(<span class="string">'booting %s'</span>, name);</div><div class="line"></div><div class="line">http.createServer(<span class="function"><span class="keyword">function</span><span class="params">(req, res)</span></span>&#123;</div><div class="line">  <span class="built_in">debug</span>(req.method + <span class="string">' '</span> + req.url);</div><div class="line">  res.<span class="keyword">end</span>(<span class="string">'hello\n'</span>);</div><div class="line">&#125;).listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="built_in">debug</span>(<span class="string">'listening'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// fake worker of some kind</div><div class="line"></div><div class="line"><span class="built_in">require</span>(<span class="string">'./worker'</span>);</div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Example worker.js:</span></div><div class="line"><span class="keyword">var</span> debug = <span class="built_in">require</span>(<span class="string">'debug'</span>)(<span class="string">'worker'</span>);</div><div class="line"></div><div class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  debug(<span class="string">'doing some work'</span>);</div><div class="line">&#125;, <span class="number">1000</span>);</div></pre></td></tr></table></figure>
 <p>效果图<br><img src="http://f.cl.ly/items/18471z1H402O24072r1J/Screenshot.png" alt="1"></p>
-<p>在windows环境下需要设置环境变量<code>set DEBUG=*,-not_this</code> 我这里使用的是idea的debug调试<br><img src="https://image.xiaomo.info/banner/debug.png" alt="1"></p>
+<p>在windows环境下需要设置环境变量<code>set DEBUG=*,-not_this</code> 我这里使用的是idea的debug调试<br><img src="https://image.xiaomo.info/node/debug.png" alt="1"></p>
 <p>windows 下启动方式<br><img src="http://f.cl.ly/items/2i3h1d3t121M2Z1A3Q0N/Screenshot.png" alt="1"></p>
 <p>将debug日志转存到文件中<br><code>DEBUG_FD=3 node your-app.js 3&gt; whatever.log</code>   </p>
 <h4 id="3、koa-bodyparser"><a href="#3、koa-bodyparser" class="headerlink" title="3、koa-bodyparser"></a>3、<a href="https://npm.taobao.org/package/koa-bodyparser" target="_blank" rel="external">koa-bodyparser</a></h4><p>使用方法  </p>
@@ -389,7 +389,7 @@
         <p><span>本文标题:</span><a href="/2016/06/01/NpmModulesShare/">npm模块分享</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-06-01, 00:00:00</p>
-        <p><span>最后更新:</span>2016-12-01, 14:50:27</p>
+        <p><span>最后更新:</span>2016-12-01, 15:37:07</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/06/01/NpmModulesShare/" title="npm模块分享">https://blog.xiaomo.info/2016/06/01/NpmModulesShare/</a>
             <span class="copy-path" data-clipboard-text="原文: https://blog.xiaomo.info/2016/06/01/NpmModulesShare/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -455,7 +455,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"npm模块分享　| 小莫-fighting　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"npm模块分享　| 小莫-fighting　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='https://image.xiaomo.info/blog/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
