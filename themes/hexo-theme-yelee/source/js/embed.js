@@ -640,7 +640,8 @@ function os(e) {
             return e.url
         },
         avatarUrl: function(e, t) {
-            return e.avatar_url || nt.data.default_avatar_url
+            return 'https://images.xiaomo.info/duoshuo/embed.php?s='+e.avatar_url
+                || 'https://images.xiaomo.info/duoshuo/embed.php?s='+nt.data.default_avatar_url
         },
         userAnchor: function(e) {npm
             var t = J.userUrl(e);
