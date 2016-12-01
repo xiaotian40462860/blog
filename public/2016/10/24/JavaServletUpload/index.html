@@ -21,13 +21,13 @@
 <meta property="og:url" content="https://blog.xiaomo.info/2016/10/24/JavaServletUpload/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="这篇文章主要为大家详细介绍了java基于servlet实现上传功能，后台使用java实现，前端主要是jsp，感兴趣的小伙伴们可以参考一下">
-<meta property="og:image" content="https://image.xiaomo.info/banner/java_banner.png">
+<meta property="og:image" content="https://image.xiaomo.info/banner/java_banner.jpg">
 <meta property="og:image" content="https://image.xiaomo.info/java/java_upload.gif">
-<meta property="og:updated_time" content="2016-12-01T07:41:08.687Z">
+<meta property="og:updated_time" content="2016-12-01T08:16:06.916Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Servlet做简单的上传功能">
 <meta name="twitter:description" content="这篇文章主要为大家详细介绍了java基于servlet实现上传功能，后台使用java实现，前端主要是jsp，感兴趣的小伙伴们可以参考一下">
-<meta name="twitter:image" content="https://image.xiaomo.info/banner/java_banner.png">
+<meta name="twitter:image" content="https://image.xiaomo.info/banner/java_banner.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -331,7 +331,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>这篇文章主要为大家详细介绍了java基于servlet实现上传功能，后台使用java实现，前端主要是jsp，感兴趣的小伙伴们可以参考一下<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.png" alt="1"></p>
+        <p>这篇文章主要为大家详细介绍了java基于servlet实现上传功能，后台使用java实现，前端主要是jsp，感兴趣的小伙伴们可以参考一下<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><h4 id="1-1-jar包"><a href="#1-1-jar包" class="headerlink" title="1.1 jar包"></a>1.1 jar包</h4><p><code>servlet-api</code> 是servlet的核心api包<br><code>commons-fileupload</code> 上传功能的通用工具包<br><code>fastjson</code> 阿里的json工具包</p>
 <h3 id="1-2-pom文件"><a href="#1-2-pom文件" class="headerlink" title="1.2 pom文件"></a>1.2 pom文件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-fileupload<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-fileupload<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="二、项目介绍"><a href="#二、项目介绍" class="headerlink" title="二、项目介绍"></a>二、项目介绍</h3><h4 id="1-1-web-xml配置"><a href="#1-1-web-xml配置" class="headerlink" title="1.1 web.xml配置"></a>1.1 web.xml配置</h4><p>此项目是采用maven构建的java web项目，传统的jsp作为页面交互。</p>
@@ -355,7 +355,7 @@
         <p><span>本文标题:</span><a href="/2016/10/24/JavaServletUpload/">使用Servlet做简单的上传功能</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">xiaomo</a></p>
         <p><span>发布时间:</span>2016-10-24, 00:00:00</p>
-        <p><span>最后更新:</span>2016-12-01, 15:41:08</p>
+        <p><span>最后更新:</span>2016-12-01, 16:16:06</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/10/24/JavaServletUpload/" title="使用Servlet做简单的上传功能">https://blog.xiaomo.info/2016/10/24/JavaServletUpload/</a>
             <span class="copy-path" data-clipboard-text="原文: https://blog.xiaomo.info/2016/10/24/JavaServletUpload/　　作者: xiaomo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
