@@ -21,17 +21,17 @@
 <meta property="og:url" content="https://blog.xiaomo.info/2016/06/01/NpmModulesShare/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="平时自己用的npm模块也不算少了，其实网上有很多牛人开发的npm模块都很好，希望不要被埋没了。">
-<meta property="og:image" content="http://xiaomo.info/static/images/npm.png">
+<meta property="og:image" content="https://image.xiaomo.info/banner/npm.png">
 <meta property="og:image" content="https://dn-cnode.qbox.me/FskKgd_Epv4IYYh0waATFFHoD7g9">
 <meta property="og:image" content="https://dn-cnode.qbox.me/FhJDMWtAwWxgkXsEMWsfIz4XZ3Jl">
 <meta property="og:image" content="http://f.cl.ly/items/18471z1H402O24072r1J/Screenshot.png">
-<meta property="og:image" content="http://xiaomo.info/static/images/debug.png">
+<meta property="og:image" content="https://image.xiaomo.info/banner/debug.png">
 <meta property="og:image" content="http://f.cl.ly/items/2i3h1d3t121M2Z1A3Q0N/Screenshot.png">
 <meta property="og:updated_time" content="2016-12-01T01:42:32.290Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm模块分享">
 <meta name="twitter:description" content="平时自己用的npm模块也不算少了，其实网上有很多牛人开发的npm模块都很好，希望不要被埋没了。">
-<meta name="twitter:image" content="http://xiaomo.info/static/images/npm.png">
+<meta name="twitter:image" content="https://image.xiaomo.info/banner/npm.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -335,7 +335,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>平时自己用的npm模块也不算少了，其实网上有很多牛人开发的npm模块都很好，希望不要被埋没了。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/npm.png" alt="点击访问小莫的github"></a></p>
+        <p>平时自己用的npm模块也不算少了，其实网上有很多牛人开发的npm模块都很好，希望不要被埋没了。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/npm.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-实用的模块"><a href="#一、-实用的模块" class="headerlink" title="一、 实用的模块"></a>一、 实用的模块</h3><h4 id="1-thunder-vip"><a href="#1-thunder-vip" class="headerlink" title="1.thunder-vip"></a>1.<a href="https://github.com/nswbmw/thunder-vip" target="_blank" rel="external">thunder-vip</a></h4><p>作用：获取最新可用的迅雷 vip 账号。<br>解决什么：不用每次打开网站去找号。。<br>用法： <code>$ thunder</code>  or</p>
   <figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var thunderVip = require('thunder-vip')<span class="comment">;</span></div><div class="line"></div><div class="line">thunderVip(<span class="name">function</span> (<span class="name">err</span>, accounts) &#123;</div><div class="line">console.log(<span class="name">accounts</span>)<span class="comment">;</span></div><div class="line">&#125;)<span class="comment">;</span></div></pre></td></tr></table></figure>
 <p>  截图  </p>
@@ -365,7 +365,7 @@
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"> //Example app.js</div><div class="line">var <span class="built_in">debug</span> = <span class="built_in">require</span>(<span class="string">'debug'</span>)(<span class="string">'http'</span>)</div><div class="line">  , http = <span class="built_in">require</span>(<span class="string">'http'</span>)</div><div class="line">  , name = <span class="string">'My App'</span>;</div><div class="line"></div><div class="line">// fake app</div><div class="line"></div><div class="line"><span class="built_in">debug</span>(<span class="string">'booting %s'</span>, name);</div><div class="line"></div><div class="line">http.createServer(<span class="function"><span class="keyword">function</span><span class="params">(req, res)</span></span>&#123;</div><div class="line">  <span class="built_in">debug</span>(req.method + <span class="string">' '</span> + req.url);</div><div class="line">  res.<span class="keyword">end</span>(<span class="string">'hello\n'</span>);</div><div class="line">&#125;).listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</div><div class="line">  <span class="built_in">debug</span>(<span class="string">'listening'</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// fake worker of some kind</div><div class="line"></div><div class="line"><span class="built_in">require</span>(<span class="string">'./worker'</span>);</div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Example worker.js:</span></div><div class="line"><span class="keyword">var</span> debug = <span class="built_in">require</span>(<span class="string">'debug'</span>)(<span class="string">'worker'</span>);</div><div class="line"></div><div class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  debug(<span class="string">'doing some work'</span>);</div><div class="line">&#125;, <span class="number">1000</span>);</div></pre></td></tr></table></figure>
 <p>效果图<br><img src="http://f.cl.ly/items/18471z1H402O24072r1J/Screenshot.png" alt="1"></p>
-<p>在windows环境下需要设置环境变量<code>set DEBUG=*,-not_this</code> 我这里使用的是idea的debug调试<br><img src="http://xiaomo.info/static/images/debug.png" alt="1"></p>
+<p>在windows环境下需要设置环境变量<code>set DEBUG=*,-not_this</code> 我这里使用的是idea的debug调试<br><img src="https://image.xiaomo.info/banner/debug.png" alt="1"></p>
 <p>windows 下启动方式<br><img src="http://f.cl.ly/items/2i3h1d3t121M2Z1A3Q0N/Screenshot.png" alt="1"></p>
 <p>将debug日志转存到文件中<br><code>DEBUG_FD=3 node your-app.js 3&gt; whatever.log</code>   </p>
 <h4 id="3、koa-bodyparser"><a href="#3、koa-bodyparser" class="headerlink" title="3、koa-bodyparser"></a>3、<a href="https://npm.taobao.org/package/koa-bodyparser" target="_blank" rel="external">koa-bodyparser</a></h4><p>使用方法  </p>

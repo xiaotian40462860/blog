@@ -21,12 +21,12 @@
 <meta property="og:url" content="https://blog.xiaomo.info/2016/05/24/NodeKoa/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="Koa 是一个类似于 Express 的Web开发框架，创始人也都是TJ。Koa 的主要特点是，使用了 ES6 的 Generator 函数，进行了架构的重新设计。Koa 的原理和内部结构很像 Express，但是语法和内部结构进行了升级。">
-<meta property="og:image" content="http://xiaomo.info/static/images/nodejs.png">
+<meta property="og:image" content="https://image.xiaomo.info/banner/nodejs.png">
 <meta property="og:updated_time" content="2016-11-26T02:18:23.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs框架koa学习">
 <meta name="twitter:description" content="Koa 是一个类似于 Express 的Web开发框架，创始人也都是TJ。Koa 的主要特点是，使用了 ES6 的 Generator 函数，进行了架构的重新设计。Koa 的原理和内部结构很像 Express，但是语法和内部结构进行了升级。">
-<meta name="twitter:image" content="http://xiaomo.info/static/images/nodejs.png">
+<meta name="twitter:image" content="https://image.xiaomo.info/banner/nodejs.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -330,7 +330,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Koa 是一个类似于 Express 的Web开发框架，创始人也都是TJ。Koa 的主要特点是，使用了 ES6 的 Generator 函数，进行了架构的重新设计。Koa 的原理和内部结构很像 Express，但是语法和内部结构进行了升级。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/nodejs.png" alt="点击访问小莫的github"></a></p>
+        <p>Koa 是一个类似于 Express 的Web开发框架，创始人也都是TJ。Koa 的主要特点是，使用了 ES6 的 Generator 函数，进行了架构的重新设计。Koa 的原理和内部结构很像 Express，但是语法和内部结构进行了升级。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/nodejs.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、国际惯例-hello-world"><a href="#一、国际惯例-hello-world" class="headerlink" title="一、国际惯例 hello world"></a>一、国际惯例 hello world</h3><h4 id="1-当前版本1-2"><a href="#1-当前版本1-2" class="headerlink" title="1. 当前版本1.2"></a>1. 当前版本1.2</h4><p><code>npm install --save koa</code>   </p>
 <h4 id="2-代码撸起来"><a href="#2-代码撸起来" class="headerlink" title="2. 代码撸起来"></a>2. 代码撸起来</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</div><div class="line"><span class="keyword">let</span> app = koa();</div><div class="line">app.use(<span class="function"><span class="keyword">function</span>*(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.body = <span class="string">"hello xiaomo"</span>;</div><div class="line">  &#125;);</div><div class="line">app.listen(<span class="number">8080</span>);</div></pre></td></tr></table></figure>
 <p>如此这般我们就创建了一个简单的http服务器。这段程序的作用是监听 8080 端口，当收到 GET 请求的时候，答复 hello xiaomo<br>你应该注意到了，我没有只用 var 关键词。我使用了 let 代替。在 ES6 中这基本上就是新的 var。这改变了变量的作用域，但是我不想在这里多说。  </p>

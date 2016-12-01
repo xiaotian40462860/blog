@@ -49,7 +49,7 @@ fancybox: false
 
 <p class="sign"><span>——</span>小莫</p>
 
-<img src="http://xiaomo.info/static/images/aboutme.gif" title="chrome">
+<img src="https://image.xiaomo.info/banner/aboutme.gif" title="chrome">
 
 **开博缘由:**
 > 在建立改造博客网站的过程中，学习和巩固所学知识；
