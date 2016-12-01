@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xiaomo.info/2016/06/03/NodeSpider/</loc>
+    
+    <lastmod>2016-12-01T06:12:43.473Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.xiaomo.info/2016/05/20/JavascriptSyntax/</loc>
     
     <lastmod>2016-12-01T01:42:40.892Z</lastmod>
@@ -194,13 +201,6 @@
     <loc>https://blog.xiaomo.info/2016/07/28/Ionic2Environment/</loc>
     
     <lastmod>2016-12-01T01:42:34.754Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xiaomo.info/2016/06/03/NodeSpider/</loc>
-    
-    <lastmod>2016-12-01T01:42:34.458Z</lastmod>
     
   </url>
   
