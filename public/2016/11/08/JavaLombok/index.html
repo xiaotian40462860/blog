@@ -21,12 +21,12 @@
 <meta property="og:url" content="https://blog.xiaomo.info/2016/11/08/JavaLombok/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta property="og:description" content="今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。">
-<meta property="og:image" content="https://image.xiaomo.info/banner/java_banner.png">
+<meta property="og:image" content="https://image.xiaomo.info/banner/java_banner.jpg">
 <meta property="og:updated_time" content="2016-12-01T06:50:27.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lombok简化java代码注解的使用">
 <meta name="twitter:description" content="今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。">
-<meta name="twitter:image" content="https://image.xiaomo.info/banner/java_banner.png">
+<meta name="twitter:image" content="https://image.xiaomo.info/banner/java_banner.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -330,7 +330,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.png" alt="1"></p>
+        <p>今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <h3 id="一、缘由"><a href="#一、缘由" class="headerlink" title="一、缘由"></a>一、缘由</h3><p>在<code>stackoverflow</code>上看到了这个问题。 <a href="https://stackoverflow.com/questions/40169763/spring-boot-restcontroller-not-work-with-lombok/40478142#40478142" target="_blank" rel="external">spring boot RestController not work with lombok</a>,然后就有了这篇博客。。</p>
 <h3 id="二、lombok是什么鬼"><a href="#二、lombok是什么鬼" class="headerlink" title="二、lombok是什么鬼"></a>二、lombok是什么鬼</h3><h4 id="1-maven引用"><a href="#1-maven引用" class="headerlink" title="1. maven引用"></a>1. maven引用</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.16.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="2-一些api"><a href="#2-一些api" class="headerlink" title="2. 一些api"></a>2. 一些api</h4><p>ombok 注解：<br>lombok 提供的注解不多，可以参考官方视频的讲解和官方文档。<br>Lombok 注解在线帮助文档：<a href="http://projectlombok.org/features/index.html" target="_blank" rel="external">http://projectlombok.org/features/index.html</a> .<br>下面介绍几个我常用的 lombok 注解：<br><code>@Data</code>   ：注解在类上；提供类所有属性的 getting 和 setting 方法，此外还提供了equals、canEqual、hashCode、toString 方法<br><code>@Setter</code>：注解在属性上；为属性提供 setting 方法<br><code>@Getter</code>：注解在属性上；为属性提供 getting 方法<br><code>@Log4j</code> ：注解在类上；为类提供一个 属性名为log 的 log4j 日志对象<br><code>@NoArgsConstructor</code>：注解在类上；为类提供一个无参的构造方法<br><code>@AllArgsConstructor</code>：注解在类上；为类提供一个全参的构造方法</p>
