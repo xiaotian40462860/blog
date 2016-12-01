@@ -634,7 +634,7 @@
     <link href="https://blog.xiaomo.info/2016/08/22/NpmYargs/"/>
     <id>https://blog.xiaomo.info/2016/08/22/NpmYargs/</id>
     <published>2016-08-21T16:00:00.000Z</published>
-    <updated>2016-11-26T02:18:27.368Z</updated>
+    <updated>2016-12-01T01:42:35.849Z</updated>
     
     <content type="html"><![CDATA[<p>如何让你的node.js 应用程序像shell 脚本一样和你交互?没错，就是yargs。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/nodejs.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、使用场景"><a href="#一、使用场景" class="headerlink" title="一、使用场景"></a>一、使用场景</h3><p>大概有一种情况你需要让你的程序接收一个参数,通过这个参数我们做一系列的定制化功能.</p>
@@ -678,7 +678,7 @@
     <link href="https://blog.xiaomo.info/2016/07/28/Ionic2Environment/"/>
     <id>https://blog.xiaomo.info/2016/07/28/Ionic2Environment/</id>
     <published>2016-07-27T16:00:00.000Z</published>
-    <updated>2016-11-26T02:18:27.027Z</updated>
+    <updated>2016-12-01T01:42:34.754Z</updated>
     
     <content type="html"><![CDATA[<p>angular2的开发，少了移动端一定是不完整的。ionic2,用angular2开发移动平台。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/ionic2.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-环境搭建"><a href="#一、-环境搭建" class="headerlink" title="一、 环境搭建"></a>一、 环境搭建</h3><h4 id="1-全局安装ionic"><a href="#1-全局安装ionic" class="headerlink" title="1. 全局安装ionic"></a>1. 全局安装ionic</h4><p><code>npm install -g ionic@beta</code></p>
@@ -707,7 +707,7 @@
     <link href="https://blog.xiaomo.info/2016/07/28/Angular2ApiRouter/"/>
     <id>https://blog.xiaomo.info/2016/07/28/Angular2ApiRouter/</id>
     <published>2016-07-27T16:00:00.000Z</published>
-    <updated>2016-11-26T02:18:28.003Z</updated>
+    <updated>2016-12-01T01:42:38.633Z</updated>
     
     <content type="html"><![CDATA[<p>不知不觉接触angular2也有半年时间了，但是对于angular2仍然是一知半解。总觉得应该系统的了解一下它的api，正好ng2马上要有稳定版本了。是时候花一些时间整理一下了<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、常量"><a href="#一、常量" class="headerlink" title="一、常量"></a>一、常量</h3><h4 id="1-PRIMARY-OUTLET"><a href="#1-PRIMARY-OUTLET" class="headerlink" title="1. PRIMARY_OUTLET"></a>1. <a href="https://angular.cn/docs/ts/latest/api/router/index/PRIMARY_OUTLET-let.html" target="_blank" rel="external">PRIMARY_OUTLET</a></h4><h4 id="2-ROUTER-DIRECTIVES"><a href="#2-ROUTER-DIRECTIVES" class="headerlink" title="2. ROUTER_DIRECTIVES"></a>2. <a href="https://angular.cn/docs/ts/latest/api/router/index/ROUTER_DIRECTIVES-let.html" target="_blank" rel="external">ROUTER_DIRECTIVES</a></h4><p>路由指令集合常量</p>
@@ -756,7 +756,7 @@
     <link href="https://blog.xiaomo.info/2016/07/21/Angular2ApiCommon/"/>
     <id>https://blog.xiaomo.info/2016/07/21/Angular2ApiCommon/</id>
     <published>2016-07-20T16:00:00.000Z</published>
-    <updated>2016-11-26T02:18:28.592Z</updated>
+    <updated>2016-12-01T01:42:33.449Z</updated>
     
     <content type="html"><![CDATA[<p>不知不觉接触angular2也有半年时间了，但是对于angular2仍然是一知半解。总觉得应该系统的了解一下它的api，正好ng2马上要有稳定版本了。是时候花一些时间整理一下了<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、通用包"><a href="#一、通用包" class="headerlink" title="一、通用包"></a>一、通用包</h3><h4 id="1-常量类"><a href="#1-常量类" class="headerlink" title="1. 常量类"></a>1. 常量类</h4><h4 id="1-1-根路径-APP-BASE-HREF"><a href="#1-1-根路径-APP-BASE-HREF" class="headerlink" title="1.1 根路径 APP_BASE_HREF"></a>1.1 根路径 <a href="https://angular.cn/docs/js/latest/api/common/index/APP_BASE_HREF-let.html" target="_blank" rel="external">APP_BASE_HREF</a></h4><p>主要作用：在顶层组件中使用bootstrap启动整个app的时候设置根url,格式如下</p>
@@ -797,7 +797,7 @@
     <link href="https://blog.xiaomo.info/2016/07/12/JavascriptRxjsStudy/"/>
     <id>https://blog.xiaomo.info/2016/07/12/JavascriptRxjsStudy/</id>
     <published>2016-07-11T16:00:00.000Z</published>
-    <updated>2016-11-26T02:18:27.677Z</updated>
+    <updated>2016-12-01T01:42:30.529Z</updated>
     
     <content type="html"><![CDATA[<p>RxJS是用于通过使用观察序列构成异步和基于事件的程序库。它提供了一个核心类型——<a href="http://reactivex.io/rxjs/manual/overview.html#observable" target="_blank" rel="external">Observable</a>（Observer, Schedulers, Subjects）和数组＃其他（map, filter, reduce, every, etc），以允许处理异步事件集合。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、rxjs内容"><a href="#一、rxjs内容" class="headerlink" title="一、rxjs内容"></a>一、rxjs内容</h3><p>ReactiveX结合观察者模式与迭代器模式和函数式编程与收藏，以填补管理事件序列的理想方法的需要。</p>
@@ -881,7 +881,7 @@
     <link href="https://blog.xiaomo.info/2016/07/02/JavascriptDesignPattern/"/>
     <id>https://blog.xiaomo.info/2016/07/02/JavascriptDesignPattern/</id>
     <published>2016-07-01T16:00:00.000Z</published>
-    <updated>2016-11-26T02:18:23.702Z</updated>
+    <updated>2016-12-01T01:42:38.784Z</updated>
     
     <content type="html"><![CDATA[<p>设计模式是一套反复使用的、思想成熟、经过分类和无数实战总结出来的。使用设计模式是为了让代码可重用、可扩展、可解藕、更容易让人理解并且有保证代码的可靠性。设计模式能够真正工程化，设计模式是软件工程的基石脉络，如同大厦的结构一样。只有夯实基础结构，才能盖好健壮的大楼。 也是我们迈向高级开发人员必经的一步。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/javascript.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、设计原则"><a href="#一、设计原则" class="headerlink" title="一、设计原则"></a>一、设计原则</h3><h4 id="1-开闭原则"><a href="#1-开闭原则" class="headerlink" title="1. 开闭原则"></a>1. 开闭原则</h4><p>对扩展开发，对修改关闭。</p>
@@ -977,7 +977,7 @@
     <link href="https://blog.xiaomo.info/2016/07/01/2016StudyPlan/"/>
     <id>https://blog.xiaomo.info/2016/07/01/2016StudyPlan/</id>
     <published>2016-06-30T16:00:00.000Z</published>
-    <updated>2016-11-26T02:18:24.502Z</updated>
+    <updated>2016-12-01T01:42:31.636Z</updated>
     
     <content type="html"><![CDATA[<p>2015年，软件开发界发生了很多变化。有很多流行的新语言发布了，也有很多重要的框架和工具发布了新版本。下面有一个我们觉得最重要的简短清单，同时也有我们觉得值得你在2016年花时间精力去学习的新事物的一些建议。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="http://xiaomo.info/static/images/2016.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、开发工具"><a href="#一、开发工具" class="headerlink" title="一、开发工具"></a>一、开发工具</h3><h4 id="1-atom"><a href="#1-atom" class="headerlink" title="1. atom"></a>1. atom</h4><p>Atom 代码编辑器支持 Windows、Mac、Linux 三大桌面平台，完全免费，并且已经在 GitHub 上开放了全部的源代码。在经过一段长时间的迭代开发和不断改进后，Atom 终于从早期的测试版达到了 1.0 正式版了！相比之前的版本，在性能和稳定性方面都有着显著的改善。</p>
