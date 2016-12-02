@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xiaomo.info/2016/11/11/JavaSpringBootSwaggerUi/</loc>
+    
+    <lastmod>2016-12-02T05:10:45.469Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.xiaomo.info/2016/11/01/JavaSpringBootCors/</loc>
     
     <lastmod>2016-12-01T08:44:36.273Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://blog.xiaomo.info/2016/10/28/JavaIdeaMaven/</loc>
     
     <lastmod>2016-12-01T08:44:36.060Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xiaomo.info/2016/11/11/JavaSpringBootSwaggerUi/</loc>
-    
-    <lastmod>2016-12-01T08:44:35.893Z</lastmod>
     
   </url>
   

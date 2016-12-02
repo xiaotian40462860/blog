@@ -50,7 +50,7 @@
 <h4 id="7-ApiModel"><a href="#7-ApiModel" class="headerlink" title="7. @ApiModel"></a>7. @ApiModel</h4><p> 描述一个Model的信息（这种一般用在post创建的时候，使用@RequestBody这样的场景，请求参数无法使用@ApiImplicitParam注解进行描述的时候）<br> <code>@ApiModel(value = &quot;用户实体类&quot;)</code></p>
 <h4 id="8-ApiModelProperty"><a href="#8-ApiModelProperty" class="headerlink" title="8. @ApiModelProperty"></a>8. @ApiModelProperty</h4><p>描述一个model的属性<br><code>@ApiModelProperty(value = &quot;登录用户&quot;)</code></p>
 <h4 id="五、-和Swagger-UI的集成"><a href="#五、-和Swagger-UI的集成" class="headerlink" title="五、 和Swagger UI的集成"></a>五、 和Swagger UI的集成</h4><p>首先，从github <a href="https://github.com/swagger-api/swagger-ui" target="_blank" rel="external">swagger-ui</a> 上下载Swagger-UI, 把该项目dist目录下的内容拷贝到项目的resources的目录public下。</p>
-<h4 id="六、访问"><a href="#六、访问" class="headerlink" title="六、访问"></a>六、访问</h4><p><a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="external">http://localhost:8080/swagger-ui.html</a> 就可以看到效果如下<br><img src="https://image.xiaomo.info/banner/swagger.png" alt=""></p>
+<h4 id="六、访问"><a href="#六、访问" class="headerlink" title="六、访问"></a>六、访问</h4><p><a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="external">http://localhost:8080/swagger-ui.html</a> 就可以看到效果如下<br><img src="https://image.xiaomo.info/swagger/swagger.png" alt=""></p>
 <h4 id="七、-项目实例"><a href="#七、-项目实例" class="headerlink" title="七、 项目实例"></a>七、 项目实例</h4><p><a href="https://github.com/JavaUsers/xiaomo-info-java/tree/master/website" target="_blank" rel="external">https://github.com/JavaUsers/xiaomo-info-java/tree/master/website</a></p>
 ]]></content>
     </entry>
