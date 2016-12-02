@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xiaomo.info/2016/11/25/HttpToHttps/</loc>
+    
+    <lastmod>2016-12-02T05:48:28.366Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.xiaomo.info/2016/11/07/NihonSeiyou/</loc>
     
     <lastmod>2016-12-02T05:15:08.546Z</lastmod>
@@ -173,13 +180,6 @@
     <loc>https://blog.xiaomo.info/2016/06/07/GulpUse/</loc>
     
     <lastmod>2016-12-01T06:50:31.027Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xiaomo.info/2016/11/25/HttpToHttps/</loc>
-    
-    <lastmod>2016-12-01T06:50:30.855Z</lastmod>
     
   </url>
   
