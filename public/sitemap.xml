@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xiaomo.info/2016/11/07/NihonSeiyou/</loc>
+    
+    <lastmod>2016-12-02T05:15:08.546Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.xiaomo.info/2016/11/11/JavaSpringBootSwaggerUi/</loc>
     
     <lastmod>2016-12-02T05:10:45.469Z</lastmod>
@@ -327,13 +334,6 @@
     <loc>https://blog.xiaomo.info/2016/06/25/Angular2StudyNoteNgTag/</loc>
     
     <lastmod>2016-12-01T06:50:28.027Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.xiaomo.info/2016/11/07/NihonSeiyou/</loc>
-    
-    <lastmod>2016-12-01T06:50:27.933Z</lastmod>
     
   </url>
   
