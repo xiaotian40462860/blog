@@ -64,7 +64,7 @@ exclude_generator:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: cyanstyle
+theme: hexo-theme-yelee
 #theme: yilia
 
 archive_generator:
