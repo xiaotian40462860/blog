@@ -7,6 +7,7 @@
   "scripts": {
     "build": "hexo generate",
     "dev": "hexo generate && http-server",
+    "pull": "git pull && hexo g",
     "test": "http-server --port=PORT",
     "start": "hexo generate && hexo server"
   },
