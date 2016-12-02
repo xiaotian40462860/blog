@@ -16,11 +16,11 @@ function checkMobile() {
 //管理员判断开始
 function sskadmin(e) {
     var ssk = '';
-    if (e.user_id == 6241514068348240642) {
+    if (e.user_id == 6225154084773561090) {
         if (checkMobile()) {
-            ssk = '<span class="ua"><span class="sskadmin">博主</span></span><br><br>';
+            ssk = '<span class="ua"><span class="sskadmin">Captain</span></span><br><br>';
         } else {
-            ssk = '<span class="ua"><span class="sskadmin">博主</span></span>';
+            ssk = '<span class="ua"><span class="sskadmin">Captain</span></span>';
         }
     } else {
         if (checkMobile()) {
@@ -636,13 +636,13 @@ function os(e) {
     };
     for (var $ in Object.prototype) return alert("Object.prototype\u4e0d\u4e3a\u7a7a\uff0c\u8bf7\u4e0d\u8981\u7ed9Object.prototype\u8bbe\u7f6e\u65b9\u6cd5");
     var J = w.templates = {
-            userUrl: function (e) {
-                return e.url
-            },
-            avatarUrl: function (e, t) {
-                return e.avatar_url || nt.data.default_avatar_url
-            },
-        userAnchor: function(e) {npm
+        userUrl: function(e) {
+            return e.url
+        },
+        avatarUrl: function(e, t) {
+            return e.avatar_url || nt.data.default_avatar_url
+        },
+        userAnchor: function(e) {
             var t = J.userUrl(e);
             return t ? '<a rel="nofollow author" target="_blank" href="' + p(t) + '">' + p(e.name) + "</a>": p(e.name)
         },

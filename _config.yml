@@ -64,8 +64,10 @@ exclude_generator:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-#theme: hexo-theme-apollo
-theme: hexo-theme-yelee
+#theme: yilia
+#theme: hexo-theme-yelee
+theme: landscape
+#theme: spfk
 
 archive_generator:
     per_page: 0
