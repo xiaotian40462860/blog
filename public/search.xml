@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[拥抱https(http全面切换到https)]]></title>
-      <url>https://blog.xiaomo.info/2016/11/25/HttpToHttps/</url>
+      <url>https://blog.xiaomo.info/HttpToHttps/</url>
       <content type="html"><![CDATA[<p>在百度和谷歌的鼓励下，现在很多网站都开始换成https了啊，只是有的没有隐私数据的网站感觉没有太大必要，但是设计要密码账号的网站必须要的。不过有部分网站没有换成https只是暂时的，2-3年后预估互联网会全部变成https。因为https成本也不是很高，免费SSL证书也有，比如腾讯免费SSL证书，starssl免费证书等。关键是https对SEO更加友好。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/linux.png" alt="1"></p>
 <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="域-名：阿里云"><a href="#域-名：阿里云" class="headerlink" title="域 名：阿里云"></a>域 名：阿里云</h4><h4 id="服务器：阿里云ECS"><a href="#服务器：阿里云ECS" class="headerlink" title="服务器：阿里云ECS"></a>服务器：阿里云ECS</h4><h4 id="SSL证书-腾讯SSL免费版"><a href="#SSL证书-腾讯SSL免费版" class="headerlink" title="SSL证书: 腾讯SSL免费版"></a>SSL证书: 腾讯SSL免费版</h4><h4 id="web容器：nginx-php"><a href="#web容器：nginx-php" class="headerlink" title="web容器：nginx+php"></a>web容器：nginx+php</h4><h3 id="一、为什么要切换到HTTPS"><a href="#一、为什么要切换到HTTPS" class="headerlink" title="一、为什么要切换到HTTPS"></a>一、为什么要切换到HTTPS</h3><h4 id="1-安全方面"><a href="#1-安全方面" class="headerlink" title="1.安全方面"></a>1.安全方面</h4><p>HTTPS比HTTP更加安全</p>
 <h4 id="2-技术方面"><a href="#2-技术方面" class="headerlink" title="2.技术方面"></a>2.技术方面</h4><p>不懂HTTPS多不好意思啊，所以就当是学习了。</p>
@@ -33,7 +33,7 @@
     
     <entry>
       <title><![CDATA[swagger ui和spring boot集成生成api文档]]></title>
-      <url>https://blog.xiaomo.info/2016/11/11/JavaSpringBootSwaggerUi/</url>
+      <url>https://blog.xiaomo.info/JavaSpringBootSwaggerUi/</url>
       <content type="html"><![CDATA[<p>曾经一度我一直想在做前后端分离的时间写api接口是一个痛苦的过程，虽然也在网上找了一些可以填写api的系统，但使用起来总是不尽人意。现在，终于找到一款可以和api完美集成自动生成api文档加测试的工具，真是一件让人高兴的事呢。如果你也需要，那就好好看看这篇文章吧。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <h3 id="一、环境"><a href="#一、环境" class="headerlink" title="一、环境"></a>一、环境</h3><h4 id="1-JAVA8"><a href="#1-JAVA8" class="headerlink" title="1. JAVA8"></a>1. JAVA8</h4><h4 id="2-MAVEN-3-0-5"><a href="#2-MAVEN-3-0-5" class="headerlink" title="2. MAVEN 3.0.5"></a>2. MAVEN 3.0.5</h4><h4 id="3-IDEA-2016-2-5"><a href="#3-IDEA-2016-2-5" class="headerlink" title="3. IDEA 2016.2.5"></a>3. IDEA 2016.2.5</h4><h4 id="4-spring-boot-1-4-1"><a href="#4-spring-boot-1-4-1" class="headerlink" title="4. spring boot 1.4.1"></a>4. spring boot 1.4.1</h4><h3 id="二、相关依赖"><a href="#二、相关依赖" class="headerlink" title="二、相关依赖"></a>二、相关依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger-ui<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.springfox<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springfox-swagger2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
 <h3 id="三、配置"><a href="#三、配置" class="headerlink" title="三、配置"></a>三、配置</h3><p>设置了一些默认显示的api相关信息，最后上截图的时就可以比较清楚的看到。</p>
@@ -56,7 +56,7 @@
     
     <entry>
       <title><![CDATA[lombok简化java代码注解的使用]]></title>
-      <url>https://blog.xiaomo.info/2016/11/08/JavaLombok/</url>
+      <url>https://blog.xiaomo.info/JavaLombok/</url>
       <content type="html"><![CDATA[<p>今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <h3 id="一、缘由"><a href="#一、缘由" class="headerlink" title="一、缘由"></a>一、缘由</h3><p>在<code>stackoverflow</code>上看到了这个问题。 <a href="https://stackoverflow.com/questions/40169763/spring-boot-restcontroller-not-work-with-lombok/40478142#40478142" target="_blank" rel="external">spring boot RestController not work with lombok</a>,然后就有了这篇博客。。</p>
 <h3 id="二、lombok是什么鬼"><a href="#二、lombok是什么鬼" class="headerlink" title="二、lombok是什么鬼"></a>二、lombok是什么鬼</h3><h4 id="1-maven引用"><a href="#1-maven引用" class="headerlink" title="1. maven引用"></a>1. maven引用</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.16.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -71,7 +71,7 @@
     
     <entry>
       <title><![CDATA[spring4免费全套视频教程]]></title>
-      <url>https://blog.xiaomo.info/2016/11/08/JavaSpringVideo/</url>
+      <url>https://blog.xiaomo.info/JavaSpringVideo/</url>
       <content type="html"><![CDATA[<p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br><a href="http://edu.csdn.net/course/detail/852/" target="_blank" rel="external">国内第1套_Spring4 视频教程</a></p>
 ]]></content>
@@ -79,14 +79,14 @@
     
     <entry>
       <title><![CDATA[日本动漫声优公演,来看看什么叫专业声优]]></title>
-      <url>https://blog.xiaomo.info/2016/11/07/NihonSeiyou/</url>
+      <url>https://blog.xiaomo.info/NihonSeiyou/</url>
       <content type="html"><![CDATA[<p>日本动漫声优公演,来看看什么叫专业声优<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/fujisann.png" alt="1"></p>
 <embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=v0337gd2b1m&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[spring boot做前后分离时间格式化]]></title>
-      <url>https://blog.xiaomo.info/2016/11/02/JavaSpringBootDataFormat/</url>
+      <url>https://blog.xiaomo.info/JavaSpringBootDataFormat/</url>
       <content type="html"><![CDATA[<p>最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <h3 id="一、写一个Serializer"><a href="#一、写一个Serializer" class="headerlink" title="一、写一个Serializer"></a>一、写一个<code>Serializer</code></h3><p>然后做一个时间格式化的处理</p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> info.xiaomo.core.filter;</div><div class="line"></div><div class="line"><span class="keyword">import</span> com.fasterxml.jackson.core.<span class="type">JsonGenerator</span>;</div><div class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.<span class="type">JsonSerializer</span>;</div><div class="line"><span class="keyword">import</span> com.fasterxml.jackson.databind.<span class="type">SerializerProvider</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.io.<span class="type">IOException</span>;</div><div class="line"><span class="keyword">import</span> java.text.<span class="type">SimpleDateFormat</span>;</div><div class="line"><span class="keyword">import</span> java.util.<span class="type">Date</span>;</div><div class="line"></div><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">CustomDateSerializer</span> <span class="keyword">extends</span> <span class="title">JsonSerializer&lt;Date&gt;</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    public void serialize(<span class="type">Date</span> value, <span class="type">JsonGenerator</span> jsonGenerator, <span class="type">SerializerProvider</span> provider) <span class="keyword">throws</span> <span class="type">IOException</span> &#123;</div><div class="line">        <span class="type">SimpleDateFormat</span> sdf = <span class="keyword">new</span> <span class="type">SimpleDateFormat</span>(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>);</div><div class="line">        jsonGenerator.writeString(sdf.format(value));</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -96,7 +96,7 @@
     
     <entry>
       <title><![CDATA[spring boot做前后分离的跨域问题]]></title>
-      <url>https://blog.xiaomo.info/2016/11/01/JavaSpringBootCors/</url>
+      <url>https://blog.xiaomo.info/JavaSpringBootCors/</url>
       <content type="html"><![CDATA[<p>最近在用spring boot 做数据接口供客户端调用时发现存在跨域问题，虽然解决问题有很多。比如用nginx处理等等。但是更方便的是服务端设置一下跨域名。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <h3 id="一、前提"><a href="#一、前提" class="headerlink" title="一、前提"></a>一、前提</h3><h4 id="1-使用spring-boot-maven-构建的项目"><a href="#1-使用spring-boot-maven-构建的项目" class="headerlink" title="1. 使用spring boot + maven 构建的项目"></a>1. 使用spring boot + maven 构建的项目</h4><h3 id="二、设置"><a href="#二、设置" class="headerlink" title="二、设置"></a>二、设置</h3><h4 id="1-写一个过滤器-filter"><a href="#1-写一个过滤器-filter" class="headerlink" title="1. 写一个过滤器(filter)"></a>1. 写一个过滤器(filter)</h4><p>实现Filter接口，然后设置一下响应头。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> info.xiaomo.core.filter;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</div><div class="line"></div><div class="line"><span class="keyword">import</span> javax.servlet.*;</div><div class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</div><div class="line"><span class="keyword">import</span> java.io.IOException;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * 把今天最好的表现当作明天最新的起点．．～</div><div class="line"> * いま 最高の表現 として 明日最新の始発．．～</div><div class="line"> * Today the best performance  as tomorrow newest starter!</div><div class="line"> * Created by IntelliJ IDEA.</div><div class="line"> *</div><div class="line"> * <span class="doctag">@author</span>: xiaomo</div><div class="line"> * <span class="doctag">@github</span>: https://github.com/syoubaku</div><div class="line"> * <span class="doctag">@email</span>: hupengbest@163.com</div><div class="line"> * <span class="doctag">@QQ</span>_NO: 83387856</div><div class="line"> * <span class="doctag">@Date</span>: 2016/4/1516:25</div><div class="line"> * <span class="doctag">@Description</span>:</div><div class="line"> * <span class="doctag">@Copyright</span>(©) 2015 by xiaomo.</div><div class="line"> **/</div><div class="line"><span class="meta">@Component</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CORSFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 初始化</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> filterConfig filterConfig</div><div class="line">     * <span class="doctag">@throws</span> ServletException ServletException</div><div class="line">     */</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FilterConfig filterConfig)</span> <span class="keyword">throws</span> ServletException </span>&#123;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * CORS 过滤器</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> req   rq</div><div class="line">     * <span class="doctag">@param</span> res   res</div><div class="line">     * <span class="doctag">@param</span> chain chin</div><div class="line">     * <span class="doctag">@throws</span> IOException      IOException</div><div class="line">     * <span class="doctag">@throws</span> ServletException ServletException</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest req, ServletResponse res, FilterChain chain)</span> <span class="keyword">throws</span> IOException, ServletException </span>&#123;</div><div class="line">        HttpServletResponse response = (HttpServletResponse) res;</div><div class="line">        response.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, <span class="string">"*"</span>);</div><div class="line">        response.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"POST, GET, OPTIONS, DELETE"</span>);</div><div class="line">        response.setHeader(<span class="string">"Access-Control-Max-Age"</span>, <span class="string">"3600"</span>);</div><div class="line">        response.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, If-Modified-Since"</span>);</div><div class="line">        chain.doFilter(req, res);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 销毁对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -108,7 +108,7 @@
     
     <entry>
       <title><![CDATA[spring boot相关资料]]></title>
-      <url>https://blog.xiaomo.info/2016/10/29/JavaSpringZiliao/</url>
+      <url>https://blog.xiaomo.info/JavaSpringZiliao/</url>
       <content type="html"><![CDATA[<p>spring真是让人又爱又恨呢，好用但是难学。spring铺的又太大，不知道从哪入手。整理点资料，免得头晕。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <h3 id="一、spring-boot-配置相关"><a href="#一、spring-boot-配置相关" class="headerlink" title="一、spring boot 配置相关"></a>一、spring boot 配置相关</h3><h4 id="1-配置文件"><a href="#1-配置文件" class="headerlink" title="1. 配置文件"></a>1. 配置文件</h4><p><a href="http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html" target="_blank" rel="external">properties</a></p>
 <h4 id="2-spring-boot-cli-安装和使用"><a href="#2-spring-boot-cli-安装和使用" class="headerlink" title="2. spring boot cli 安装和使用"></a>2. spring boot cli 安装和使用</h4><ol>
@@ -123,7 +123,7 @@
     
     <entry>
       <title><![CDATA[Maven 与 IntelliJ IDEA 的完美结合]]></title>
-      <url>https://blog.xiaomo.info/2016/10/28/JavaIdeaMaven/</url>
+      <url>https://blog.xiaomo.info/JavaIdeaMaven/</url>
       <content type="html"><![CDATA[<p>你是否正在学习Maven？是否因为Maven难用而又不得不用而苦恼？是否对Eclipse于Maven的冲突而困惑？ 那么我告诉你一个更直接更简单的解决方案: IntelliJ IDEA！<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <h3 id="1-什么是-Maven，为什么要使用-Maven-而不是-Ant"><a href="#1-什么是-Maven，为什么要使用-Maven-而不是-Ant" class="headerlink" title="1. 什么是 Maven，为什么要使用 Maven 而不是 Ant"></a>1. 什么是 Maven，为什么要使用 Maven 而不是 Ant</h3><p>Maven简单来说是一个项目管理工具，被认为是Ant的替代品或者继任者。事实上Maven的功能要远远超出Ant，它不仅仅提供编译的脚本，更是在整 个项目周期中提供测试，发布，文档生成等功能，并且有着独特的依赖性管理方法。但是强大的功能的代价就是复杂的使用方法，第一次使用Maven往往需要将 近半个小时的时间（国内网速）来下载一个本地的依赖库，这无疑会使很多开发人员“知难而退”。虽然广受诟病，一个不争的事实就是Maven逐渐代替了 Ant，使用Maven也成了Java开发人员的一个必要技能。</p>
 <h3 id="2-IntelliJ-IDEA-与-Eclipse"><a href="#2-IntelliJ-IDEA-与-Eclipse" class="headerlink" title="2. IntelliJ IDEA 与 Eclipse"></a>2. IntelliJ IDEA 与 Eclipse</h3><p>在Java的世界里，Eclipse毋庸置疑是IDE中的王者，IntelliJ IDEA和NetBeans都只能生活在Eclipse的光环下。Eclipse的强大已经不用我多说了，但其实IntelliJ IDEA也是一个相当优秀的IDE，尤其体现在它的智能上。它的一个针对.Net的Clone产品ReSharper已经被越来越多的C#开发者所接受。 IntelliJ IDEA提供了大量的智能规则来协助开发者，类似代码补全，用法的转换，格式的提示等等，当你习惯以后，你就会对那个小灯泡爱不释手。</p>
@@ -150,7 +150,7 @@
     
     <entry>
       <title><![CDATA[使用Servlet做简单的上传功能]]></title>
-      <url>https://blog.xiaomo.info/2016/10/24/JavaServletUpload/</url>
+      <url>https://blog.xiaomo.info/JavaServletUpload/</url>
       <content type="html"><![CDATA[<p>这篇文章主要为大家详细介绍了java基于servlet实现上传功能，后台使用java实现，前端主要是jsp，感兴趣的小伙伴们可以参考一下<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/java_banner.jpg" alt="1"></p>
 <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><h4 id="1-1-jar包"><a href="#1-1-jar包" class="headerlink" title="1.1 jar包"></a>1.1 jar包</h4><p><code>servlet-api</code> 是servlet的核心api包<br><code>commons-fileupload</code> 上传功能的通用工具包<br><code>fastjson</code> 阿里的json工具包</p>
 <h3 id="1-2-pom文件"><a href="#1-2-pom文件" class="headerlink" title="1.2 pom文件"></a>1.2 pom文件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-fileupload<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-fileupload<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -169,7 +169,7 @@
     
     <entry>
       <title><![CDATA[喜欢的动漫]]></title>
-      <url>https://blog.xiaomo.info/2016/10/08/NihonAnime/</url>
+      <url>https://blog.xiaomo.info/NihonAnime/</url>
       <content type="html"><![CDATA[<p>二次元为我们描绘了一个不一样的世界，一群有着精彩故事的人，还有视觉听觉上的双重享受。不是很美妙吗？我们还能从二次元里获得力量、勇气、热情、梦想，懂得坚持、友爱、乐观、努力。二次元正是人类的伟大创造。<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/dongli3.jpg" alt="1"></p>
 <h3 id="一、アニメ"><a href="#一、アニメ" class="headerlink" title="一、アニメ"></a>一、<a href="https://zh.moegirl.org" target="_blank" rel="external">アニメ</a></h3><table>
 <thead>
@@ -346,7 +346,7 @@
     
     <entry>
       <title><![CDATA[生活习惯的不同，造就了丰富多彩的世界]]></title>
-      <url>https://blog.xiaomo.info/2016/08/28/NihonSekaku/</url>
+      <url>https://blog.xiaomo.info/NihonSekaku/</url>
       <content type="html"><![CDATA[<p>にほんのライフスタイルに<br><a id="more"></a><br><img src="https://image.xiaomo.info/banner/fujisann.png" alt="1"></p>
 <ul>
 <li>不喜欢用蓝色圆珠笔。蓝色圆珠笔只在作标记的场合使用。</li>
@@ -398,7 +398,7 @@
     
     <entry>
       <title><![CDATA[《东离剑游记》]]></title>
-      <url>https://blog.xiaomo.info/2016/08/24/BangumiDongli/</url>
+      <url>https://blog.xiaomo.info/BangumiDongli/</url>
       <content type="html"><![CDATA[<p>这两天看了一部神奇的动漫，具有强烈的武侠风。现在循环听练听力。然而你一定想不到这部动漫是多么的让人惊喜。<br><a id="more"></a></p>
 <h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>这是一次打破当前布袋戏模式的局限的冒险和挑战。关键的变化主要在三点：</p>
 <h4 id="第一"><a href="#第一" class="headerlink" title="第一"></a>第一</h4><p>剧本作者由日本的虚渊玄担任，虚的创作水平有目共睹，保守的说，当不在目前布袋戏圈内最出色的编剧三弦之下，甚至只会更高，这实际上有效的补完了霹雳近年来剧本疲弱的短板，把最弱点变成了最强点。<br>但水平是一方面，文化属性则是另一方面，从东离的第一集看，比如一些人物特质，就明显少了几分霹雳和金光的中国侠客味道，而多了几分日本武士的感觉，这种改变实际上让东离剑在文化意识领域有些脱离了承载着传统文化的布袋戏，而接近了日本动画的范畴。</p>
@@ -410,7 +410,7 @@
     
     <entry>
       <title><![CDATA[yargs插件的使用，node.js 命令行框架 yargs 和你的程序实现交互]]></title>
-      <url>https://blog.xiaomo.info/2016/08/22/NpmYargs/</url>
+      <url>https://blog.xiaomo.info/NpmYargs/</url>
       <content type="html"><![CDATA[<p>如何让你的node.js 应用程序像shell 脚本一样和你交互?没错，就是yargs。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/nodejs.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、使用场景"><a href="#一、使用场景" class="headerlink" title="一、使用场景"></a>一、使用场景</h3><p>大概有一种情况你需要让你的程序接收一个参数,通过这个参数我们做一系列的定制化功能.</p>
 <p>常见的做法是 把一些不同环境不同配置的变量写到 config 配置文件中.</p>
@@ -438,7 +438,7 @@
     
     <entry>
       <title><![CDATA[ionic2环境搭建]]></title>
-      <url>https://blog.xiaomo.info/2016/07/28/Ionic2Environment/</url>
+      <url>https://blog.xiaomo.info/Ionic2Environment/</url>
       <content type="html"><![CDATA[<p>angular2的开发，少了移动端一定是不完整的。ionic2,用angular2开发移动平台。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/ionic2.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-环境搭建"><a href="#一、-环境搭建" class="headerlink" title="一、 环境搭建"></a>一、 环境搭建</h3><h4 id="1-全局安装ionic"><a href="#1-全局安装ionic" class="headerlink" title="1. 全局安装ionic"></a>1. 全局安装ionic</h4><p><code>npm install -g ionic@beta</code></p>
 <h4 id="2-创建一个项目"><a href="#2-创建一个项目" class="headerlink" title="2. 创建一个项目"></a>2. 创建一个项目</h4><p><code>ionic start app --v2</code></p>
@@ -451,7 +451,7 @@
     
     <entry>
       <title><![CDATA[angular2 api整理之路由模块]]></title>
-      <url>https://blog.xiaomo.info/2016/07/28/Angular2ApiRouter/</url>
+      <url>https://blog.xiaomo.info/Angular2ApiRouter/</url>
       <content type="html"><![CDATA[<p>不知不觉接触angular2也有半年时间了，但是对于angular2仍然是一知半解。总觉得应该系统的了解一下它的api，正好ng2马上要有稳定版本了。是时候花一些时间整理一下了<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、常量"><a href="#一、常量" class="headerlink" title="一、常量"></a>一、常量</h3><h4 id="1-PRIMARY-OUTLET"><a href="#1-PRIMARY-OUTLET" class="headerlink" title="1. PRIMARY_OUTLET"></a>1. <a href="https://angular.cn/docs/ts/latest/api/router/index/PRIMARY_OUTLET-let.html" target="_blank" rel="external">PRIMARY_OUTLET</a></h4><h4 id="2-ROUTER-DIRECTIVES"><a href="#2-ROUTER-DIRECTIVES" class="headerlink" title="2. ROUTER_DIRECTIVES"></a>2. <a href="https://angular.cn/docs/ts/latest/api/router/index/ROUTER_DIRECTIVES-let.html" target="_blank" rel="external">ROUTER_DIRECTIVES</a></h4><p>路由指令集合常量</p>
 <h3 id="二、接口"><a href="#二、接口" class="headerlink" title="二、接口"></a>二、接口</h3><h4 id="1-活跃路由ActivatedRoute"><a href="#1-活跃路由ActivatedRoute" class="headerlink" title="1. 活跃路由ActivatedRoute"></a>1. 活跃路由<a href="https://angular.cn/docs/ts/latest/api/router/index/ActivatedRoute-interface.html" target="_blank" rel="external">ActivatedRoute</a></h4><p>可以获取当前路由的参数和数据</p>
@@ -484,7 +484,7 @@
     
     <entry>
       <title><![CDATA[angular2 api整理之通用模块]]></title>
-      <url>https://blog.xiaomo.info/2016/07/21/Angular2ApiCommon/</url>
+      <url>https://blog.xiaomo.info/Angular2ApiCommon/</url>
       <content type="html"><![CDATA[<p>不知不觉接触angular2也有半年时间了，但是对于angular2仍然是一知半解。总觉得应该系统的了解一下它的api，正好ng2马上要有稳定版本了。是时候花一些时间整理一下了<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、通用包"><a href="#一、通用包" class="headerlink" title="一、通用包"></a>一、通用包</h3><h4 id="1-常量类"><a href="#1-常量类" class="headerlink" title="1. 常量类"></a>1. 常量类</h4><h4 id="1-1-根路径-APP-BASE-HREF"><a href="#1-1-根路径-APP-BASE-HREF" class="headerlink" title="1.1 根路径 APP_BASE_HREF"></a>1.1 根路径 <a href="https://angular.cn/docs/js/latest/api/common/index/APP_BASE_HREF-let.html" target="_blank" rel="external">APP_BASE_HREF</a></h4><p>主要作用：在顶层组件中使用bootstrap启动整个app的时候设置根url,格式如下</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">bootstrap(AppCmp, [</div><div class="line">  ROUTER_PROVIDERS,</div><div class="line">  &#123;<span class="string">provide:</span> APP_BASE_HREF, <span class="string">useValue:</span> <span class="string">'/my/app'</span>&#125;</div><div class="line">]);</div></pre></td></tr></table></figure>
@@ -509,7 +509,7 @@
     
     <entry>
       <title><![CDATA[rxjs全接触]]></title>
-      <url>https://blog.xiaomo.info/2016/07/12/JavascriptRxjsStudy/</url>
+      <url>https://blog.xiaomo.info/JavascriptRxjsStudy/</url>
       <content type="html"><![CDATA[<p>RxJS是用于通过使用观察序列构成异步和基于事件的程序库。它提供了一个核心类型——<a href="http://reactivex.io/rxjs/manual/overview.html#observable" target="_blank" rel="external">Observable</a>（Observer, Schedulers, Subjects）和数组＃其他（map, filter, reduce, every, etc），以允许处理异步事件集合。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、rxjs内容"><a href="#一、rxjs内容" class="headerlink" title="一、rxjs内容"></a>一、rxjs内容</h3><p>ReactiveX结合观察者模式与迭代器模式和函数式编程与收藏，以填补管理事件序列的理想方法的需要。</p>
 <p>在RxJS其中解决异步事件管理的基本概念是：</p>
@@ -575,7 +575,7 @@
     
     <entry>
       <title><![CDATA[javascript设计模式]]></title>
-      <url>https://blog.xiaomo.info/2016/07/02/JavascriptDesignPattern/</url>
+      <url>https://blog.xiaomo.info/JavascriptDesignPattern/</url>
       <content type="html"><![CDATA[<p>设计模式是一套反复使用的、思想成熟、经过分类和无数实战总结出来的。使用设计模式是为了让代码可重用、可扩展、可解藕、更容易让人理解并且有保证代码的可靠性。设计模式能够真正工程化，设计模式是软件工程的基石脉络，如同大厦的结构一样。只有夯实基础结构，才能盖好健壮的大楼。 也是我们迈向高级开发人员必经的一步。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/javascript.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、设计原则"><a href="#一、设计原则" class="headerlink" title="一、设计原则"></a>一、设计原则</h3><h4 id="1-开闭原则"><a href="#1-开闭原则" class="headerlink" title="1. 开闭原则"></a>1. 开闭原则</h4><p>对扩展开发，对修改关闭。</p>
 <h4 id="2-里氏替换原则"><a href="#2-里氏替换原则" class="headerlink" title="2.  里氏替换原则"></a>2.  里氏替换原则</h4><p>子类继承父类，但单独调用完全可以运行。</p>
@@ -655,7 +655,7 @@
     
     <entry>
       <title><![CDATA[5年学习计划]]></title>
-      <url>https://blog.xiaomo.info/2016/07/01/2016StudyPlan/</url>
+      <url>https://blog.xiaomo.info/2016StudyPlan/</url>
       <content type="html"><![CDATA[<p>2015年，软件开发界发生了很多变化。有很多流行的新语言发布了，也有很多重要的框架和工具发布了新版本。下面有一个我们觉得最重要的简短清单，同时也有我们觉得值得你在2016年花时间精力去学习的新事物的一些建议。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/2016.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、开发工具"><a href="#一、开发工具" class="headerlink" title="一、开发工具"></a>一、开发工具</h3><h4 id="1-atom"><a href="#1-atom" class="headerlink" title="1. atom"></a>1. atom</h4><p>Atom 代码编辑器支持 Windows、Mac、Linux 三大桌面平台，完全免费，并且已经在 GitHub 上开放了全部的源代码。在经过一段长时间的迭代开发和不断改进后，Atom 终于从早期的测试版达到了 1.0 正式版了！相比之前的版本，在性能和稳定性方面都有着显著的改善。</p>
 <h4 id="2-idea"><a href="#2-idea" class="headerlink" title="2. idea"></a>2. idea</h4><p>IDEA 全称IntelliJ IDEA，是java语言开发的集成环境，IntelliJ在业界被公认为最好的java开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE支持、Ant、JUnit、CVS整合、代码审查、 创新的GUI设计等方面的功能可以说是超常的。IDEA是JetBrains公司的产品，这家公司总部位于捷克共和国的首都布拉格，开发人员以严谨著称的东欧程序员为主。</p>
@@ -722,7 +722,7 @@
     
     <entry>
       <title><![CDATA[angular2学习笔记之动画效果]]></title>
-      <url>https://blog.xiaomo.info/2016/06/30/Angular2studyAnimate/</url>
+      <url>https://blog.xiaomo.info/Angular2studyAnimate/</url>
       <content type="html"><![CDATA[<p>动画是现代 Web 应用设计中一个很重要的方面。我们希望用户界面能在不同的状态之间更平滑的转场。如果需要，还可以用适当的动画来吸引注意力。 设计良好的动画不但会让 UI 更有趣，还会让它更容易使用。Angular 的动画系统赋予了制作各种动画效果的能力，以构建出与原生 CSS 动画性能相同的动画。 我们也获得了额外的让动画逻辑与其它应用代码紧紧集成在一起的能力，这让动画可以被更容易的触发与控制。<a href="https://github.com/syoubaku/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、在两个状态间转场"><a href="#一、在两个状态间转场" class="headerlink" title="一、在两个状态间转场"></a>一、在两个状态间转场</h3><h4 id="1-构建一个动画"><a href="#1-构建一个动画" class="headerlink" title="1. 构建一个动画"></a>1. 构建一个动画</h4><p>它会让一个元素用模型驱动的方式在两个状态之间转场。动画会被定义在 <code>@Component</code> 元数据中。在添加动画之前，先引入一些与动画有关的函数</p>
 <figure class="highlight moonscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;</div><div class="line">  Component,</div><div class="line">  Input,</div><div class="line">  trigger,</div><div class="line">  state,</div><div class="line">  style,</div><div class="line">  transition,</div><div class="line">  animate</div><div class="line">&#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line">//通过这些，可以在组件元数据中定义一个名叫 heroState 的 动画触发器 。它在两个状态 active 和 inactive 之间进行转场。 当英雄处于激活状态时，它会把该元素显示得稍微大一点、亮一点。</div><div class="line"><span class="keyword">import</span> &#123; Heroes &#125; <span class="keyword">from</span> <span class="string">'./hero.service'</span>;</div><div class="line">@Component(&#123;</div><div class="line">  <span class="name">moduleId</span>: <span class="built_in">module</span>.id,</div><div class="line">  <span class="name">selector</span>: <span class="string">'hero-list-basic'</span>,</div><div class="line">  <span class="name">template</span>: `</div><div class="line">    &lt;ul&gt;</div><div class="line">      &lt;li *ngFor=<span class="string">"let hero of heroes"</span></div><div class="line">          @heroState=<span class="string">"hero.state"</span></div><div class="line">          (click)=<span class="string">"hero.toggleState()"</span>&gt;</div><div class="line">        &#123;&#123;hero.name&#125;&#125;</div><div class="line">      &lt;/li&gt;</div><div class="line">    &lt;/ul&gt;</div><div class="line">  `,</div><div class="line">  <span class="name">styleUrls</span>: [<span class="string">'hero-list.component.css'</span>],</div><div class="line">  <span class="name">animations</span>: [</div><div class="line">    trigger(<span class="string">'heroState'</span>, [</div><div class="line">      state(<span class="string">'inactive'</span>, style(&#123;</div><div class="line">        <span class="name">backgroundColor</span>: <span class="string">'#eee'</span>,</div><div class="line">        <span class="name">transform</span>: <span class="string">'scale(1)'</span></div><div class="line">      &#125;)),</div><div class="line">      state(<span class="string">'active'</span>,   style(&#123;</div><div class="line">        <span class="name">backgroundColor</span>: <span class="string">'#cfd8dc'</span>,</div><div class="line">        <span class="name">transform</span>: <span class="string">'scale(1.1)'</span></div><div class="line">      &#125;)),</div><div class="line">      transition(<span class="string">'inactive =&gt; active'</span>, animate(<span class="string">'100ms ease-in'</span>)),</div><div class="line">      transition(<span class="string">'active =&gt; inactive'</span>, animate(<span class="string">'100ms ease-out'</span>))</div><div class="line">    ])</div><div class="line">  ]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">HeroListBasicComponent</span> &#123;</span></div><div class="line">  @Input() <span class="name">heroes</span>: Heroes;</div><div class="line">&#125;</div><div class="line">//我们刚刚定义了一个动画，但它还没有被用到任何地方。要想使用它，可以在模板中用 @triggerName 语法来把它附加到一个或多个元素上。</div></pre></td></tr></table></figure>
@@ -731,7 +731,7 @@
     
     <entry>
       <title><![CDATA[angular2学习笔记之服务和http]]></title>
-      <url>https://blog.xiaomo.info/2016/06/27/Angular2StudyServiceHttp/</url>
+      <url>https://blog.xiaomo.info/Angular2StudyServiceHttp/</url>
       <content type="html"><![CDATA[<p>现在应用开发多为spa的前后分离,前后端通讯则使用http的接口通过json进行交互。<a href="https://github.com/syoubaku/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-效果图"><a href="#一、-效果图" class="headerlink" title="一、 效果图"></a>一、 效果图</h3><h4 id="1-展现出来的效果"><a href="#1-展现出来的效果" class="headerlink" title="1. 展现出来的效果"></a>1. 展现出来的效果</h4><p><img src="https://image.xiaomo.info/banner/httpService.png" alt=""></p>
 <h4 id="2-mysql的数据"><a href="#2-mysql的数据" class="headerlink" title="2. mysql的数据"></a>2. mysql的数据</h4><p><img src="https://image.xiaomo.info/angular/mysql.png" alt=""></p>
@@ -743,7 +743,7 @@
     
     <entry>
       <title><![CDATA[angular2学习笔记之小技巧]]></title>
-      <url>https://blog.xiaomo.info/2016/06/26/Angular2StudyNoteOther/</url>
+      <url>https://blog.xiaomo.info/Angular2StudyNoteOther/</url>
       <content type="html"><![CDATA[<p>在angular2的开发中经常会遇到各种各样的问题，我们可以采用一些小技巧来解决这些问题。<a href="https://github.com/syoubaku/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="1-组件"><a href="#1-组件" class="headerlink" title="1. 组件"></a>1. 组件</h4><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"> <span class="meta">@Component(&#123;</span></div><div class="line"> selector: <span class="meta-string">'reddit-article'</span>,</div><div class="line"> inputs: [<span class="meta-string">'article'</span>],</div><div class="line"> template:require(<span class="meta-string">'reddit-article.html'</span>);</div><div class="line"> &#125;)</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArticleComponent</span> </span>&#123;</div><div class="line"> article: Article;</div><div class="line"></div><div class="line"> voteUp(): boolean &#123;</div><div class="line"> <span class="keyword">this</span>.article.voteUp();</div><div class="line"> <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"> &#125;</div><div class="line"></div><div class="line"> voteDown(): boolean &#123;</div><div class="line"> <span class="keyword">this</span>.article.voteDown();</div><div class="line"> <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
 <h4 id="2-模型"><a href="#2-模型" class="headerlink" title="2. 模型"></a>2. 模型</h4><p>类似javabean，可以把api封装在模型中</p>
@@ -777,7 +777,7 @@
     
     <entry>
       <title><![CDATA[angular2学习笔记之ng2标签]]></title>
-      <url>https://blog.xiaomo.info/2016/06/25/Angular2StudyNoteNgTag/</url>
+      <url>https://blog.xiaomo.info/Angular2StudyNoteNgTag/</url>
       <content type="html"><![CDATA[<p>angular2的内值指令和angular2很类似，所有熟悉angular1的朋友看一眼就会了。<a href="https://github.com/syoubaku/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-效果图"><a href="#一、-效果图" class="headerlink" title="一、 效果图"></a>一、 效果图</h3><p><img src="https://image.xiaomo.info/banner/ngTag.png" alt=""></p>
 <h3 id="一、指令解读"><a href="#一、指令解读" class="headerlink" title="一、指令解读"></a>一、<a href="https://github.com/syoubaku/angular2-demo/tree/master/src/ts/component/ngTag" target="_blank" rel="external">指令解读</a></h3><h4 id="0-组件"><a href="#0-组件" class="headerlink" title="0. 组件"></a>0. <a href="https://github.com/syoubaku/angular2-demo/tree/master/src/ts/component/ngTag//NgTag.ts" target="_blank" rel="external">组件</a></h4><p>主要就是定义了一些数据用于测试</p>
@@ -808,7 +808,7 @@
     
     <entry>
       <title><![CDATA[angular2学习笔记之事件和多组件]]></title>
-      <url>https://blog.xiaomo.info/2016/06/24/Angular2StudyNoteEvent/</url>
+      <url>https://blog.xiaomo.info/Angular2StudyNoteEvent/</url>
       <content type="html"><![CDATA[<p>组件免不了和用户交互，而交互中使用最频繁的莫过于点击事件的交互。<a href="https://github.com/syoubaku/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-点击事件"><a href="#一、-点击事件" class="headerlink" title="一、 点击事件"></a>一、 点击事件</h3><p><img src="https://image.xiaomo.info/banner/ClickEvent.gif" alt=""></p>
 <p><a href="https://github.com/syoubaku/angular2-demo/tree/master/src/ts/component/clickEvent" target="_blank" rel="external">代码解读</a></p>
@@ -829,7 +829,7 @@
     
     <entry>
       <title><![CDATA[angular2学习笔记之基本组件和ngFor]]></title>
-      <url>https://blog.xiaomo.info/2016/06/23/Angular2StudyNoteComponent/</url>
+      <url>https://blog.xiaomo.info/Angular2StudyNoteComponent/</url>
       <content type="html"><![CDATA[<p>angular2的思想非常先进，摒弃了angular1那种复杂的构建模式，采用了组件化开方的方，那我们一起来看一看，一个基础的组件是什么样子的呢。<a href="https://github.com/syoubaku/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><h4 id="1-目录结构"><a href="#1-目录结构" class="headerlink" title="1. 目录结构"></a>1. 目录结构</h4><p><img src="https://image.xiaomo.info/angular/jiegou.png" alt=""></p>
 <ul>
@@ -850,7 +850,7 @@
     
     <entry>
       <title><![CDATA[angular2学习笔记之基础环境搭建]]></title>
-      <url>https://blog.xiaomo.info/2016/06/22/Angular2StudyNoteEnvironment/</url>
+      <url>https://blog.xiaomo.info/Angular2StudyNoteEnvironment/</url>
       <content type="html"><![CDATA[<p>俗话说万事开头难，对于一个项目的开发，准备工作其实是一件很很头大的事。尤其是像angular2这种前沿基础，搭建环境这一步就让很多人望而却步。<a href="https://github.com/syoubaku/angular2-demo" target="_blank" rel="external">angular2-demo</a><br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、angular2基础依赖"><a href="#一、angular2基础依赖" class="headerlink" title="一、angular2基础依赖"></a>一、angular2基础依赖</h3><h4 id="1-angular模块"><a href="#1-angular模块" class="headerlink" title="1.angular模块"></a>1.angular模块</h4><ul>
 <li>@angular/common</li>
@@ -910,7 +910,7 @@
     
     <entry>
       <title><![CDATA[react学习笔记之环境搭建]]></title>
-      <url>https://blog.xiaomo.info/2016/06/21/ReactEnvironment/</url>
+      <url>https://blog.xiaomo.info/ReactEnvironment/</url>
       <content type="html"><![CDATA[<p>不知道为什么，就是突然想学一学react。先进的思想，前沿的技术，漂亮的组件。它的魔力就在于能让我一眼就爱上它！源码: <a href="https://github.com/nodejs-study/node-koa/tree/master/web/client" target="_blank" rel="external">react-detail</a><br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/react.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、核心依赖"><a href="#一、核心依赖" class="headerlink" title="一、核心依赖"></a>一、核心依赖</h3><h4 id="1-react"><a href="#1-react" class="headerlink" title="1. react"></a>1. <a href="https://npm.taobao.org/package/react" target="_blank" rel="external">react</a></h4><h4 id="2-react-dom"><a href="#2-react-dom" class="headerlink" title="2. react-dom"></a>2. <a href="https://npm.taobao.org/package/react-dom" target="_blank" rel="external">react-dom</a></h4><h4 id="3-react-redux"><a href="#3-react-redux" class="headerlink" title="3. react-redux"></a>3. <a href="https://npm.taobao.org/package/react-redux" target="_blank" rel="external">react-redux</a></h4><h4 id="4-react-router"><a href="#4-react-router" class="headerlink" title="4. react-router"></a>4. <a href="https://npm.taobao.org/package/react-router" target="_blank" rel="external">react-router</a></h4><h4 id="5-redux"><a href="#5-redux" class="headerlink" title="5. redux"></a>5. <a href="https://npm.taobao.org/package/redux" target="_blank" rel="external">redux</a></h4><h4 id="6-react-router-redux"><a href="#6-react-router-redux" class="headerlink" title="6. react-router-redux"></a>6. <a href="https://npm.taobao.org/package/react-router-redux" target="_blank" rel="external">react-router-redux</a></h4><h4 id="7-redux-thunk"><a href="#7-redux-thunk" class="headerlink" title="7. redux-thunk"></a>7. <a href="https://npm.taobao.org/package/redux-thunk" target="_blank" rel="external">redux-thunk</a></h4><h4 id="8-isomorphic-fetch"><a href="#8-isomorphic-fetch" class="headerlink" title="8. isomorphic-fetch"></a>8. <a href="https://npm.taobao.org/package/isomorphic-fetch" target="_blank" rel="external">isomorphic-fetch</a></h4><h4 id="9-antd"><a href="#9-antd" class="headerlink" title="9. antd"></a>9. <a href="https://npm.taobao.org/package/antd" target="_blank" rel="external">antd</a></h4><h4 id="10-bootstrap"><a href="#10-bootstrap" class="headerlink" title="10.bootstrap"></a>10.<a href="https://npm.taobao.org/package/bootstrap" target="_blank" rel="external">bootstrap</a></h4><h2 id="二、babel相关"><a href="#二、babel相关" class="headerlink" title="二、babel相关"></a>二、babel相关</h2><h3 id="1-命令编译器"><a href="#1-命令编译器" class="headerlink" title="1. 命令编译器"></a>1. 命令编译器</h3><p><a href="https://npm.taobao.org/package/babel-cli" target="_blank" rel="external">babel-cli</a></p>
 <p>使用 <code>babel script.js</code>   一般全局安装 <code>npm install -g babel-cli</code></p>
@@ -986,7 +986,7 @@
     
     <entry>
       <title><![CDATA[获取多说和 Disqus 文章评论数的方法]]></title>
-      <url>https://blog.xiaomo.info/2016/06/17/DuoshuoComment/</url>
+      <url>https://blog.xiaomo.info/DuoshuoComment/</url>
       <content type="html"><![CDATA[<p></p><h2 id="intro">前言</h2>不少网站使用的是多说等第三方评论系统，有时候需要在特定位置显示对应文章的评论数，下面的方法可以快速获取多说和 Disqus 的文章评论数，所得为纯数字，方便排版布局。<p></p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/life.png" alt="点击访问小莫的github"></a></p>
@@ -1033,7 +1033,7 @@
     
     <entry>
       <title><![CDATA[几个国内专用的公共 DNS]]></title>
-      <url>https://blog.xiaomo.info/2016/06/17/PublicDns/</url>
+      <url>https://blog.xiaomo.info/PublicDns/</url>
       <content type="html"><![CDATA[<p>　　之前 <a href="http://www.bootcdn.cn/" target="_blank" rel="external">有个网站</a> 自己经常上不去，查了挺久才发现是 DNS 的问题，更换为公共 DNS 后访问恢复正常。由此可见，挑选一个合适自己网络的 DNS 还是挺有必要的。</p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/dns.png" alt="点击访问小莫的github"></a></p>
@@ -1069,7 +1069,7 @@
     
     <entry>
       <title><![CDATA[阿里云服务器磁盘挂载]]></title>
-      <url>https://blog.xiaomo.info/2016/06/17/LinuxDisk/</url>
+      <url>https://blog.xiaomo.info/LinuxDisk/</url>
       <content type="html"><![CDATA[<p>起因在于前段时间在阿里云上购买了一台ECS的云服务器，奈何硬盘20G不够用，所以又买了一块硬块。so,问题来了,磁盘挂载哪家强？最终还要靠自己！！</p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/linux.png" alt="点击访问小莫的github"></a></p>
@@ -1096,7 +1096,7 @@
     
     <entry>
       <title><![CDATA[linux权限详细解读]]></title>
-      <url>https://blog.xiaomo.info/2016/06/17/LinuxChmod/</url>
+      <url>https://blog.xiaomo.info/LinuxChmod/</url>
       <content type="html"><![CDATA[<p>话说我接触linux也有近2年的时候了,而且有自己的linux服务器。感觉对linux的操作熟练程度还可以，但是基本知识还是有待提高，linux权限这一块有必要啃一啃了。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/linux.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、理论说明"><a href="#一、理论说明" class="headerlink" title="一、理论说明"></a>一、理论说明</h3><p>Linux系统中的每个文件和目录都有访问许可权限，用它来确定谁可以通过何种方式对文件和目录进行访问和操作。</p>
 <h4 id="1-权限说明"><a href="#1-权限说明" class="headerlink" title="1. 权限说明"></a>1. 权限说明</h4><p>文件或目录的访问权限分为只读，只写和可执行三种。<br>以文件为例，只读权限表示只允许读其内容，而禁止对其做任何的更改操作。<br>可执行权限表示允许将该文件作为一个程序执行。<br>文件被创建时，文件所有者自动拥有对该文件的读、写和可执行权限，以便于对文件的阅读和修改。<br>用户也可根据需要把访问权限设置为需要的任何组合。</p>
@@ -1151,7 +1151,7 @@
     
     <entry>
       <title><![CDATA[Markdown 表格样式调整与自适应优化]]></title>
-      <url>https://blog.xiaomo.info/2016/06/07/MarkdownTableStyle/</url>
+      <url>https://blog.xiaomo.info/MarkdownTableStyle/</url>
       <content type="html"><![CDATA[<p>　　Markdown 写的表格最终会被解析成 HTML 代码，如果使用的编辑器支持自定义 CSS，就能方便的调整样式。如果可以引入 JavaScript，样式自适应也能较好地实现。</p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/markdown.png" alt="点击访问小莫的github"></a></p>
@@ -1203,7 +1203,7 @@
     
     <entry>
       <title><![CDATA[gulp构建工具的使用]]></title>
-      <url>https://blog.xiaomo.info/2016/06/07/GulpUse/</url>
+      <url>https://blog.xiaomo.info/GulpUse/</url>
       <content type="html"><![CDATA[<p>先前学习了webpack,但是总是感觉webpack略显复杂，并且现在很多公司gulp工作流用的比较多，因此就入gulp的坑来踩一踩，技多不压身，霍霍霍…。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/gulp.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、简介-增强和使你的工作自动化"><a href="#一、简介-增强和使你的工作自动化" class="headerlink" title="一、简介(增强和使你的工作自动化)"></a>一、简介(增强和使你的工作自动化)</h3><h4 id="1-使用简单"><a href="#1-使用简单" class="headerlink" title="1. 使用简单"></a>1. 使用简单</h4><p>没有繁琐的配置，一个任务一个task。通过代码优于配置的策略，Gulp 让简单的任务简单，复杂的任务可管理。  </p>
 <h4 id="2-高效"><a href="#2-高效" class="headerlink" title="2. 高效"></a>2. 高效</h4><p>利用node强大的工作流，快速的构建项目并减少频繁的 IO 操作。  </p>
@@ -1265,7 +1265,7 @@
     
     <entry>
       <title><![CDATA[前端工程化工具初选]]></title>
-      <url>https://blog.xiaomo.info/2016/06/05/FrontEndTools/</url>
+      <url>https://blog.xiaomo.info/FrontEndTools/</url>
       <content type="html"><![CDATA[<p>　　面对日益纷杂的前端工具，作为新人常感无从下手。经过一番检索和简单对比，再结合自己的喜好，筛选了将要学习和使用的工具，以适应日益工程化、专业化的 Web 前端开发工作。</p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/life.png" alt="点击访问小莫的github"></a></p>
@@ -1377,7 +1377,7 @@
     
     <entry>
       <title><![CDATA[Anki 记忆库之 Excel 快捷键大全]]></title>
-      <url>https://blog.xiaomo.info/2016/06/04/AnkiExcelShortcuts/</url>
+      <url>https://blog.xiaomo.info/AnkiExcelShortcuts/</url>
       <content type="html"><![CDATA[<p></p><h2 id="intro">前言</h2>如果微软 Office 系列套件里只能保留一个，我会选择保留 Excel。只需要学一点基础的 Excel 知识，就能直观地感受到信息技术所带来的高效生产力。有些软件，掌握了它的快捷键，不仅能较全面地了解它的功能，也能极大地提升使用效率。Excel 就属于这类软件。<p></p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/life.png" alt="点击访问小莫的github"></a></p>
@@ -2090,7 +2090,7 @@
     
     <entry>
       <title><![CDATA[CSS font-family 网页字体使用小结]]></title>
-      <url>https://blog.xiaomo.info/2016/06/03/CssFontFamily/</url>
+      <url>https://blog.xiaomo.info/CssFontFamily/</url>
       <content type="html"><![CDATA[<p></p><h2 id="intro">前言</h2>一直到最近才开始调整博客的字体，之前都是全站微软雅黑了事。慢慢调整后发现 font-family 这个属性相关的知识还是不少的，整理一下常用的部分，分享于此。<p></p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/life.png" alt="点击访问小莫的github"></a></p>
@@ -2383,7 +2383,7 @@
     
     <entry>
       <title><![CDATA[nodejs爬虫项目实战]]></title>
-      <url>https://blog.xiaomo.info/2016/06/03/NodeSpider/</url>
+      <url>https://blog.xiaomo.info/NodeSpider/</url>
       <content type="html"><![CDATA[<p>这篇文章主要介绍了NodeJS制作爬虫的全过程，包括项目建立，目标网站分析、使用superagent获取源数据、使用cheerio解析、使用eventproxy来并发抓取每个主题的内容等方面，有需要的小伙伴参考下吧。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/nodejs.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-依赖"><a href="#一、-依赖" class="headerlink" title="一、 依赖"></a>一、 依赖</h3><h4 id="1-DOM操作-cheerio"><a href="#1-DOM操作-cheerio" class="headerlink" title="1. DOM操作  cheerio"></a>1. DOM操作  <a href="https://npm.taobao.org/package/cheerio" target="_blank" rel="external">cheerio</a></h4><h4 id="2-请求插件-request"><a href="#2-请求插件-request" class="headerlink" title="2. 请求插件  request"></a>2. 请求插件  <a href="https://npm.taobao.org/package/request" target="_blank" rel="external">request</a></h4><h4 id="3-http库-superagent"><a href="#3-http库-superagent" class="headerlink" title="3. http库  superagent"></a>3. http库  <a href="https://npm.taobao.org/package/superagent" target="_blank" rel="external">superagent</a></h4><h4 id="4-代理-eventproxy"><a href="#4-代理-eventproxy" class="headerlink" title="4. 代理  eventproxy"></a>4. 代理  <a href="https://npm.taobao.org/package/eventproxy" target="_blank" rel="external">eventproxy</a></h4><h3 id="二、建立项目node-spider"><a href="#二、建立项目node-spider" class="headerlink" title="二、建立项目node-spider"></a>二、建立项目node-spider</h3><h4 id="1-建立一个Koa2项目"><a href="#1-建立一个Koa2项目" class="headerlink" title="1. 建立一个Koa2项目"></a>1. 建立一个Koa2项目</h4><p> <code>npm install -g koa-generator</code></p>
 <h4 id="2-生成一个koa2的项目"><a href="#2-生成一个koa2的项目" class="headerlink" title="2. 生成一个koa2的项目"></a>2. 生成一个koa2的项目</h4><p> <code>koa2 -e node-spider</code>   -e表示使用ejs模板，具体参照<a href="http://localhost:4000/2016/05/26/2016-5-26-koa_generator/" target="_blank" rel="external">koa生成器,一键生成koa和koa2项目</a>   </p>
@@ -2417,7 +2417,7 @@
     
     <entry>
       <title><![CDATA[package.json常用script]]></title>
-      <url>https://blog.xiaomo.info/2016/06/02/Package.jsonScripts/</url>
+      <url>https://blog.xiaomo.info/Package.jsonScripts/</url>
       <content type="html"><![CDATA[<p>好的script能够大大减少我们对命令行的操作，直接使用npm run xxx 就可以执行。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/npm.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、git相关"><a href="#一、git相关" class="headerlink" title="一、git相关"></a>一、git相关</h3><h4 id="1-查看分支"><a href="#1-查看分支" class="headerlink" title="1. 查看分支"></a>1. 查看分支</h4><p>  <code>branch:git branch -a</code>,    </p>
 <h4 id="2-查看标签"><a href="#2-查看标签" class="headerlink" title="2. 查看标签"></a>2. 查看标签</h4><p>  <code>tag:git tag</code>,    </p>
@@ -2442,7 +2442,7 @@
     
     <entry>
       <title><![CDATA[npm模块分享]]></title>
-      <url>https://blog.xiaomo.info/2016/06/01/NpmModulesShare/</url>
+      <url>https://blog.xiaomo.info/NpmModulesShare/</url>
       <content type="html"><![CDATA[<p>平时自己用的npm模块也不算少了，其实网上有很多牛人开发的npm模块都很好，希望不要被埋没了。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/npm.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-实用的模块"><a href="#一、-实用的模块" class="headerlink" title="一、 实用的模块"></a>一、 实用的模块</h3><h4 id="1-thunder-vip"><a href="#1-thunder-vip" class="headerlink" title="1.thunder-vip"></a>1.<a href="https://github.com/nswbmw/thunder-vip" target="_blank" rel="external">thunder-vip</a></h4><p>作用：获取最新可用的迅雷 vip 账号。<br>解决什么：不用每次打开网站去找号。。<br>用法： <code>$ thunder</code>  or</p>
   <figure class="highlight lisp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var thunderVip = require('thunder-vip')<span class="comment">;</span></div><div class="line"></div><div class="line">thunderVip(<span class="name">function</span> (<span class="name">err</span>, accounts) &#123;</div><div class="line">console.log(<span class="name">accounts</span>)<span class="comment">;</span></div><div class="line">&#125;)<span class="comment">;</span></div></pre></td></tr></table></figure>
@@ -2491,7 +2491,7 @@
     
     <entry>
       <title><![CDATA[mongodb数据库的使用]]></title>
-      <url>https://blog.xiaomo.info/2016/05/27/MongodbUse/</url>
+      <url>https://blog.xiaomo.info/MongodbUse/</url>
       <content type="html"><![CDATA[<p>最近在学习node，听说node和mongodb更配哦。。所以我就来学习mongodb了<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/mongodb.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、mongodb的开启和关闭"><a href="#一、mongodb的开启和关闭" class="headerlink" title="一、mongodb的开启和关闭"></a>一、mongodb的开启和关闭</h3><h4 id="1-查找mongod是否可用"><a href="#1-查找mongod是否可用" class="headerlink" title="1. 查找mongod是否可用"></a>1. 查找mongod是否可用</h4><p><code>which mongod</code></p>
 <h4 id="2-启动mongodb"><a href="#2-启动mongodb" class="headerlink" title="2. 启动mongodb"></a>2. 启动mongodb</h4><p> 指定path 和log日志<br><code>mongod --dbpath /data2/db --port=27017 --fork /data2/db/log/mongod.log</code></p>
@@ -2529,7 +2529,7 @@
     
     <entry>
       <title><![CDATA[koa生成器,一键生成koa和koa2项目]]></title>
-      <url>https://blog.xiaomo.info/2016/05/26/KoaGenerator/</url>
+      <url>https://blog.xiaomo.info/KoaGenerator/</url>
       <content type="html"><![CDATA[<p>最近在学koa,想着exrpess有生成器,那么koa应该也有。不出所料，经过我仔细上网排查,果然也有koa生成器。这对于想学koa，且规范的使用koa的朋友来说是一件多么让人开心的事情。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/koajs.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、一键生成koa项目特性"><a href="#一、一键生成koa项目特性" class="headerlink" title="一、一键生成koa项目特性"></a>一、一键生成koa项目特性</h3><ol>
 <li>Express-style</li>
@@ -2561,7 +2561,7 @@
     
     <entry>
       <title><![CDATA[nodejs框架koa学习]]></title>
-      <url>https://blog.xiaomo.info/2016/05/24/NodeKoa/</url>
+      <url>https://blog.xiaomo.info/NodeKoa/</url>
       <content type="html"><![CDATA[<p>Koa 是一个类似于 Express 的Web开发框架，创始人也都是TJ。Koa 的主要特点是，使用了 ES6 的 Generator 函数，进行了架构的重新设计。Koa 的原理和内部结构很像 Express，但是语法和内部结构进行了升级。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/nodejs.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、国际惯例-hello-world"><a href="#一、国际惯例-hello-world" class="headerlink" title="一、国际惯例 hello world"></a>一、国际惯例 hello world</h3><h4 id="1-当前版本1-2"><a href="#1-当前版本1-2" class="headerlink" title="1. 当前版本1.2"></a>1. 当前版本1.2</h4><p><code>npm install --save koa</code>   </p>
 <h4 id="2-代码撸起来"><a href="#2-代码撸起来" class="headerlink" title="2. 代码撸起来"></a>2. 代码撸起来</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</div><div class="line"><span class="keyword">let</span> app = koa();</div><div class="line">app.use(<span class="function"><span class="keyword">function</span>*(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.body = <span class="string">"hello xiaomo"</span>;</div><div class="line">  &#125;);</div><div class="line">app.listen(<span class="number">8080</span>);</div></pre></td></tr></table></figure>
@@ -2581,7 +2581,7 @@
     
     <entry>
       <title><![CDATA[javascript学习笔记]]></title>
-      <url>https://blog.xiaomo.info/2016/05/20/JavascriptSyntax/</url>
+      <url>https://blog.xiaomo.info/JavascriptSyntax/</url>
       <content type="html"><![CDATA[<p>一直对javscript抱有敬畏的态度，也没有一直深入学习。当学到各种js框架的时候才发现力不从心，感觉到了javascript基础的重要性，重新认真的系统的学习一下。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/javascript.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、一些不同"><a href="#一、一些不同" class="headerlink" title="一、一些不同"></a>一、一些不同</h3><h4 id="1-javscript没有块级作用域"><a href="#1-javscript没有块级作用域" class="headerlink" title="1. javscript没有块级作用域"></a>1. javscript没有块级作用域</h4><p>于是es6中有了let和var<br>模拟js的块级作用域    </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">outputNumbers</span>(<span class="params">count</span>)</span>&#123;</div><div class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;count;i++)&#123;</div><div class="line">      <span class="built_in">console</span>.log(i);</div><div class="line">    &#125;</div><div class="line">    &#125;)();</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(i) <span class="comment">//会报错</span></div></pre></td></tr></table></figure>
@@ -2674,7 +2674,7 @@
     
     <entry>
       <title><![CDATA[es6语法快速上手]]></title>
-      <url>https://blog.xiaomo.info/2016/05/19/Es6Syntax/</url>
+      <url>https://blog.xiaomo.info/Es6Syntax/</url>
       <content type="html"><![CDATA[<p>随着google和firfox以及node6.0对es6的支持，es6语法的定稿使它越来越受到关注，尤其是react项目基本上都是用es6来写的。是时候从es5到es6转变了<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/es6.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、相关背景介绍"><a href="#一、相关背景介绍" class="headerlink" title="一、相关背景介绍"></a>一、相关背景介绍</h3><p>我们现在大多数人用的语法javascript 其实版本是ecmscript5,也是就es5。这个版本己经很多年了，且完美被各大浏览器所支持。所以很多学js的朋友可以一直分不清楚es5和javascript的关系。javascript是一门编程语言，那么它就会有版本，es5还是es6 就就是它的版本号。最新版es7己经在紧锣密布的进行中，它最新的语法会让我们写代码更新的行云流水。</p>
 <h3 id="二、babel-一个es6的解析器"><a href="#二、babel-一个es6的解析器" class="headerlink" title="二、babel 一个es6的解析器"></a>二、babel 一个es6的解析器</h3><p>在我们正式讲解ES6语法之前，我们得先了解下<a href="https://babeljs.io/" target="_blank" rel="external">Babel。</a></p>
@@ -2800,7 +2800,7 @@
     
     <entry>
       <title><![CDATA[webpack相关命令参数]]></title>
-      <url>https://blog.xiaomo.info/2016/05/17/WebpackParams/</url>
+      <url>https://blog.xiaomo.info/WebpackParams/</url>
       <content type="html"><![CDATA[<p>使用webpack的同学，你真的熟练应用webpack么？其实直接<code>webpack --help</code>就可以看到，但是有很多人还是在网上到处搜相关参数<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/webpack.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、webpack相关参数"><a href="#一、webpack相关参数" class="headerlink" title="一、webpack相关参数"></a>一、webpack相关参数</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">webpack --config webpack.config.dev.js   <span class="comment">//使用另一份配置文件（比如webpack.config2.js）来打包</span></div><div class="line">webpack --watch   <span class="comment">//监听变动并自动打包</span></div><div class="line">webpack <span class="comment">//执行一次开发时的编译</span></div><div class="line">webpack -p <span class="comment">//执行一次生成环境的编译（压缩）</span></div><div class="line">webpack --watch <span class="comment">//在开发时持续监控增量编译（很快）</span></div><div class="line">webpack -<span class="keyword">d</span> <span class="comment">//让他生成SourceMaps</span></div><div class="line">webpack --progress <span class="comment">//显示编译进度</span></div><div class="line">webpack --colors <span class="comment">//显示静态资源的颜色</span></div><div class="line">webpack --<span class="keyword">sort</span>-modules-<span class="keyword">by</span>, --<span class="keyword">sort</span>-chunks-<span class="keyword">by</span>, --<span class="keyword">sort</span>-assets-<span class="keyword">by</span> <span class="comment">//将modules/chunks/assets进行列表排序</span></div><div class="line">webpack --<span class="keyword">display</span>-chunks <span class="comment">//展示编译后的分块</span></div><div class="line">webpack --<span class="keyword">display</span>-reasons <span class="comment">//显示更多引用模块原因</span></div><div class="line">webapck --<span class="keyword">display</span>-<span class="keyword">error</span>-details <span class="comment">//显示更多报错信息</span></div></pre></td></tr></table></figure>
 ]]></content>
@@ -2808,7 +2808,7 @@
     
     <entry>
       <title><![CDATA[webpack进阶之插件篇]]></title>
-      <url>https://blog.xiaomo.info/2016/05/17/WebpackPlugins/</url>
+      <url>https://blog.xiaomo.info/WebpackPlugins/</url>
       <content type="html"><![CDATA[<p>上一篇博客讲解了webpack环境的基本，这一篇讲解一些更深入的内容和开发技巧。基本环境搭建就不展开讲了<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/webpack.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、插件篇"><a href="#一、插件篇" class="headerlink" title="一、插件篇"></a>一、插件篇</h3><h4 id="1-自动补全css3前缀"><a href="#1-自动补全css3前缀" class="headerlink" title="1. 自动补全css3前缀"></a>1. 自动补全css3前缀</h4><p> autoprefixer  </p>
 <blockquote>
@@ -2906,7 +2906,7 @@
     
     <entry>
       <title><![CDATA[webpack进阶之loader篇]]></title>
-      <url>https://blog.xiaomo.info/2016/05/17/WebpackLLink/</url>
+      <url>https://blog.xiaomo.info/WebpackLLink/</url>
       <content type="html"><![CDATA[<p>webpack的loaders是一大特色，也是很重要的一部分。这遍博客我将分类讲解一些常用的laoder<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/webpack.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、loaders之-预处理"><a href="#一、loaders之-预处理" class="headerlink" title="一、loaders之 预处理"></a>一、loaders之 预处理</h3><ul>
 <li>css-loader 处理css中路径引用等问题</li>
@@ -2953,7 +2953,7 @@
     
     <entry>
       <title><![CDATA[用 Excel 生成和管理 Markdown 表格]]></title>
-      <url>https://blog.xiaomo.info/2016/05/16/ExcelMarkdownTable/</url>
+      <url>https://blog.xiaomo.info/ExcelMarkdownTable/</url>
       <content type="html"><![CDATA[<p></p><h2 id="intro">前言</h2>Markdown 作为一种轻量级的标记语言，用来进行简单的文本排版，确实方便快捷。但 Markdown 标记语言的属性，也使得其在表格处理上略显繁琐且不直观。而 Excel 几乎就是表格的代名词，借助 Excel，可以改善我们在 Markdown 中使用表格的体验。下文将简单介绍怎么使用 Excel 生成和管理可用于 Markdown 文章的表格。<p></p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/markdown.png" alt="点击访问小莫的github"></a></p>
@@ -3049,7 +3049,7 @@
     
     <entry>
       <title><![CDATA[nodejs的process模块]]></title>
-      <url>https://blog.xiaomo.info/2016/05/16/NodeProcess/</url>
+      <url>https://blog.xiaomo.info/NodeProcess/</url>
       <content type="html"><![CDATA[<p>我们在使用webpack的时候经常会有两套配置，一套生产环境和一套测试环境。因此我们会用到一些系统变量，我们就需要用到process。process模块用来与当前进程互动，可以通过全局变量process访问，不必使用require命令加载。它是一个EventEmitter对象的实例。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/nodejs.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、process属性。"><a href="#一、process属性。" class="headerlink" title="一、process属性。"></a>一、process属性。</h3><ul>
 <li>process.pid：当前进程的进程号。</li>
@@ -3097,7 +3097,7 @@
     
     <entry>
       <title><![CDATA[webpack使用之基础篇]]></title>
-      <url>https://blog.xiaomo.info/2016/05/14/WebpackBasicUse/</url>
+      <url>https://blog.xiaomo.info/WebpackBasicUse/</url>
       <content type="html"><![CDATA[<p>说到自动化构建，你想到了什么？基于AMD的requirejs？还是基于commoJS的browserify？他们都在各自的领域或者说时代发挥了很重要的作用。但是时代的变迁，webpack成了现在的佼佼者，我们不知道什么时候wepback也会被取代，但是现在我们必须要掌握。我不担心我学完webpack新东西来了就没用了，相反的我很期待也很高兴有新的东西来取代webpack，因为如果能取代，必然是更好的东西。如果是更好的，那又为什么要拒绝呢？活在当下，认真学习。</p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/webpack.png" alt="点击访问小莫的github"></a></p>
@@ -3132,14 +3132,14 @@
     
     <entry>
       <title><![CDATA[我的个人简历]]></title>
-      <url>https://blog.xiaomo.info/2016/05/14/AboutMe/</url>
+      <url>https://blog.xiaomo.info/AboutMe/</url>
       <content type="html"><![CDATA[<p>我的简历<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/life.png" alt="点击访问小莫的github"></a><br><a href="https://image.xiaomo.info/blog/aboutMe.doc" target="_blank" rel="external">点击下载简历</a></p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[使用nodejs搭建一个简易的即时聊天软件]]></title>
-      <url>https://blog.xiaomo.info/2016/05/13/NodeOnlineChat/</url>
+      <url>https://blog.xiaomo.info/NodeOnlineChat/</url>
       <content type="html"><![CDATA[<p>最近在学习node，跟着书上的例子写的一个基于net模块的tcp服务器，感觉挺有意思在此分享一下。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/nodejs.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、搭建简易的服务器"><a href="#一、搭建简易的服务器" class="headerlink" title="一、搭建简易的服务器"></a>一、搭建简易的服务器</h3><p><code>vim server.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//引入node的net模块</span></div><div class="line"><span class="keyword">var</span> net = <span class="built_in">require</span>(<span class="string">'net'</span>)</div><div class="line"><span class="comment">//创建一个服务器</span></div><div class="line"><span class="keyword">var</span> chatServer = net.createServer();</div><div class="line"><span class="comment">//定义一个客户端列表</span></div><div class="line"><span class="keyword">var</span> clientList = [];</div><div class="line"><span class="comment">//监听连接...</span></div><div class="line">chatServer.on(<span class="string">'connection'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">client</span>) </span>&#123;</div><div class="line"><span class="comment">//给客户端反馈</span></div><div class="line">client.name = client.remoteAddress+<span class="string">':'</span>+client.remotePort;</div><div class="line">client.write(<span class="string">'Hi!'</span>+client.name+<span class="string">',您己成功连接服务器，可以正常通讯了..\n'</span>);</div><div class="line"><span class="built_in">console</span>.log(client.name+<span class="string">'加入了聊天...'</span>)</div><div class="line"><span class="comment">//将客户端放到客户端列表中</span></div><div class="line">clientList.push(client);</div><div class="line"><span class="comment">//监听客户端信信息并给出反馈</span></div><div class="line">client.on(<span class="string">'data'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line"><span class="comment">// 把数据发送给所有客户端</span></div><div class="line">      broadcast(data,client);</div><div class="line">    &#125;);</div><div class="line"></div><div class="line"><span class="comment">//监听离线事件</span></div><div class="line">client.on(<span class="string">'end'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(client.name+<span class="string">'quit...'</span>)</div><div class="line">    clientList.splice(clientList.indexOf(client),<span class="number">1</span>);</div><div class="line">    client.write(<span class="string">'用户:'</span>+client.name+<span class="string">'退出了当前服务\n'</span>);</div><div class="line">    &#125;)</div><div class="line"><span class="comment">//监听错误事件</span></div><div class="line">client.on(<span class="string">'error'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(e);</div><div class="line">&#125;)</div><div class="line"></div><div class="line">&#125;)</div><div class="line"><span class="comment">/**</span></div><div class="line"> *  广播消息</div><div class="line"> **/</div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">broadcast</span>(<span class="params">message,client</span>)</span>&#123;</div><div class="line">     <span class="keyword">var</span> cleanUp=[];</div><div class="line">     <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;clientList.length;i++) &#123;</div><div class="line">         <span class="keyword">if</span>(clientList[i]!==client[i])&#123;</div><div class="line">             <span class="keyword">if</span>(clientList[i].writable)&#123;</div><div class="line">             clientList[i].write(client.name+<span class="string">'说:'</span>+message);</div><div class="line">             &#125; <span class="keyword">else</span>&#123;</div><div class="line">                 cleanUp.push(clientList[i]);</div><div class="line">                 clientList[i].destroy();</div><div class="line">             &#125;</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line">     <span class="comment">//在写入循环中删除死节点，消除垃圾索引</span></div><div class="line">     <span class="keyword">for</span>(<span class="keyword">var</span> i =<span class="number">0</span>;i&lt;cleanUp.length;i++)&#123;</div><div class="line">         clientList.splice(clientList.indexOf(cleanUp[i],i));</div><div class="line">     &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
 <p>开启服务器<br><code>node server.js</code><br><code>chatServer is running at port 9000...</code><br>此时服务己经成功开启</p>
@@ -3150,7 +3150,7 @@
     
     <entry>
       <title><![CDATA[linux下使用定时器跑任务]]></title>
-      <url>https://blog.xiaomo.info/2016/05/12/LinuxCrontab/</url>
+      <url>https://blog.xiaomo.info/LinuxCrontab/</url>
       <content type="html"><![CDATA[<p>我打算把github的代码用jenkins实时同步到线上，但是因为买的阿里云是个学习机内存太小容易跌机，因此打算使用linux的定时任务来做同步。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/linux.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h3><ol>
 <li>选好一个目录放shell脚本</li>
@@ -3172,7 +3172,7 @@
     
     <entry>
       <title><![CDATA[angularjs键盘事件]]></title>
-      <url>https://blog.xiaomo.info/2016/05/11/AngularKeyboardEvent/</url>
+      <url>https://blog.xiaomo.info/AngularKeyboardEvent/</url>
       <content type="html"><![CDATA[<p> 使用angularjs的键盘事件来增强用户体验。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、绑定键盘事件"><a href="#一、绑定键盘事件" class="headerlink" title="一、绑定键盘事件"></a>一、绑定键盘事件</h3><p>（尤其注意：不能用a标签，不然会失效）</p>
 <blockquote>
@@ -3193,7 +3193,7 @@
     
     <entry>
       <title><![CDATA[第三方组件ui-router的简单使用]]></title>
-      <url>https://blog.xiaomo.info/2016/05/11/AngularUiRouter/</url>
+      <url>https://blog.xiaomo.info/AngularUiRouter/</url>
       <content type="html"><![CDATA[<p>因为1.x的angularjs自带的ng-router功能比较弱，不支持路由嵌套。因些我们要使用到ui-router这个组件<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、ui-router基本思路"><a href="#一、ui-router基本思路" class="headerlink" title="一、ui-router基本思路"></a>一、ui-router基本思路</h3><ol>
 <li>多视图用@，嵌套用parent.child这种子路由</li>
@@ -3216,7 +3216,7 @@
     
     <entry>
       <title><![CDATA[markdown语法]]></title>
-      <url>https://blog.xiaomo.info/2016/05/11/MarkdownSyntax/</url>
+      <url>https://blog.xiaomo.info/MarkdownSyntax/</url>
       <content type="html"><![CDATA[<p>markdown的一些基本语法，大致够用了<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/markdown.png" alt="点击访问小莫的github"></a></p>
 <h3 id="1-标题-h标签"><a href="#1-标题-h标签" class="headerlink" title="1.标题(h标签)"></a>1.标题(h标签)</h3><p>h1-h6对应1-6个#</p>
 <h3 id="2-列表-li-gt-li"><a href="#2-列表-li-gt-li" class="headerlink" title="2.列表(li&gt;li)"></a>2.列表(li&gt;li)</h3><h4 id="1-无序列表"><a href="#1-无序列表" class="headerlink" title="1. 无序列表"></a>1. 无序列表</h4><h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">* </span>1</div><div class="line"><span class="bullet">* </span>2</div><div class="line"><span class="bullet">* </span>3</div></pre></td></tr></table></figure>
@@ -3258,7 +3258,7 @@
     
     <entry>
       <title><![CDATA[使用angularjs的$http异步删除数据]]></title>
-      <url>https://blog.xiaomo.info/2016/05/11/AngularHttp/</url>
+      <url>https://blog.xiaomo.info/AngularHttp/</url>
       <content type="html"><![CDATA[<p>因为我在使用angularjs做异步删除数据的时候遇到了一些问题，所以把这些问题记录下面供大家参考，也加深自己的印象。</p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
@@ -3282,7 +3282,7 @@
     
     <entry>
       <title><![CDATA[表单添加之ng-options]]></title>
-      <url>https://blog.xiaomo.info/2016/05/11/ngOptions/</url>
+      <url>https://blog.xiaomo.info/ngOptions/</url>
       <content type="html"><![CDATA[<p>我们在使用select&gt;option的时候经常会遇到一些问题，这里是对ng-options使用的一些总结。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>这个ng-options感觉略坑啊，跟原生的select、option不太一样</p>
 <h3 id="二、-要解决的几个问题"><a href="#二、-要解决的几个问题" class="headerlink" title="二、 要解决的几个问题"></a>二、 要解决的几个问题</h3><h4 id="1-select下拉框的默认值"><a href="#1-select下拉框的默认值" class="headerlink" title="1. select下拉框的默认值"></a>1. select下拉框的默认值</h4><h4 id="2-通过选择不同的值传给后台"><a href="#2-通过选择不同的值传给后台" class="headerlink" title="2. 通过选择不同的值传给后台"></a>2. 通过选择不同的值传给后台</h4><h4 id="3-ng-options的值要设置在-scope中"><a href="#3-ng-options的值要设置在-scope中" class="headerlink" title="3. ng-options的值要设置在$scope中"></a>3. ng-options的值要设置在$scope中</h4><h3 id="三、-代码实例"><a href="#三、-代码实例" class="headerlink" title="三、 代码实例"></a>三、 代码实例</h3><h4 id="1-html中的展示"><a href="#1-html中的展示" class="headerlink" title="1.html中的展示"></a>1.html中的展示</h4><figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span></div><div class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"col-md-2 control-label"</span>&gt;</span></div><div class="line">        权限：</div><div class="line">    <span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-md-10"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">title</span>=<span class="string">"权限"</span> <span class="attr">ng-model</span>=<span class="string">"adminUser.authLevel"</span></span></div><div class="line">                <span class="attr">ng-options</span>=<span class="string">"authLevel.name for authLevel in adminUser.authLevels"</span>&gt;</div><div class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span>-- 请选择 --<span class="tag">&lt;/<span class="name">option</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></div><div class="line">        <span class="template-variable">&#123;&#123;adminUser.authLevel&#125;&#125;</span><span class="xml"></span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -3300,7 +3300,7 @@
     
     <entry>
       <title><![CDATA[atom的使用和插件的安装]]></title>
-      <url>https://blog.xiaomo.info/2016/05/11/AtomPlugins/</url>
+      <url>https://blog.xiaomo.info/AtomPlugins/</url>
       <content type="html"><![CDATA[<p>由于生活在天朝这个神奇的国度，因此任何网站都会被强。因此安装插件就会很困扰，那么我们除了翻墙要怎么去解决这个问题呢？<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/atom.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、在讲插件之前，插入一个小知识"><a href="#一、在讲插件之前，插入一个小知识" class="headerlink" title="一、在讲插件之前，插入一个小知识"></a>一、在讲插件之前，插入一个小知识</h3><p>怎么使用atom实时预览markdown效果</p>
 <blockquote>
@@ -3328,7 +3328,7 @@
     
     <entry>
       <title><![CDATA[angularjs复选框]]></title>
-      <url>https://blog.xiaomo.info/2016/05/11/NgCheckbox/</url>
+      <url>https://blog.xiaomo.info/NgCheckbox/</url>
       <content type="html"><![CDATA[<p>使用angularjs做复选框，这也是一个常见的需求。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、代码"><a href="#一、代码" class="headerlink" title="一、代码"></a>一、代码</h3><h4 id="1-html"><a href="#1-html" class="headerlink" title="1. html"></a>1. html</h4><figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-repeat</span>=<span class="string">"tag in tags.content track by $index "</span>&gt;</span></span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span></span></div><div class="line">               <span class="attr">title</span>=<span class="string">"标签"</span></div><div class="line">               <span class="attr">class</span>=<span class="string">"btn "</span></div><div class="line">               <span class="attr">id</span>=<span class="string">"</span><span class="template-variable">&#123;&#123;tag.id&#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span></span></span></div><div class="line">               <span class="attr">name</span>=<span class="string">"</span><span class="template-variable">&#123;&#123;tag.name&#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span></span></span></div><div class="line">               <span class="attr">ng-checked</span>=<span class="string">"isSelected(tag.id)"</span> //动态 <span class="attr">true</span> <span class="attr">false</span></div><div class="line">               <span class="attr">ng-click</span>=<span class="string">"updateSelection($event,tag.id)"</span> //将<span class="attr">id</span>添加到<span class="attr">Array</span>中</div><div class="line">               <span class="attr">ng-model</span>=<span class="string">"tags"</span>&gt;</div><div class="line">        <span class="template-variable">&#123;&#123;tag.name&#125;&#125;</span><span class="xml"></span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="2-controller"><a href="#2-controller" class="headerlink" title="2. controller"></a>2. controller</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">$scope.selected = [];</div><div class="line">$scope.selectedTags = [];</div><div class="line"></div><div class="line"><span class="comment">//实际操作数组的方法</span></div><div class="line"><span class="keyword">var</span> updateSelected = <span class="function"><span class="keyword">function</span> <span class="params">(action, id, name)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (action == <span class="string">'add'</span> &amp;&amp; $scope.selected.indexOf(id) == <span class="number">-1</span>) &#123;</div><div class="line">        $scope.selected.push(id);</div><div class="line">        $scope.selectedTags.push(name);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (action == <span class="string">'remove'</span> &amp;&amp; $scope.selected.indexOf(id) != <span class="number">-1</span>) &#123;</div><div class="line">        <span class="keyword">var</span> idx = $scope.selected.indexOf(id);</div><div class="line">        $scope.selected.splice(idx, <span class="number">1</span>);</div><div class="line">        $scope.selectedTags.splice(idx, <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    console.log($scope.selected);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//根据传入的动作和要操作的id更新Array</span></div><div class="line">$scope.updateSelection = <span class="function"><span class="keyword">function</span> <span class="params">($event, id)</span> </span>&#123;</div><div class="line">    <span class="keyword">var</span> checkbox = $event.target;</div><div class="line">    <span class="keyword">var</span> action = (checkbox.checked ? <span class="string">'add'</span> : <span class="string">'remove'</span>);</div><div class="line">    updateSelected(action, id, checkbox.name);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//返回true false</span></div><div class="line">$scope.isSelected = <span class="function"><span class="keyword">function</span> <span class="params">(id)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> $scope.selected.indexOf(id) &gt;= <span class="number">0</span>;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
@@ -3342,7 +3342,7 @@
     
     <entry>
       <title><![CDATA[angularjs的验证系统]]></title>
-      <url>https://blog.xiaomo.info/2016/05/10/AngularValidate/</url>
+      <url>https://blog.xiaomo.info/AngularValidate/</url>
       <content type="html"><![CDATA[<p>使用angularjs的验证系统来做前端验证需要注意的一些地方<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/angular.png" alt="点击访问小莫的github"></a></p>
 <h3 id="一、-效果图"><a href="#一、-效果图" class="headerlink" title="一、 效果图"></a>一、 效果图</h3><p> <img src="https://image.xiaomo.info/angular/validate.gif" alt="angularjs验证效果图"></p>
 <h3 id="二、-要点"><a href="#二、-要点" class="headerlink" title="二、 要点"></a>二、 要点</h3><h4 id="1：form"><a href="#1：form" class="headerlink" title="1：form"></a>1：form</h4><p>给form起一个名字,并禁掉原生的验证</p>
@@ -3383,7 +3383,7 @@
     
     <entry>
       <title><![CDATA[Sublime Text 3 使用配置与插件安装]]></title>
-      <url>https://blog.xiaomo.info/2015/11/30/SublimeConfig/</url>
+      <url>https://blog.xiaomo.info/SublimeConfig/</url>
       <content type="html"><![CDATA[<p>　　记录安装配置 Sublime 的过程，同时列出所用到的插件，方便自己在新系统新电脑上快速用上熟悉的 Sublime。</p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/life.png" alt="点击访问小莫的github"></a></p>
@@ -3477,7 +3477,7 @@
     
     <entry>
       <title><![CDATA[Anki 自用卡片模板分享]]></title>
-      <url>https://blog.xiaomo.info/2015/11/23/AnkiTemplates/</url>
+      <url>https://blog.xiaomo.info/AnkiTemplates/</url>
       <content type="html"><![CDATA[<p></p><h2 id="intro">前言</h2><a href="http://ankisrs.net/" target="_blank" rel="external">Anki</a> 是一款卡片式的记忆辅助软件。软件在保持轻巧简洁的同时，各种设置也很丰富。另外， Anki 通过嵌入式的网页来展示卡片，大大增强了卡片样式的自定义功能。下面是目前自己常用的卡片样式代码，有折腾闲情的可以试试。<p></p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/life.png" alt="点击访问小莫的github"></a></p>
@@ -3503,7 +3503,7 @@
     
     <entry>
       <title><![CDATA[制作透明背景 PNG 图片和 GIF 动图的几种方法]]></title>
-      <url>https://blog.xiaomo.info/2015/11/16/PngGifTransparency/</url>
+      <url>https://blog.xiaomo.info/PngGifTransparency/</url>
       <content type="html"><![CDATA[<p>　　偶尔需要将图片的背景透明，渐渐掌握了几种较为简便的处理方法。写篇文章记录一下经验，免得自己哪天又忘了。</p>
 <a id="more"></a>
 <p><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/life.png" alt="点击访问小莫的github"></a></p>

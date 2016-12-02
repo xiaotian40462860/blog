@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>nodejs的process模块 | 小莫-fighting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="我们在使用webpack的时候经常会有两套配置，一套生产环境和一套测试环境。因此我们会用到一些系统变量，我们就需要用到process。process模块用来与当前进程互动，可以通过全局变量process访问，不必使用require命令加载。它是一个EventEmitter对象的实例。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs的process模块">
+<meta property="og:url" content="https://blog.xiaomo.info/NodeProcess/index.html">
+<meta property="og:site_name" content="小莫-fighting">
+<meta property="og:description" content="我们在使用webpack的时候经常会有两套配置，一套生产环境和一套测试环境。因此我们会用到一些系统变量，我们就需要用到process。process模块用来与当前进程互动，可以通过全局变量process访问，不必使用require命令加载。它是一个EventEmitter对象的实例。">
+<meta property="og:image" content="https://image.xiaomo.info/banner/nodejs.png">
+<meta property="og:updated_time" content="2016-12-01T06:50:27.616Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nodejs的process模块">
+<meta name="twitter:description" content="我们在使用webpack的时候经常会有两套配置，一套生产环境和一套测试环境。因此我们会用到一些系统变量，我们就需要用到process。process模块用来与当前进程互动，可以通过全局变量process访问，不必使用require命令加载。它是一个EventEmitter对象的实例。">
+<meta name="twitter:image" content="https://image.xiaomo.info/banner/nodejs.png">
+  
+    <link rel="alternative" href="/atom.xml" title="小莫-fighting" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">xiaomo</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">日本語を習っています.....</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/JavaScript/" style="font-size: 11px;">JavaScript</a> <a href="/tags/PhotoShop/" style="font-size: 10px;">PhotoShop</a> <a href="/tags/angular/" style="font-size: 14px;">angular</a> <a href="/tags/angular2/" style="font-size: 17px;">angular2</a> <a href="/tags/css/" style="font-size: 12px;">css</a> <a href="/tags/es5/" style="font-size: 10px;">es5</a> <a href="/tags/es6/" style="font-size: 15px;">es6</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/ionic2/" style="font-size: 10px;">ionic2</a> <a href="/tags/java/" style="font-size: 16px;">java</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/koa/" style="font-size: 13px;">koa</a> <a href="/tags/linux/" style="font-size: 13px;">linux</a> <a href="/tags/markdown/" style="font-size: 11px;">markdown</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/node/" style="font-size: 18px;">node</a> <a href="/tags/npm/" style="font-size: 12px;">npm</a> <a href="/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/tags/rxjs/" style="font-size: 10px;">rxjs</a> <a href="/tags/sass/" style="font-size: 15px;">sass</a> <a href="/tags/typescript/" style="font-size: 15px;">typescript</a> <a href="/tags/webpack/" style="font-size: 19px;">webpack</a> <a href="/tags/动漫/" style="font-size: 11px;">动漫</a> <a href="/tags/开发工具/" style="font-size: 16px;">开发工具</a> <a href="/tags/技术/" style="font-size: 12px;">技术</a> <a href="/tags/生活/" style="font-size: 12px;">生活</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">xiaomo</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">xiaomo</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">日本語を習っています.....</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-NodeProcess" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/NodeProcess/" class="article-date">
+  	<time datetime="2016-05-15T16:00:00.000Z" itemprop="datePublished">2016-05-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      nodejs的process模块
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/es6/">es6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/nodejs之process/">nodejs之process</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我们在使用webpack的时候经常会有两套配置，一套生产环境和一套测试环境。因此我们会用到一些系统变量，我们就需要用到process。process模块用来与当前进程互动，可以通过全局变量process访问，不必使用require命令加载。它是一个EventEmitter对象的实例。<br><a id="more"></a><br><a href="https://github.com/syoubaku" target="_blank" rel="external"><img src="https://image.xiaomo.info/banner/nodejs.png" alt="点击访问小莫的github"></a></p>
+<h3 id="一、process属性。"><a href="#一、process属性。" class="headerlink" title="一、process属性。"></a>一、process属性。</h3><ul>
+<li>process.pid：当前进程的进程号。</li>
+<li>process.version：Node的版本，比如v0.10.18。</li>
+<li>process.platform：当前系统平台，比如Linux。</li>
+<li>process.title：默认值为“node”，可以自定义该值。</li>
+<li>process.argv：当前进程的命令行参数数组。</li>
+<li>process.env：指向当前shell的环境变量，比如process.env.HOME。</li>
+<li>process.execPath：运行当前进程的可执行文件的绝对路径。</li>
+<li>process.stdout：指向标准输出。</li>
+<li>process.stdin：指向标准输入。</li>
+<li>process.stderr：指向标准错误。</li>
+</ul>
+<p>下面是主要属性的介绍。</p>
+<h4 id="1-stdout"><a href="#1-stdout" class="headerlink" title="1. stdout"></a>1. stdout</h4><p>process.stdout用来控制标准输出，也就是在命令行窗口向用户显示内容。它的write方法等同于console.log。</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">exports.<span class="built_in">log</span> = <span class="function"><span class="keyword">function</span><span class="params">()</span></span> &#123;</div><div class="line">    process.stdout.<span class="built_in">write</span>(<span class="keyword">format</span>.apply(this, arguments) + <span class="string">'\n'</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h4 id="2-argv"><a href="#2-argv" class="headerlink" title="2. argv"></a>2. argv</h4><p>process.argv返回命令行脚本的各个参数组成的数组。</p>
+<p>先新建一个脚本文件argv.js。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// argv.js</span></div><div class="line">console.<span class="built_in">log</span>(<span class="string">"argv: "</span>,process.argv);</div><div class="line">console.<span class="built_in">log</span>(<span class="string">"argc: "</span>,process.argc);</div></pre></td></tr></table></figure>
+<p>在命令行下调用这个脚本，会得到以下结果。<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">node argv.js a b c</div><div class="line"><span class="meta"># [ <span class="string">'node'</span>, <span class="string">'/path/to/argv.js'</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span> ]</span></div></pre></td></tr></table></figure></p>
+<p>上面代码表示，argv返回数组的成员依次是命令行的各个部分。要得到真正的参数部分，可以把argv.js改写成下面这样。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// argv.js</span></div><div class="line"><span class="keyword">var</span> myArgs = process.argv.slice(<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(myArgs);</div></pre></td></tr></table></figure>
+<h4 id="3-方法"><a href="#3-方法" class="headerlink" title="3.方法"></a>3.方法</h4><ul>
+<li>process对象提供以下方法：</li>
+<li>process.cwd()：返回运行当前脚本的工作目录的路径。_</li>
+<li>process.chdir()：改变工作目录。</li>
+<li>process.exit()：退出当前进程。</li>
+<li>process.nextTick()：将一个回调函数放在下次事件循环的顶部。</li>
+</ul>
+<p>process.chdir()改变工作目录的例子。  </p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">process</span>.cwd()</div><div class="line"># <span class="string">'/home/aaa'</span></div><div class="line"></div><div class="line"><span class="built_in">process</span>.chdir(<span class="string">'/home/bbb'</span>)</div><div class="line"></div><div class="line"><span class="built_in">process</span>.cwd()</div><div class="line"># <span class="string">'/home/bbb'</span></div></pre></td></tr></table></figure>
+<p>process.nextTick()的例子，指定下次事件循环首先运行的任务。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">process.nextTick(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'Next event loop!'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>上面代码可以用setTimeout改写，但是nextTick的效果更高、描述更准确。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">   <span class="built_in">console</span>.log(<span class="string">'Next event loop!'</span>);</div><div class="line">&#125;, <span class="number">0</span>)</div></pre></td></tr></table></figure>
+<h4 id="4-事件"><a href="#4-事件" class="headerlink" title="4. 事件"></a>4. 事件</h4><p>（1）exit事件<br>当前进程退出时，会触发exit事件，可以对该事件指定回调函数。这一个用来定时检查模块的状态的好钩子(hook)(例如单元测试),当主事件循环在执行完’exit’的回调函数后将不再执行,所以在exit事件中定义的定时器可能不会被加入事件列表.</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">process.on(<span class="string">'exit'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</div><div class="line">  fs.writeFileSync(<span class="string">'/tmp/myfile'</span>, <span class="string">'This MUST be saved on exit.'</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>（2）uncaughtException事件<br>当前进程抛出一个没有被捕捉的意外时，会触发uncaughtException事件。  </p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">process.<span class="keyword">on</span>('uncaughtException', function (<span class="keyword">err</span>) &#123;</div><div class="line">  console.<span class="keyword">error</span>('<span class="keyword">An</span> uncaught <span class="keyword">error</span> occurred!');</div><div class="line">  console.<span class="keyword">error</span>(<span class="keyword">err</span>.<span class="keyword">stack</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<blockquote>
+<p>摘自阮老师博客   <a href="http://javascript.ruanyifeng.com/nodejs/basic.html#toc22" target="_blank" rel="external">Node.js 概述</a></p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/ExcelMarkdownTable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          用 Excel 生成和管理 Markdown 表格
+        
+      </div>
+    </a>
+  
+  
+    <a href="/WebpackBasicUse/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">webpack使用之基础篇</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	--- JiaThis Button BEGIN ---
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	--- JiaThis Button END ---
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	--- 多说评论框 start ---
+	<div class="ds-thread" data-thread-key="NodeProcess" data-title="nodejs的process模块" data-url="https://blog.xiaomo.info/NodeProcess/"></div>
+	--- 多说评论框 end ---
+	--- 多说公共JS代码 start (一个网页只需插入一次) ---
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	--- 多说公共JS代码 end ---
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 xiaomo
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
