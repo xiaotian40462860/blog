@@ -1,209 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>小莫-fighting</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="xiaomo" />
+
+
+    
+    
+
+
+<meta property="og:type" content="website">
 <meta property="og:title" content="小莫-fighting">
 <meta property="og:url" content="https://blog.xiaomo.info/index.html">
 <meta property="og:site_name" content="小莫-fighting">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小莫-fighting">
-  
-    <link rel="alternative" href="/atom.xml" title="小莫-fighting" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
-</head>
 
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternative" href="/atom.xml" title="小莫-fighting" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="https://image.xiaomo.info/logo/avatar.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/green/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <style> .article { opacity: 0;} </style>
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>小莫-fighting</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: true,
+        isPost: false,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        open_in_new: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
 <body>
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="null" class="js-avatar">
-			
-		</a>
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="https://image.xiaomo.info/logo/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">xiaomo</a></h1>
+        </hgroup>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">xiaomo</a></h1>
-		</hgroup>
+        
+        <p class="header-subtitle">日本語を習っています.....</p>
+        
 
-		
-		<p class="header-subtitle">日本語を習っています.....</p>
-		
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
 
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
-						
-						<li>Links</li>
-						
-						
-						<li>Über</li>
-						
-					</ul>
-				</div>
-			</div>
-		
 
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="#" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-					        
-								<a class="rss" target="_blank" href="#" title="rss">rss</a>
-					        
-								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/JavaScript/" style="font-size: 11px;">JavaScript</a> <a href="/tags/PhotoShop/" style="font-size: 10px;">PhotoShop</a> <a href="/tags/angular/" style="font-size: 14px;">angular</a> <a href="/tags/angular2/" style="font-size: 17px;">angular2</a> <a href="/tags/css/" style="font-size: 12px;">css</a> <a href="/tags/es5/" style="font-size: 10px;">es5</a> <a href="/tags/es6/" style="font-size: 15px;">es6</a> <a href="/tags/excel/" style="font-size: 10px;">excel</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gulp/" style="font-size: 10px;">gulp</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/ionic2/" style="font-size: 10px;">ionic2</a> <a href="/tags/java/" style="font-size: 16px;">java</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/koa/" style="font-size: 13px;">koa</a> <a href="/tags/linux/" style="font-size: 13px;">linux</a> <a href="/tags/markdown/" style="font-size: 11px;">markdown</a> <a href="/tags/mongodb/" style="font-size: 10px;">mongodb</a> <a href="/tags/node/" style="font-size: 18px;">node</a> <a href="/tags/npm/" style="font-size: 12px;">npm</a> <a href="/tags/reactjs/" style="font-size: 10px;">reactjs</a> <a href="/tags/rxjs/" style="font-size: 10px;">rxjs</a> <a href="/tags/sass/" style="font-size: 15px;">sass</a> <a href="/tags/typescript/" style="font-size: 15px;">typescript</a> <a href="/tags/webpack/" style="font-size: 19px;">webpack</a> <a href="/tags/动漫/" style="font-size: 11px;">动漫</a> <a href="/tags/开发工具/" style="font-size: 16px;">开发工具</a> <a href="/tags/技术/" style="font-size: 12px;">技术</a> <a href="/tags/生活/" style="font-size: 12px;">生活</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
-			        
-			        </div>
-				</section>
-				
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
 
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/about/">关于我&amp;留言板</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:xiaomo@xiaomo.info" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/syoubaku" title="GitHub"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=83387856&site=qq&menu=yes" title="QQ"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="https://twitter.com/hupengbest" title="Twitter"></a>
+                            
+                                <a class="fa StackOverflow" target="_blank" href="http://stackoverflow.com/users/5804125/hpbest" title="StackOverflow"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/hupengbest" title="知乎"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular/">angular</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/angular2/">angular2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es5/">es5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/es6/">es6</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/excel/">excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ionic2/">ionic2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/koa/">koa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reactjs/">reactjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rxjs/">rxjs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/">sass</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typescript/">typescript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动漫/">动漫</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发工具/">开发工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术/">技术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/syoubaku">github</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://zgboke.com">中国博客联盟</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.edik.cn/">edik</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://sentsin.com/">sentsin</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.tangqq.cn/">tangqq</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://lengziyu.com/">lengziyu</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://tool.lu">tool</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://139.196.39.103:8081/">zhangli</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">技术宅、 杭州、 夜猫子、 爱动漫、 爱日语 2015年毕业、 java开发、 web前端、 前沿技术发烧友、 生命不息折腾不止、</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
 </div>
-
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">xiaomo</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-			
-				<img lazy-src="null" class="js-avatar">
-			
-			</div>
-			<hgroup>
-			  <h1 class="header-author">xiaomo</h1>
-			</hgroup>
-			
-			<p class="header-subtitle">日本語を習っています.....</p>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="#" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss">rss</a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">xiaomo</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="https://image.xiaomo.info/logo/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">xiaomo</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">日本語を習っています.....</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/about/">关于我&amp;留言板</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:xiaomo@xiaomo.info" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/syoubaku" title="GitHub"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=83387856&site=qq&menu=yes" title="QQ"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="https://twitter.com/hupengbest" title="Twitter"></a>
+                            
+                                <a class="fa StackOverflow" target="_blank" href="http://stackoverflow.com/users/5804125/hpbest" title="StackOverflow"></a>
+                            
+                                <a class="fa 知乎" target="_blank" href="https://www.zhihu.com/people/hupengbest" title="知乎"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-
       <div class="body-wrap">
+<script src="//cdn.bootcss.com/offline-js/0.7.14/offline.min.js"></script>
+<link href="//cdn.bootcss.com/offline-js/0.7.14/themes/offline-language-english.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/offline-js/0.7.14/themes/offline-theme-chrome.css" rel="stylesheet">
+
   
     <article id="post-HttpToHttps" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/HttpToHttps/" class="article-date">
-  	<time datetime="2016-11-24T16:00:00.000Z" itemprop="datePublished">2016-11-25</time>
+      <time datetime="2016-11-24T16:00:00.000Z" itemprop="datePublished">2016-11-25</time>
 </a>
     </div>
   
@@ -225,26 +321,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在百度和谷歌的鼓励下，现在很多网站都开始换成https了啊，只是有的没有隐私数据的网站感觉没有太大必要，但是设计要密码账号的网站必须要的。不过有部分网站没有换成https只是暂时的，2-3年后预估互联网会全部变成https。因为https成本也不是很高，免费SSL证书也有，比如腾讯免费SSL证书，starssl免费证书等。关键是https对SEO更加友好。<br>
+          
+              <p>在百度和谷歌的鼓励下，现在很多网站都开始换成https了啊，只是有的没有隐私数据的网站感觉没有太大必要，但是设计要密码账号的网站必须要的。不过有部分网站没有换成https只是暂时的，2-3年后预估互联网会全部变成https。因为https成本也不是很高，免费SSL证书也有，比如腾讯免费SSL证书，starssl免费证书等。关键是https对SEO更加友好。<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/生活/">生活</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/生活/">生活</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/HttpToHttps/#more">more >></a>
+          <a href="/HttpToHttps/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -267,7 +365,7 @@
   
     <div class="article-meta">
       <a href="/JavaSpringBootSwaggerUi/" class="article-date">
-  	<time datetime="2016-11-10T16:00:00.000Z" itemprop="datePublished">2016-11-11</time>
+      <time datetime="2016-11-10T16:00:00.000Z" itemprop="datePublished">2016-11-11</time>
 </a>
     </div>
   
@@ -289,26 +387,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>曾经一度我一直想在做前后端分离的时间写api接口是一个痛苦的过程，虽然也在网上找了一些可以填写api的系统，但使用起来总是不尽人意。现在，终于找到一款可以和api完美集成自动生成api文档加测试的工具，真是一件让人高兴的事呢。如果你也需要，那就好好看看这篇文章吧。<br>
+          
+              <p>曾经一度我一直想在做前后端分离的时间写api接口是一个痛苦的过程，虽然也在网上找了一些可以填写api的系统，但使用起来总是不尽人意。现在，终于找到一款可以和api完美集成自动生成api文档加测试的工具，真是一件让人高兴的事呢。如果你也需要，那就好好看看这篇文章吧。<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/java/">java</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/JavaSpringBootSwaggerUi/#more">more >></a>
+          <a href="/JavaSpringBootSwaggerUi/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -331,7 +431,7 @@
   
     <div class="article-meta">
       <a href="/JavaLombok/" class="article-date">
-  	<time datetime="2016-11-07T16:00:00.000Z" itemprop="datePublished">2016-11-08</time>
+      <time datetime="2016-11-07T16:00:00.000Z" itemprop="datePublished">2016-11-08</time>
 </a>
     </div>
   
@@ -353,26 +453,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。<br>
+          
+              <p>今天在stackoverflow上回答问题的时候发现了几个不得了的注解，是我从来没有见过的。然后呢，为了回答别人的问题，我就去查资料了。。。觉得挺有用的，记录一下。。<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/java/">java</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/JavaLombok/#more">more >></a>
+          <a href="/JavaLombok/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -395,7 +497,7 @@
   
     <div class="article-meta">
       <a href="/JavaSpringVideo/" class="article-date">
-  	<time datetime="2016-11-07T16:00:00.000Z" itemprop="datePublished">2016-11-08</time>
+      <time datetime="2016-11-07T16:00:00.000Z" itemprop="datePublished">2016-11-08</time>
 </a>
     </div>
   
@@ -417,26 +519,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br>
+          
+              <p>废话不多说，直接上链接。给自己打个mark,如果你需要学习spring又正好转到这里来了，那么恭喜你。<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/java/">java</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/JavaSpringVideo/#more">more >></a>
+          <a href="/JavaSpringVideo/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -459,7 +563,7 @@
   
     <div class="article-meta">
       <a href="/NihonSeiyou/" class="article-date">
-  	<time datetime="2016-11-06T16:00:00.000Z" itemprop="datePublished">2016-11-07</time>
+      <time datetime="2016-11-06T16:00:00.000Z" itemprop="datePublished">2016-11-07</time>
 </a>
     </div>
   
@@ -481,26 +585,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>日本动漫声优公演,来看看什么叫专业声优<br>
+          
+              <p>日本动漫声优公演,来看看什么叫专业声优<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动漫/">动漫</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/生活/">生活</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/生活/">生活</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动漫/">动漫</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/NihonSeiyou/#more">more >></a>
+          <a href="/NihonSeiyou/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -523,7 +629,7 @@
   
     <div class="article-meta">
       <a href="/JavaSpringBootDataFormat/" class="article-date">
-  	<time datetime="2016-11-01T16:00:00.000Z" itemprop="datePublished">2016-11-02</time>
+      <time datetime="2016-11-01T16:00:00.000Z" itemprop="datePublished">2016-11-02</time>
 </a>
     </div>
   
@@ -545,26 +651,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。<br>
+          
+              <p>最近在用spring boot 做数据接口时难免遇到时间这类的问题，接口原则：能服务端处理的别留给客户端。客户端的职责就是把服务端的数据完美的展现出来就好了。所以在返回时间的时候最好先进行一下格式化处理，不要返回时间戳格式。<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/java/">java</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/JavaSpringBootDataFormat/#more">more >></a>
+          <a href="/JavaSpringBootDataFormat/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -587,7 +695,7 @@
   
     <div class="article-meta">
       <a href="/JavaSpringBootCors/" class="article-date">
-  	<time datetime="2016-10-31T16:00:00.000Z" itemprop="datePublished">2016-11-01</time>
+      <time datetime="2016-10-31T16:00:00.000Z" itemprop="datePublished">2016-11-01</time>
 </a>
     </div>
   
@@ -609,26 +717,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在用spring boot 做数据接口供客户端调用时发现存在跨域问题，虽然解决问题有很多。比如用nginx处理等等。但是更方便的是服务端设置一下跨域名。<br>
+          
+              <p>最近在用spring boot 做数据接口供客户端调用时发现存在跨域问题，虽然解决问题有很多。比如用nginx处理等等。但是更方便的是服务端设置一下跨域名。<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/java/">java</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/JavaSpringBootCors/#more">more >></a>
+          <a href="/JavaSpringBootCors/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -651,7 +761,7 @@
   
     <div class="article-meta">
       <a href="/JavaSpringZiliao/" class="article-date">
-  	<time datetime="2016-10-28T16:00:00.000Z" itemprop="datePublished">2016-10-29</time>
+      <time datetime="2016-10-28T16:00:00.000Z" itemprop="datePublished">2016-10-29</time>
 </a>
     </div>
   
@@ -673,26 +783,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>spring真是让人又爱又恨呢，好用但是难学。spring铺的又太大，不知道从哪入手。整理点资料，免得头晕。<br>
+          
+              <p>spring真是让人又爱又恨呢，好用但是难学。spring铺的又太大，不知道从哪入手。整理点资料，免得头晕。<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/java/">java</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/JavaSpringZiliao/#more">more >></a>
+          <a href="/JavaSpringZiliao/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -715,7 +827,7 @@
   
     <div class="article-meta">
       <a href="/JavaIdeaMaven/" class="article-date">
-  	<time datetime="2016-10-27T16:00:00.000Z" itemprop="datePublished">2016-10-28</time>
+      <time datetime="2016-10-27T16:00:00.000Z" itemprop="datePublished">2016-10-28</time>
 </a>
     </div>
   
@@ -737,26 +849,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>你是否正在学习Maven？是否因为Maven难用而又不得不用而苦恼？是否对Eclipse于Maven的冲突而困惑？ 那么我告诉你一个更直接更简单的解决方案: IntelliJ IDEA！<br>
+          
+              <p>你是否正在学习Maven？是否因为Maven难用而又不得不用而苦恼？是否对Eclipse于Maven的冲突而困惑？ 那么我告诉你一个更直接更简单的解决方案: IntelliJ IDEA！<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/java/">java</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/JavaIdeaMaven/#more">more >></a>
+          <a href="/JavaIdeaMaven/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -779,7 +893,7 @@
   
     <div class="article-meta">
       <a href="/JavaServletUpload/" class="article-date">
-  	<time datetime="2016-10-23T16:00:00.000Z" itemprop="datePublished">2016-10-24</time>
+      <time datetime="2016-10-23T16:00:00.000Z" itemprop="datePublished">2016-10-24</time>
 </a>
     </div>
   
@@ -801,26 +915,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这篇文章主要为大家详细介绍了java基于servlet实现上传功能，后台使用java实现，前端主要是jsp，感兴趣的小伙伴们可以参考一下<br>
+          
+              <p>这篇文章主要为大家详细介绍了java基于servlet实现上传功能，后台使用java实现，前端主要是jsp，感兴趣的小伙伴们可以参考一下<br>
+          
       
     </div>
     
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
-	</div>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/java/">java</a>
+    </div>
+
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/java/">java</a>
-	</div>
-
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
 
       
         <p class="article-more-link">
-          <a  href="/JavaServletUpload/#more">more >></a>
+          <a href="/JavaServletUpload/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -846,44 +962,65 @@
   
 </div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2016 xiaomo
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 xiaomo
+            </div>
+            <div class="footer-right">
+                <a href="http://xiaomo.info/" target="_blank" title="欢迎来到小莫的博客">Blog </a> Created by <a href="https://github.com/syoubaku" target="_blank" title="希望这里的文章对你有所帮助  v3.0">xiaomo</a>  <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
-  </div>
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
 
 
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
-</script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
 
 
-
-
-
-
-<script type="text/x-mathjax-config">
+    <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
         inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
@@ -900,10 +1037,17 @@ MathJax.Hub.Queue(function() {
 });
 </script>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
   </div>
 </body>
 </html>
