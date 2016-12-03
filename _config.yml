@@ -5,7 +5,31 @@
 # Site
 title: 小莫-fighting
 subtitle: 日本語を習っています.....
-description: 小莫的博客、JAVA、日语、日本語、アニメ、动漫、技术、前端、nginx、https、angular2、游戏、服务器
+keywords: 小莫的博客、
+          JAVA、
+          日语、
+          日本語、
+          アニメ、
+          动漫、
+          技术、
+          前端、
+          nginx、
+          https、
+          angular2、
+          游戏、
+          服务器、
+          tomcat、
+          IDEA、
+          JAVA游戏工程师、
+          引擎、
+          企业项目、
+          javaWEB、
+          spring、
+          spring boot、
+          ssh、
+          开源中国、
+          github
+description: 专注于技术研究的博客，具有开源精神;乐于将自己折腾的项目放在github上和大家共同学习，共同进步;近期在学习日语，希望尽考过N2出国长长见识。
 author: xiaomo
 language: zh-CN
 timezone:
