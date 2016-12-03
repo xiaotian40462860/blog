@@ -36,7 +36,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: //xiaomo.info
+url: https://xiaomo.info
 root: /
 permalink: :year/:title/
 permalink_defaults:
