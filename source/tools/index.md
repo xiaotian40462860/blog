@@ -45,14 +45,22 @@ date: 2016-12-03 14:41:25
 ---
 
 <table>
-    <tr>
-        <td>链接</td>
-        <td>发布时间</td>
-    </tr>
-    <tr>
-        <td><a href="//xiaomo.info/yys">阴阳师查询工具</a></td>
-        <td>2016.11</td>
-    </tr>
+      <tr>
+          <td>链接</td>
+          <td>发布时间</td>
+      </tr>
+      <tr>
+          <td><a href="//xiaomo.info/yys" target="_blank">阴阳师查询工具</a></td>
+          <td>2016.11</td>
+      </tr>
+      <tr>
+          <td><a href="//xiaomo.info/calculator" target="_blank">属性计算器</a></td>
+          <td>2016.11</td>
+      </tr>
+      <tr>
+          <td><a href="//xiaomo.info/lolmax" target="_blank">lolmax</a></td>
+          <td>2015.5</td>
+      </tr>
 </table>
 
 
