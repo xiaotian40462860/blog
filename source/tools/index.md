@@ -50,7 +50,6 @@ date: 2016-12-03 14:41:25
         <td>发布时间</td>
     </tr>
     <tr>
-        <td></td>
         <td><a href="//xiaomo.info/yys">阴阳师查询工具</a></td>
         <td>2016.11</td>
     </tr>
