@@ -13,8 +13,10 @@ toc:
   show: 显示目录
 
 visit_counter:
-  site: 本站到访数
+  site: 总访问数
   page: 本页阅读量
+  lastday: 昨日访问量
+  today: 今日访问量
 
 copyright_info:
   title: 本文标题
