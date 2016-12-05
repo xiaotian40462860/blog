@@ -40,13 +40,16 @@ date: 2016-12-03 14:41:25
 	#ds-hot-posts {
 		display: none;
 	}
+	table,tr,td{
+	    text-align:center;
+	}
 </style>
 
 ---
 
 <table>
       <tr>
-          <td>链接</td>
+          <td>名字</td>
           <td>发布时间</td>
       </tr>
       <tr>
