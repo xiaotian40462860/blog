@@ -12,3 +12,4 @@ Disallow: /fancybox/
 
 Sitemap: https://xiaomo.info/sitemap.xml
 Sitemap: https://xiaomo.info/baidusitemap.xml
+Sitemap: https://xiaomo.info/sitemap.txt
