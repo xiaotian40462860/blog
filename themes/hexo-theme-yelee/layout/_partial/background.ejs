@@ -9,7 +9,9 @@
             }
             else {
                 var backgroundnum = <%= theme.background_image %>;
-                var backgroundimg = "url(https://image.xiaomo.info/background/bg-number.jpg)".replace(/number/gi, Math.ceil(Math.random() * backgroundnum));
+                var result = Math.ceil(Math.random() * backgroundnum);
+                console.info("加载图片"+result);
+                var backgroundimg = "url(https://image.xiaomo.info/background/bg-number.jpg)".replace(/number/gi, result);
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
         })
