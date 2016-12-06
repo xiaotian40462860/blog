@@ -11,7 +11,7 @@
                 var backgroundnum = <%= theme.background_image %>;
                 var result = Math.ceil(Math.random() * backgroundnum);
                 console.info("加载图片"+result);
-                var backgroundimg = "url(https://image.xiaomo.info/background/bg-number.jpg)".replace(/number/gi, result);
+                var backgroundimg = "url(https://image.xiaomo.info/background/bg-number)".replace(/number/gi, result+".jpg?version="+new Date());
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
         })
