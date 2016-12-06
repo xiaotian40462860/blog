@@ -10,7 +10,7 @@
             else {
                 var backgroundnum = <%= theme.background_image %>;
                 var randomIndex = Math.ceil(Math.random() * backgroundnum);
-                var result = randomIndex+".jpg?version="+(new Date()/10);
+                var result = randomIndex+".jpg?version="+(new Date()/500);
                 var backgroundimg = "url(https://image.xiaomo.info/background/bg-number)".replace(/number/gi,result);
                 console.info("加载图片"+backgroundimg);
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
