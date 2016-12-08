@@ -1,3 +1,23 @@
+<style>
+    .fengmian {
+        float: left;
+        width: 400px;
+        height: 250px;
+    }
+
+    .article img {
+        width: 380px;
+        height: 228px;
+        margin: 1px 20px 5px 3px;
+        opacity: 0.5;
+        border-radius: 3%;
+    }
+    .article-entry{
+        height:126px;
+    }
+</style>
+
+
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
   <%if(post.noDate != "true"){%>
     <div class="article-meta">
@@ -8,6 +28,9 @@
     <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
     <% } %>
+      <div class="fengmian">
+          <img class="fengmian-image" id="<%= post.slug %>-1" src="/img/bg-33.jpg" alt="封面" onload="changeImg(this.id)">
+      </div>
     <% if (post.link || post.title){ %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
@@ -55,6 +78,14 @@
   <% if (!index){ %>
     <%- partial('post/nav') %>
   <% } %>
+    <script>
+        function changeImg(id) {
+            var backgroundnum = <%= theme.background_image %>;
+            var result = Math.ceil(Math.random() * backgroundnum);
+            var backgroundimg = "https://image.xiaomo.info/background/bg-number.jpg".replace(/number/gi, result);
+            $("#"+id).attr("src",backgroundimg);
+        }
+    </script>
 </article>
 <% if (!index && ((post.toc != false && !is_page() && theme.toc) || post.toc)){ %>
     <%- partial('_partial/toc') %>
@@ -93,3 +124,4 @@
         <% } %>
     </script>
 <% } %>
+
