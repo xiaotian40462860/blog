@@ -83,7 +83,9 @@
             var backgroundnum = <%= theme.background_image %>;
             var result = Math.ceil(Math.random() * backgroundnum);
             var backgroundimg = "https://image.xiaomo.info/background/bg-number.jpg".replace(/number/gi, result);
-            $("#"+id).attr("src",backgroundimg);
+            var key = "#"+id;
+            console.log(key);
+            $(key).attr("src",backgroundimg);
         }
     </script>
 </article>
