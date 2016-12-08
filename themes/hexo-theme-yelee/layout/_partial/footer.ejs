@@ -20,16 +20,6 @@
                         </span>
                     </span>
                 <% } %>
-                <% if (theme.visit_counter.site_visit && theme.visit_counter.page_visit) { %>
-                    <span>, </span>
-                <% } %>
-                <% if (theme.visit_counter.page_visit) { %>
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"><%= __('visit_counter.page') %>: 
-                            <span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                <% } %>
                 <span style="color: grey;">(<a href="http://www.qiniu.com/" rel="external nofollow" target="_blank">背景随机加载-资源存储于七牛CDN</a>) </span>
             </div>
         <% } %>
