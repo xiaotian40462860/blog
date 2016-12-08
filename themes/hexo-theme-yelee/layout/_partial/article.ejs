@@ -7,13 +7,13 @@
 
     .article img {
         width: 380px;
-        height: 228px;
-        margin: 1px 20px 5px 3px;
+        height: 220px;
+        margin: -1px 20px 5px -1px;
         opacity: 0.5;
         border-radius: 3%;
     }
     .article-entry{
-        height:126px;
+        height:110px;
     }
 </style>
 
@@ -29,7 +29,7 @@
       <input type="hidden" class="isFancy" />
     <% } %>
       <div class="fengmian">
-          <img class="fengmian-image" id="<%= post.slug %>-1" src="/img/bg-33.jpg" alt="封面" onload="changeImg(this.id)">
+          <img class="fengmian-image" id="<%= post.slug %>" src="https://image.xiaomo.info/background/bg-23.jpg" alt="封面" onload="loadImage(this.id)">
       </div>
     <% if (post.link || post.title){ %>
       <header class="article-header">
@@ -79,12 +79,11 @@
     <%- partial('post/nav') %>
   <% } %>
     <script>
-        function changeImg(id) {
+        function loadImage (id) {
             var backgroundnum = <%= theme.background_image %>;
             var result = Math.ceil(Math.random() * backgroundnum);
             var backgroundimg = "https://image.xiaomo.info/background/bg-number.jpg".replace(/number/gi, result);
             var key = "#"+id;
-            console.log(key);
             $(key).attr("src",backgroundimg);
         }
     </script>

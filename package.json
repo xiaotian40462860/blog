@@ -5,11 +5,11 @@
     "version": "3.2.2"
   },
   "scripts": {
-    "build": "hexo generate",
+    "build": "hexo clean && hexo generate && http-server",
     "dev": "hexo generate && http-server",
     "pull": "git pull && hexo g",
     "test": "http-server --port=PORT",
-    "start": "hexo generate && hexo server"
+    "start": "hexo clean && hexo generate && hexo server"
   },
   "dependencies": {
     "hexo": "^3.2.0",
