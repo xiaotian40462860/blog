@@ -1,48 +1,8 @@
-<style>
-    .color3{
-        display: inline-block;
-        text-decoration: none;
-        font-weight: normal;
-        font-size: 0.75rem;
-        height: 1.125rem;
-        line-height: 1.125rem;
-        float: left;
-        padding: 0 5px 0 1px;
-        position: relative;
-        border-radius: 0 5px 5px 0;
-        margin: 5px 9px 5px 8px;
-    }
-    .eye{
-        width: 2px;
-        height:2px;
-    }
-</style>
-
 <% if (post.tags && post.tags.length){ %>
     <div class="article-tag tagcloud">
         <%- list_tags(post.tags, {
             show_count: false,
             class: 'article-tag'
-          }) %>
-    </div>
+          }) %> </div>
 <% } %>
-<span id="busuanzi_container_page_pv" style='display:none'>
-    <span id="page-visit"><i class="fa fa-eye" style="float: left;margin-top:5px" aria-hidden="true" title="文章访问量"></i>
-        <span id="busuanzi_value_page_pv"></span>
-    </span>
-</span>>
 
-<script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>

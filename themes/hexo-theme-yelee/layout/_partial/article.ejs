@@ -13,9 +13,22 @@
         border-top-left-radius: 3px;
         -webkit-border-radius-topleft: 3%;
     }
-    /*.article-entry{*/
-        /*height:110px;*/
-    /*}*/
+     .color3{
+         display: inline-block;
+         text-decoration: none;
+         font-weight: normal;
+         font-size: 0.75rem;
+         height: 1.125rem;
+         line-height: 1.125rem;
+         float: left;
+         padding: 0 5px 0 1px;
+         position: relative;
+         border-radius: 0 5px 5px 0;
+         margin: 5px 9px 5px 8px;
+     }
+    #busuanzi_container_page_pv:hover{
+        background: #DD8D8D;
+    }
 </style>
 
 
@@ -40,6 +53,11 @@
       <div class="article-info article-info-post">
         <%- partial('post/category') %>
         <%- partial('post/tag') %>
+        <span id="busuanzi_container_page_pv" style='display:none'>
+        <span id="page-visit"><i class="fa fa-eye" style="float: left;margin-top:5px" aria-hidden="true" title="文章访问量"></i>
+            <span id="busuanzi_value_page_pv"></span>
+        </span>
+        </span>
         <div class="clearfix"></div>
       </div>
       <% } %>
@@ -127,3 +145,17 @@
     </script>
 <% } %>
 
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
