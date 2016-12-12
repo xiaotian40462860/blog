@@ -98,7 +98,7 @@
   <% } %>
     <script>
         function loadImage (id) {
-            var backgroundnum = <%= theme.background_image %>;
+            var backgroundnum = <%= theme.cover_image %>;
             var randomIndex = Math.ceil(Math.random() * backgroundnum);
             var result = randomIndex+".jpg?version="+(new Date()/1000);
             var backgroundimg = "https://image.xiaomo.info/cover/bg-number.jpg".replace(/number/gi, result);
