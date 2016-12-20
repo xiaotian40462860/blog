@@ -67,15 +67,6 @@ comments: false
       </tr>
 </table>
 
-
-
-
-
-
 **欢迎交流:**
 > 个人邮件及社交网站等信息见左侧边栏底部；
 > 有什么留言或问题直接在文末留下评论即可。
-
-<hr>
-**最近访客:**
-<ul class="ds-recent-visitors" data-num-items="46" data-avatar-size="40"></ul>
