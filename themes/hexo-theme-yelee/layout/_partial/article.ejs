@@ -177,11 +177,12 @@
             return "pc";
         }
 
-    window.onload = function(){
-        var result = getPgjs();
-        if(result !="pc"){
-            document.getElementById("fengmian").style.display="none";
-        }
-    }
+    document.ready(function(){
+                           var result = getPgjs();
+                           alert(result);
+                           if(result !="pc"){
+                               document.getElementById("fengmian").style.display="none";
+                           }
+                       })
 
 </script>
