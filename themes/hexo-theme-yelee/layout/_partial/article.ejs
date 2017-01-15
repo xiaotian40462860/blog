@@ -118,7 +118,7 @@
         function loadImage (id) {
            var result = getPgjs();
             console.log(result);
-             if(result =="pc" || result=="wp"){
+             if(result !="pc" || result!="wp"){
              $("#fengmian").hide();
               return;
             }
