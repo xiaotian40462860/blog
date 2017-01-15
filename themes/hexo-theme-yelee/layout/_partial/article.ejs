@@ -119,8 +119,8 @@
            var result = getPgjs();
             console.log(result);
              if(result !="pc" || result!="wp"){
-             $("#fengmian").hide();
-              return;
+                $(".fengmian").hide();
+                return;
             }
             var backgroundnum = <%= theme.cover_image %>;
             var randomIndex = Math.ceil(Math.random() * backgroundnum);
