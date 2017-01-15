@@ -39,7 +39,7 @@
     <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
     <% } %>
-      <div class="fengmian" id="fengmian">
+      <div class="fengmian">
           <img class="fengmian-image" id="<%= post.slug %>" src="https://image.xiaomo.info/background/bg-23.jpg" alt="封面" onload="loadImage(this.id)" >
       </div>
     <% if (post.link || post.title){ %>
@@ -121,6 +121,7 @@
              $("#fengmian").hide();
               return;
             }
+            console.log(result);
             var backgroundnum = <%= theme.cover_image %>;
             var randomIndex = Math.ceil(Math.random() * backgroundnum);
             var result = randomIndex+"?version="+(new Date()/1000);
