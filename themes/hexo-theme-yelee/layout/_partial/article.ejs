@@ -40,7 +40,7 @@
       <input type="hidden" class="isFancy" />
     <% } %>
       <div class="fengmian" id="fengmian">
-          <img class="fengmian-image" id="<%= post.slug %>" src="https://image.xiaomo.info/background/bg-23.jpg" alt="封面" onload="loadImage(this.id)" onload="hideImage(this.id)">
+          <img class="fengmian-image" id="<%= post.slug %>" src="https://image.xiaomo.info/background/bg-23.jpg" alt="封面" onload="loadImage(this.id)" >
       </div>
     <% if (post.link || post.title){ %>
       <header class="article-header">
@@ -97,7 +97,29 @@
     <%- partial('post/nav') %>
   <% } %>
     <script>
+
+        function getPgjs(){
+                var agent = navigator.userAgent.toLowerCase();
+                var res = agent.match(/android/);
+                if(res == "android")
+                    return res;
+                res = agent.match(/iphone/);
+                if(res == "iphone")
+                    return "ios";
+                res = agent.match(/ipad/);
+                if(res == "ipad")
+                    return "ios";
+                res = agent.match(/windows/);
+                if(res == "windows")
+                    return "wp";
+                return "pc";
+            }
+
         function loadImage (id) {
+           var result = getPgjs();
+             if(result !="pc" || result!="wp"){
+              return;
+            }
             var backgroundnum = <%= theme.cover_image %>;
             var randomIndex = Math.ceil(Math.random() * backgroundnum);
             var result = randomIndex+"?version="+(new Date()/1000);
@@ -159,29 +181,6 @@
         s.parentNode.insertBefore(bp, s);
     })();
 
-
-    function getPgjs(){
-            var agent = navigator.userAgent.toLowerCase();
-            var res = agent.match(/android/);
-            if(res == "android")
-                return res;
-            res = agent.match(/iphone/);
-            if(res == "iphone")
-                return "ios";
-            res = agent.match(/ipad/);
-            if(res == "ipad")
-                return "ios";
-            res = agent.match(/windows/);
-            if(res == "windows")
-                return "wp";
-            return "pc";
-        }
-
-    function hideImage(id){
-     var result = getPgjs();
-     if(result !="pc" || result!="wp"){
-      $("#"+id).hide();
-        }
  }
 
 </script>
