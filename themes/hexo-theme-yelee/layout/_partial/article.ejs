@@ -40,7 +40,7 @@
       <input type="hidden" class="isFancy" />
     <% } %>
       <div class="fengmian" id="fengmian">
-          <img class="fengmian-image" id="<%= post.slug %>" src="https://image.xiaomo.info/background/bg-23.jpg" alt="封面" onload="loadImage(this.id)">
+          <img class="fengmian-image" id="<%= post.slug %>" src="https://image.xiaomo.info/background/bg-23.jpg" alt="封面" onload="loadImage(this.id)" onload="hideImage(this.id)">
       </div>
     <% if (post.link || post.title){ %>
       <header class="article-header">
@@ -177,12 +177,11 @@
             return "pc";
         }
 
-    window.onload=function(){
-                         var result = getPgjs();
-                         alert(result);
-                         if(result !="pc" || result!="wp"){
-                          $("#fengmian").hide();
-                            }
-                     }
+    function hideImage(id){
+     var result = getPgjs();
+     if(result !="pc" || result!="wp"){
+      $("#"+id).hide();
+        }
+ }
 
 </script>
