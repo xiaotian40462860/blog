@@ -180,9 +180,9 @@
     window.onload=function(){
                          var result = getPgjs();
                          alert(result);
-                         if(result !="pc"){
-                             document.getElementById("fengmian").style.display="none";
-                                         }
+                         if(result !="pc" || result!="wp"){
+                          $("#fengmian").hide();
+                            }
                      }
 
 </script>
