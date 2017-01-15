@@ -118,6 +118,7 @@
         function loadImage (id) {
            var result = getPgjs();
              if(result !="pc" || result!="wp"){
+             $("#fengmian").hide();
               return;
             }
             var backgroundnum = <%= theme.cover_image %>;
