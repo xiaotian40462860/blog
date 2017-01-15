@@ -39,7 +39,7 @@
     <% if (theme.fancybox){ %>
       <input type="hidden" class="isFancy" />
     <% } %>
-      <div class="fengmian">
+      <div class="fengmian" id="fengmian">
           <img class="fengmian-image" id="<%= post.slug %>" src="https://image.xiaomo.info/background/bg-23.jpg" alt="封面" onload="loadImage(this.id)">
       </div>
     <% if (post.link || post.title){ %>
@@ -158,4 +158,30 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(bp, s);
     })();
+
+
+    function getPgjs(){
+            var agent = navigator.userAgent.toLowerCase();
+            var res = agent.match(/android/);
+            if(res == "android")
+                return res;
+            res = agent.match(/iphone/);
+            if(res == "iphone")
+                return "ios";
+            res = agent.match(/ipad/);
+            if(res == "ipad")
+                return "ios";
+            res = agent.match(/windows/);
+            if(res == "windows")
+                return "wp";
+            return "pc";
+        }
+
+    window.onload = function(){
+        var result = getPgjs();
+        if(result !="pc"){
+            document.getElementById("fengmian").style.display="none";
+        }
+    }
+
 </script>
