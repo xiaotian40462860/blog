@@ -169,19 +169,19 @@ jquery_ui: true
 tagcloud: true
 
 # Blogroll, Link exchange | 友情链接
-friends:
-  烧酒博客: https://i.shojo.cc
-  github: https://github.com/syoubaku
-  中国博客联盟: http://zgboke.com
-  edik: http://www.edik.cn/
-  sentsin: http://sentsin.com/
-  tangqq: http://www.tangqq.cn/
-  lengziyu: http://lengziyu.com/
-  tool: http://tool.lu
-  zhangli: http://fortl.net/
-  monsterLin: http://monsterLin.com/
+#friends:
+#  烧酒博客: https://i.shojo.cc
+#  github: https://github.com/syoubaku
+#  中国博客联盟: http://zgboke.com
+#  edik: http://www.edik.cn/
+#  sentsin: http://sentsin.com/
+#  tangqq: http://www.tangqq.cn/
+#  lengziyu: http://lengziyu.com/
+#  tool: http://tool.lu
+#  zhangli: http://fortl.net/
+#  monsterLin: http://monsterLin.com/
 
-friends: false
+#friends: false
 
 #是否开启“关于我”。
 aboutme:  技术宅、
