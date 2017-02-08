@@ -8,13 +8,13 @@ Yelee: "3.0"
 ## Tags Cloud Page: `hexo new page tags`
 menu:
   主页: /
+  友情链接: /friends/
+  关于我&留言板: /about/
   所有文章: /archives/
   小工具: /tools/
-  友情链接: /friends/
   #随笔: /tags/随笔
 #  标签云: /tags/
-  图说: http://tushuo.baidu.com/wave/index#/gallery
-  关于我&留言板: /about/
+  #图说: http://tushuo.baidu.com/wave/index#/gallery
 
 # Link to your avatar | 填写头像地址
 avatar: //image.xiaomo.info/logo/avatar.png
