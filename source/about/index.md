@@ -85,6 +85,9 @@ fancybox: false
 > 个人邮件及社交网站等信息见左侧边栏底部；
 > 有什么留言或问题直接在文末留下评论即可。
 
+如果本站的内容为您提供了些许帮助，欢迎搭赏。
+![https://image.xiaomo.info/blog/dashang.png](https://image.xiaomo.info/blog/dashang.png)
+
 <hr>
 **最近访客:**
 <ul class="ds-recent-visitors" data-num-items="46" data-avatar-size="40"></ul>
