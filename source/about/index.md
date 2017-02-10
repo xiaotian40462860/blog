@@ -86,7 +86,7 @@ fancybox: false
 > 有什么留言或问题直接在文末留下评论即可。
 
 如果本站的内容为您提供了些许帮助，欢迎搭赏。
-![https://image.xiaomo.info/blog/dashang.png](https://image.xiaomo.info/blog/dashang.png)
+![https://image.xiaomo.info/blog/donate.png](https://image.xiaomo.info/blog/donate.png)
 
 <hr>
 **最近访客:**
