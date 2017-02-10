@@ -97,6 +97,4 @@ font-size: 12px;
 |[Leonn——财务砖家](https://liyuans.com/)|[netcan——高精尖人才](http://www.netcan666.com/)|
 
 
-<hr>
-**最近访客:**
-<ul class="ds-recent-visitors" data-num-items="46" data-avatar-size="40"></ul>
+
