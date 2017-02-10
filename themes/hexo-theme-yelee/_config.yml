@@ -7,11 +7,11 @@ Yelee: "3.0"
 ## About Page: `hexo new page about`
 ## Tags Cloud Page: `hexo new page tags`
 menu:
-  主页: /
+#  主页: /
+  所有文章: /archives/
   友情链接: /friends/
   关于我&留言板: /about/
-  所有文章: /archives/
-  小工具: /tools/
+#  小工具: /tools/
   #随笔: /tags/随笔
 #  标签云: /tags/
   #图说: http://tushuo.baidu.com/wave/index#/gallery
