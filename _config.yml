@@ -94,12 +94,11 @@ exclude_generator:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-yelee
-#theme: yilia
 
 archive_generator:
     per_page: 0
     yearly: false
-    monthly: false
+    monthly: true
     daily: false
 
 # Deployment
