@@ -11,4 +11,8 @@ date: 2017-03-02 11:24:53
 2. 开发公司订单处理项目《loggerCenter》(spring boot/maven/git),处理游戏充值订单记录相关
 
 #### 2号 周四
+1. 配置 ssh
+2. 折腾oh-my-zsh
+3. 补番《人形电脑天使心》
+#### 3号 周五
 1. 阅读《thinking in java》
