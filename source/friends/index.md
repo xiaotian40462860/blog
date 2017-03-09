@@ -94,7 +94,7 @@ font-size: 12px;
 |:-------------: |:-------------:|:-----:|:-----:|
 |[小莫——java开发工程师](https://xiaomo.info) |[烧酒博客——全能型人才](https://i.shojo.cc/)| [小野狗——游戏开发工程师](http://fortl.net)  |[monsterLin——android开发工程师](https://monsterlin.com)|
 |[香菇会长——二次元代码家](https://siitake.cn/) |[Edik博客——全栈工程师](https://www.edik.cn/) |[贤心博客——layerUi作者](http://sentsin.com/) |[冷子欲——阿里前端](http://lengziyu.com/) |
-|[Leonn——财务砖家](https://liyuans.com/)|[netcan——高精尖人才](http://www.netcan666.com/)|
+|[Leonn——财务砖家](https://liyuans.com/)|[netcan——高精尖人才](http://www.netcan666.com/)|[kotori](https://kotori.love/)|
 
 <br>如果评论框出错请刷新！
 
