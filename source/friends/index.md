@@ -15,8 +15,28 @@ background: #E6EAE9;
 }   
   
 a {   
-color: #c75f3e;   
+color: #000000; 
 }   
+
+td:{
+    float: left;
+    margin: 0 0 2px;
+    padding: 1rem;
+    background: #e5eaed;
+    border-right: 2px solid #fff;
+    font-size: 1.6rem;
+    text-indent: 0;
+}
+
+td:hover{
+    background: #f25962;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    -o-transition:all 1s;
+}
+td a:hover:{
+    color: #c75f3e;
+}
   
 table {   
 padding: 0;   
