@@ -149,9 +149,9 @@
     <%- partial('post/share') %>
 <% } %>
 
- if (theme.youyan.on) { %>
-        <%- partial('comments/youyan') %>
-    <% } else if (theme.disqus.on) { %>
+<% { if (theme.youyan.on) { %>
+        <%- partial('comments/youyan')%>
+    <% }else if (theme.disqus.on) { %>
         <%- partial('comments/disqus', {
             shortname: theme.disqus.shortname
           }) %>
@@ -159,7 +159,6 @@
         <%- partial('comments/disqus', {
             shortname: config.disqus_shortname
           }) %>
-    <% } %>
     <% } else if (theme.changyang.on) { %>
         <% if (!index){ %>
           <section id="comments">
