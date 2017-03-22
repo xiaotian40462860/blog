@@ -150,11 +150,10 @@
 <script>
     (function(){
         var path = window.location.pathname;
-        console.log(path);
-//        if (true){
-//            $("#cyreward").hide();
-//            $("#cyemoji").hide();
-//        }
+        if (path =="/" || path== undefined || path == null ){
+            $("#cyreward").hide();
+            $("#cyemoji").hide();
+        }
     })()
 
 
